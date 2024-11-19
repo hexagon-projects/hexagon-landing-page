@@ -91,14 +91,12 @@ const toggleDropdown = ref(false)
             </div>
         </div>
     </nav>
-    <div v-if="toggleNavbar" class="lg:hidden fixed w-full h-full bg-white top-0 left-0 z-10">
-        <div class="pt-[96px]">
-            <div class="flex flex-col items-center">
-                <RouterLink v-for="item in navItems" :to="{ name: item.route }" class="relative py-6 w-full text-center"
-                    active-class="after:content-[''] after:block after:absolute after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-1 after:rounded-full after:bg-light-primary after:mt-1">
-                    <span>{{ item.text }}</span>
-                </RouterLink>
-            </div>
+    <div v-if="toggleNavbar" class="lg:hidden w-full h-full bg-white z-10">
+        <div class="flex flex-col items-center">
+            <RouterLink v-for="item in navItems" :to="{ name: item.route }" class="relative py-6 w-full text-center"
+                active-class="after:content-[''] after:block after:absolute after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-1 after:rounded-full after:bg-light-primary after:mt-1">
+                <span>{{ item.text }}</span>
+            </RouterLink>
         </div>
     </div>
 </template>

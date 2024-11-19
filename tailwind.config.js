@@ -13,6 +13,7 @@ export default {
         'gray-100': '#F2F4F7',
         'gray-600': '#475467',
         'gray-700': '#344054',
+        'gray-800': '#1D2939',
       },
       fontFamily: {
         'sans': ['Sora', 'sans-serif'],
