@@ -15,7 +15,8 @@ export default {
         'gray-700': '#344054',
       },
       fontFamily: {
-        'sans': ['Roboto', 'sans-serif']
+        'sans': ['Sora', 'sans-serif'],
+        'raleway': ['Raleway', 'sans-serif']
       },
     },
   },

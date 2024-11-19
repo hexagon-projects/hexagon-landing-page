@@ -38,7 +38,7 @@ const toggleDropdown = ref(false)
 </script>
 
 <template>
-    <nav class="bg-white h-[96px] w-full z-20 fixed">
+    <nav class="bg-white h-[96px] w-full relative z-20">
         <div class="px-[56px] md:px-[112px] h-full">
             <div class="flex items-center justify-between h-full">
                 <div class="flex items-center gap-[40px]">
@@ -72,15 +72,17 @@ const toggleDropdown = ref(false)
                             @click="() => toggleDropdown = !toggleDropdown" />
 
                         <div v-if="toggleDropdown" class="absolute right-0 z-30">
-                            <div class="outline outline-1 outline-gray-200 shadow-md rounded-md p-4 mt-2">
-                                <div class="flex gap-2">
-                                    <label class="flex items-center cursor-pointer">
-                                        <input type="checkbox" value="" class="hidden peer">
-                                        <div
-                                            class="relative w-[42px] h-[24px] rounded-full outline outline-[2px] outline-light-primary peer-checked:after:translate-x-[18px] after:content-[''] after:absolute after:top-[4px] after:start-[4px] after:bg-light-secondary after:rounded-full after:h-4 after:w-4 after:transition-all">
-                                        </div>
-                                    </label>
-                                    <span>Light Mode</span>
+                            <div class="outline outline-1 outline-gray-200 shadow-md rounded-md w-[180px]">
+                                <div class="p-4 mt-2">
+                                    <div class="flex gap-2">
+                                        <label class="flex items-center cursor-pointer">
+                                            <input type="checkbox" value="" class="hidden peer">
+                                            <div
+                                                class="relative w-[42px] h-[24px] rounded-full outline outline-[2px] outline-light-primary peer-checked:after:translate-x-[18px] after:content-[''] after:absolute after:top-[4px] after:start-[4px] after:bg-light-secondary after:rounded-full after:h-4 after:w-4 after:transition-all">
+                                            </div>
+                                        </label>
+                                        <span>Light Mode</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +91,7 @@ const toggleDropdown = ref(false)
             </div>
         </div>
     </nav>
-    <div v-if="toggleNavbar" class="lg:hidden fixed w-full h-full bg-white bg-opacity-75 top-0 left-0 z-10">
+    <div v-if="toggleNavbar" class="lg:hidden fixed w-full h-full bg-white top-0 left-0 z-10">
         <div class="pt-[96px]">
             <div class="flex flex-col items-center">
                 <RouterLink v-for="item in navItems" :to="{ name: item.route }" class="relative py-6 w-full text-center"
