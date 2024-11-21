@@ -7,7 +7,7 @@ import OurProject from '@/components/pages/home/OurProject.vue';
 
 <template>
     <div class="space-y-[156px]">
-        <Hero />
+        <!-- <Hero /> -->
         <!-- <OurPartner /> -->
         <AboutUs />
         <OurProject />

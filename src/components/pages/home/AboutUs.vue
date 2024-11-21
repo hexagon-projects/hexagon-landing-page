@@ -22,7 +22,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
         </div>
         <div class="flex flex-col lg:flex-row gap-[18px] mb-[18px]">
             <div
-                class="lg:max-w-[750px] w-full flex flex-col bg-[#F5F6FA] bg-opacity-[55%] rounded-[16px] items-center">
+                class="lg:max-w-[750px] w-full flex flex-col bg-[#F5F6FA] rounded-[16px] items-center">
                 <div class="p-[56px] pt-[55px]">
                     <h1 class="text-[32px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gray-800 mb-4">
                         IT Consultation: Digital Solutions For
@@ -36,7 +36,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
             </div>
 
             <div
-                class="lg:max-w-[450px] w-full flex flex-col lg:flex-col-reverse items-center bg-[#F5F6FA] bg-opacity-[55%] rounded-[16px]">
+                class="lg:max-w-[450px] w-full flex flex-col lg:flex-col-reverse items-center bg-[#F5F6FA] rounded-[16px]">
                 <div class="p-[56px] pt-0">
                     <h1 class="text-[32px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gray-800 mb-4">
                         Digital Marketing: Boost Your Brand's
@@ -51,7 +51,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
         </div>
         <div class="flex flex-col lg:flex-row gap-[18px]">
             <div
-                class="lg:max-w-[450px] w-full flex flex-col items-center bg-[#F5F6FA] bg-opacity-[55%] rounded-[16px]">
+                class="lg:max-w-[450px] w-full flex flex-col items-center bg-[#F5F6FA] rounded-[16px]">
                 <div class="px-[56px] pt-[40px]">
                     <h1 class="text-[32px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gray-800 mb-4">
                         Branding: Create a Distinct and Impactful Brand</h1>
@@ -63,7 +63,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                 </div>
             </div>
             <div
-                class="lg:max-w-[750px] w-full flex flex-col lg:flex-row-reverse items-center lg:items-start bg-[#F5F6FA] bg-opacity-[55%] rounded-[16px]">
+                class="lg:max-w-[750px] w-full flex flex-col lg:flex-row-reverse items-center lg:items-start bg-[#F5F6FA] rounded-[16px]">
                 <div class="flex-initial px-[48px] pt-[55px]">
                     <h1 class="text-[32px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gray-800 mb-4">
                         Media Consultant: Strategic Guide for Media Excellence</h1>
