@@ -4,13 +4,13 @@ import Button from '@/components/button/Button.vue';
 
 <template>
     <div class="flex flex-col gap-9 mb-[78px] px-[56px] md:px-[112px]">
-        <span class="text-xs font-medium px-[10px]">CAREER OPPORTUNITIES</span>
+        <span class="text-sm font-semibold px-[10px]">CAREER OPPORTUNITIES</span>
         <div class="flex flex-col lg:flex-row gap-[50px] mb-[18px]">
             <div class="mb-6 lg:w-1/2">
                 <h1 class="text-[30px] md:text-[45px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 mb-4">
                     Would you like to join our team</h1>
                 <p class="text-xs text-gray-600 text-justify">Join Hexagon Inc. and grow with a team that values innovation and excellence. We offer a collaborative environment, exciting projects, and the chance to make a real impact in digital services. Ready to shape the future with us? Explore our open roles today!</p>
-                <div class="px-[32px] mt-4">
+                <div class="mt-4">
                     <Button>
                         <span class="text-xs">See All Job Offer</span>
                         <font-awesome-icon icon="arrow-right" />

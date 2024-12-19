@@ -25,7 +25,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                 </div>
             </div>
 
-            <div class="lg:max-w-[450px] w-full flex flex-col items-center bg-[#F5F6FA] rounded-[16px] p-[5px]">
+            <div class="lg:max-w-[450px] w-full flex flex-col items-center rounded-[16px] p-[5px]">
                 <div class="flex flex-col items-center gap-2">
                     <img src="@/assets/Top arrow.svg" alt="">
                     <img src="@/assets/Active dot.svg" alt="">
