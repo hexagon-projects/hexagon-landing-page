@@ -26,6 +26,9 @@ import Button from '@/components/button/Button.vue';
                     <div class="absolute bottom-0 right-0 flex items-center justify-center">
                         <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />
                     </div>
+                    <div class="absolute bottom-0 right-0 flex gap-2 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                        <img src="@/assets/Large unit.svg" alt="Large Unit Icon" class="w-[150px] h-[150]" />
+                    </div>
                 </div>
                 <div class="flex flex-col items-start bg-[#F5F6FA] rounded-[16px] mb-4 p-[45px] pt-[35px] relative transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg hover:scale-105">
                     <p class="text-xs text-gray-600 mb-2">Intern</p>
@@ -34,6 +37,9 @@ import Button from '@/components/button/Button.vue';
                     <p class="text-xs text-gray-600 text-justify">Proficiency in HTML, CSS, JavaScript (React, Vue, or Angular experience is a plus), knowledge of responsive design principles, and familiarity with version control (Git).</p>
                     <div class="absolute bottom-0 right-0 flex items-center justify-center">
                         <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" /> 
+                    </div>
+                    <div class="absolute bottom-0 right-0 flex gap-2 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                        <img src="@/assets/Large unit.svg" alt="Large Unit Icon" class="w-[150px] h-[150]" />
                     </div>
                 </div>
                 <div class="flex flex-col items-start items-center bg-[#F5F6FA] rounded-[16px] mb-4 p-[45px] pt-[35px] relative transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg hover:scale-105">
@@ -73,8 +79,12 @@ import Button from '@/components/button/Button.vue';
 .hover\:text-white:hover h1 {
     color: white; 
 }
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
 </style>
-
-
-
-
