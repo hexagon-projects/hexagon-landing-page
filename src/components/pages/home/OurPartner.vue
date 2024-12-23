@@ -8,7 +8,7 @@ const logos = ref([
   },
   {
     alt: "logo 2",
-    path: "/src/assets/our-partner/logo-2.png",
+    path: "/src/assets/our-partner/image 4.png",
   },
   {
     alt: "logo 3",
