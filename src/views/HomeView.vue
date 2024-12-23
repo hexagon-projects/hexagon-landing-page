@@ -6,17 +6,19 @@ import OurProject from '@/components/pages/home/OurProject.vue';
 import Review from '@/components/pages/home/Review.vue';
 import Career from '@/components/pages/home/Career.vue';
 import News from '@/components/pages/home/News.vue';
+import Cta from '@/components/pages/home/cta.vue';
 
 </script>
 
 <template>
     <div class="space-y-[156px]">
         <!-- <Hero /> -->
-        <!-- <OurPartner /> -->
+        <OurPartner />
         <AboutUs />
         <OurProject />
         <Review />
         <News />
         <Career />
+        <Cta />
     </div>
 </template>
