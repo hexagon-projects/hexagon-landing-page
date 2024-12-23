@@ -27,7 +27,7 @@
           <div class="flex flex-row w-full md:w-2/3 md:ml-20 justify-between">
             <div class="mr-20 mb-6 md:mb-0 flex flex-col">
               <h2 class="font-semibold text-sl mb-3">QUICK LINKS</h2>
-              <ul class="mt-2 flex-col space-y-2"> 
+              <ul class="mt-2 flex-col space-y-3"> 
                 <li><a href="#" class="text-blue-600 hover:underline">About us</a></li>
                 <li><a href="#" class="text-blue-600 hover:underline">Services</a></li>
                 <li><a href="#" class="text-blue-600 hover:underline">Portfolio</a></li>
@@ -38,7 +38,7 @@
             </div>
             <div class="mr-10 mb-6 md:flex flex-col">
               <h2 class="font-semibold text-sl mb-3">OUR ECOSYSTEM</h2>
-              <ul class="mt-2 flex-col space-y-2">
+              <ul class="mt-2 flex-col space-y-3">
                 <li><a href="#" class="text-blue-600 hover:underline">Hexamedia</a></li>
                 <li><a href="#" class="text-blue-600 hover:underline">Hexa Journal</a></li>
               </ul>
@@ -68,13 +68,6 @@
       </div>
   </template>
   
-  <script>
-  export default {
-    name: 'Footer',
-  }
-  </script>
-  
   <style scoped>
-  /* Add any additional styles here */
   </style>
   
