@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-white text-gray-800 px-[112px] mt-10">
+    <footer class="bg-white text-gray-800 px-[50px] md:px-[112px] md:mt-10">
       <div class="container mx-auto py-8">
         <div class="flex flex-col md:flex-row justify-between">
           <div class="flex flex-col mb-6 md:mb-0 w-full md:w-1/3">
@@ -24,7 +24,7 @@
               </a>
             </div>
           </div>
-          <div class="flex flex-row w-full md:w-2/3 md:ml-20 justify-between">
+          <div class="flex flex-col md:flex-row w-full md:w-2/3 md:ml-20 justify-between">
             <div class="mr-20 mb-6 md:mb-0 flex flex-col">
               <h2 class="font-semibold text-sl mb-3">QUICK LINKS</h2>
               <ul class="mt-2 flex-col space-y-3"> 
