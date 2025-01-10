@@ -31,8 +31,8 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                     <p class="text-[16px] text-gray-600 dark:text-gray-400">Collaborate with us to create a responsive,
                         high-performance website tailored to your business needs.</p>
                 </div>
-                <div class="px-[32px]">
-                    <img src="@/assets/about-us/it-consultation.png" alt="IT Consultation" />
+                <div class="w-full h-full">
+                    <img src="@/assets/about-us/it-consultation.png" alt="IT Consultation" class="w-full h-full object-cover"/>
                 </div>
             </div>
 
@@ -45,8 +45,8 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                     <p class="text-[16px] text-gray-600 dark:text-gray-400">Boost your digital reach with targeted strategies, audience
                         engagement, and measurable growth for your brand.</p>
                 </div>
-                <div class="px-[56px] pt-[40px]">
-                    <img src="@/assets/about-us/digital-marketing.png" alt="Digital Marketing">
+                <div class="w-full px-[56px] pt-[40px]">
+                    <img src="@/assets/about-us/digital-marketing.png" alt="Digital Marketing" class="w-full h-auto object-cover rounded-xl">
                 </div>
             </div>
         </div>
@@ -59,8 +59,8 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                     <p class="text-[16px] text-gray-600 dark:text-gray-400">Craft a powerful brand identity to stand out, attract
                         customers, and build lasting industry impact.</p>
                 </div>
-                <div class="">
-                    <img src="@/assets/about-us/branding.png" alt="Branding">
+                <div class="w-full px-[56px] pb-[32px]">
+                    <img src="@/assets/about-us/branding.png" alt="Branding" class="w-full h-auto object-cover rounded-xl">
                 </div>
             </div>
             <div
@@ -71,8 +71,8 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                     <p class="text-[16px] text-gray-600 dark:text-gray-400">Expert guidance to enhance media strategies, increase
                         visibility, and strengthen your brand's market position.</p>
                 </div>
-                <div class="lg:max-w-[382px] lg:w-full">
-                    <img src="@/assets/about-us/media-consultant.png" alt="Media Consultant" class="rounded-tl-2xl">
+                <div class="lg:max-w-[420px] w-full">
+                    <img src="@/assets/about-us/media-consultant.png" alt="Media Consultant" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>

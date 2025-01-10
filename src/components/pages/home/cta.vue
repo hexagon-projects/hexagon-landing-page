@@ -3,6 +3,7 @@ import Button from '@/components/button/Button.vue';
 </script>
 
 <template>
+
   <div class="relative h-screen max-h-[500px] mb-16 md:relative">
     <div
       class="flex flex-col items-center justify-center hero-section-bg absolute w-full h-full bg-no-repeat z-0 -mt-[48px]">

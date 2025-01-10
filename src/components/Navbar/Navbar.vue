@@ -3,6 +3,9 @@ import { ref, onMounted, watch } from "vue";
 
 const isLightMode = ref(false);
 
+const toggleNavbar = ref(false);
+const toggleDropdown = ref(false);
+
 const toggleTheme = () => {
     isLightMode.value = !isLightMode.value;
     if (isLightMode.value) {
@@ -66,7 +69,7 @@ const navItems = [
                 <div class="flex items-center gap-[40px]">
                     <img class="flex-initial dark:saturate-0" src="@/assets/hexagon.svg" alt="Hexagon Inc.">
                     <div class="flex-none hidden gap-8 lg:flex">
-                        <RouterLink v-for="item in navItems" :to="{ name: item.route }" class="relative dark:text-white"
+                        <RouterLink v-for="item in navItems" :key="item.route" :to="{ name: item.route }" class="relative dark:text-white"
                             active-class="font-medium mb-1 after:content-[''] after:block after:absolute after:left-1/2 after:-translate-x-1/2 after:w-2 after:h-2 after:rounded-full after:bg-light-primary dark:after:bg-white after:mt-4">
                             <span>{{ item.text }}</span>
                         </RouterLink>
@@ -116,7 +119,7 @@ const navItems = [
     </nav>
     <div v-if="toggleNavbar" class="z-10 w-full h-full bg-white lg:hidden">
         <div class="flex flex-col items-center">
-            <RouterLink v-for="item in navItems" :to="{ name: item.route }" class="relative w-full py-6 text-center"
+            <RouterLink v-for="item in navItems" :key="item.route" :to="{ name: item.route }" class="relative w-full py-6 text-center"
                 active-class="after:content-[''] after:block after:absolute after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-1 after:rounded-full after:bg-light-primary after:mt-1">
                 <span>{{ item.text }}</span>
             </RouterLink>
