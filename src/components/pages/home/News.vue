@@ -45,26 +45,35 @@ onMounted(() => {
 </script>
 
 <template>
-    <div>
+    <div class="pt-40">
         <div class="px-[56px] md:px-[112px]">
             <div class="mb-0">
-                <span class="text-sm font-semibold px-[10px]">NEWS AND INSIGHT</span>
+                <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">NEWS AND
+                    INSIGHT</span>
                 <div class="flex items-center justify-between">
-                    <h1 class="font-semibold text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">Get the latest articles from our journal, writing, discuss and share</h1>
-                    <ButtonOutline>
+                    <h1 class="font-semibold text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">Get the latest
+                        articles from our journal, writing, discuss and share</h1>
+                    <Button>
                         <font-awesome-icon icon="arrow-right" />
-                    </ButtonOutline>
+                        Show All Articles
+                    </Button>
                 </div>
             </div>
         </div>
         <div class="flex justify-start gap-[24px] py-[56px] overflow-x-auto project-container">
-            <div v-for="(card, index) in cardItems" class="p-[24px] w-[395px] rounded-2xl flex-shrink-0 border-r-2" :class="{ 'ml-[56px] md:ml-[112px]' : index == 0, '' : index + 1 == activeCard }">
+            <div v-for="(card, index) in cardItems"
+                class="p-[24px] w-[395px] rounded-2xl flex-shrink-0 border-r-2 dark:border-none dark:bg-[#0D0D0D]"
+                :class="{ 'ml-[56px] md:ml-[112px]' : index == 0, '' : index + 1 == activeCard }">
                 <img :src="card.image" :alt="card.alt" class="mb-[24px] rounded-2xl">
                 <div class="space-y-[16px]">
-                    <span class="px-3 py-2 text-xs text">{{ card.tag }}   |   {{ card.Posted }}</span>
-                    <h1 class="text-gray-800 font-raleway text-[25px] font-bold">{{ card.title }}</h1>
-                    <p class="text-[16px] text-gray-600 text-justify">{{ card.description }}</p>
-                    <span class="inline-block text-gray-900">Admin Hexagon</span>
+                    <span class="px-3 py-2 text-xs font-bold text-blue-500">{{ card.tag }}</span> | <span
+                        class="px-3 py-2 text-xs text-black font-semibold dark:text-[#D6DADE]">{{ card.Posted }}</span>
+                    <h1 class="text-gray-800 dark:text-white font-raleway text-[25px] font-bold">{{ card.title }}</h1>
+                    <p class="text-[13px] text-gray-600 font-light dark:text-[#D6DADE]">{{ card.description }}</p>
+                    <div class="flex items-center gap-2">
+                        <img src="@/assets/logoA.png" alt="">
+                        <span class="inline-block text-gray-900 dark:text-white">Admin Hexagon</span>
+                    </div>
                 </div>
             </div>
         </div>

@@ -26,8 +26,9 @@ const logos = ref([
 </script>
 
 <template>
-  <div class="px-[56px] md:px-[112px]">
-    <p class="text-center font-raleway font-medium text-gray-700 mb-6">Integrated with over 100 mainstream media outlets
+  <div class="px-[56px] md:px-[112px] dark:bg-black">
+    <p class="mb-6 font-medium text-center text-gray-700 font-raleway dark:text-[#F0EFF5]">Integrated with over 100
+      mainstream media outlets
     </p>
     <div class="flex items-center justify-center gap-[98px]">
       <img v-for="logo in logos" :key="logo.path" :src="logo.path" :alt="logo.alt">

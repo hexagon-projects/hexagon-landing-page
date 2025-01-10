@@ -11,7 +11,7 @@ import Cta from '@/components/pages/home/cta.vue';
 </script>
 
 <template>
-    <div class="space-y-[156px]">
+    <div class=" dark:bg-black">
         <!-- <Hero /> -->
         <OurPartner />
         <AboutUs />
