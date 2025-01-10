@@ -1,8 +1,8 @@
 <template>
-    <div class="h-screen pt-52 pb-[1000px]">
+    <div class=" pt-52">
         <img src="@/assets/about-us/ser_shape.png" class="absolute right-0" />
-        <img src="@/assets/about-us/ser_shape_r.png" class="absolute left-0" />
-        <div class="max-w-[1000px] flex justifty-center mx-auto">
+        <img src="@/assets/about-us/ser_shape_r.png" class="absolute" />
+        <div class="max-w-[1000px] flex justifty-center mx-auto pb-32 pt-20">
             <div class="flex flex-col items-center justify-center gap-2.5 mt-8">
                 <div class="flex items-center gap-2.5">
                     <div class="w-8 h-1 bg-light-primary"></div>

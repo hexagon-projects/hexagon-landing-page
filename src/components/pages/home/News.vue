@@ -50,7 +50,7 @@ onMounted(() => {
             <div class="mb-0">
                 <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">NEWS AND
                     INSIGHT</span>
-                <div class="flex items-center justify-between">
+                <div class="z-20 flex items-center justify-between">
                     <h1 class="font-semibold text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">Get the latest
                         articles from our journal, writing, discuss and share</h1>
                     <Button>

@@ -3,15 +3,15 @@
     <div class="relative">
         <div class="">
             <div class="relative h-[1000px]">
-                <video  src="@/assets/about-us/hero.mp4" autoplay loop muted
-                    class="absolute object-cover w-full h-full -z-10">
+                <video  src="@/assets/about-us/output.mp4" autoplay loop muted
+                    class="absolute z-10 object-cover w-full h-full">
                 </video>
                 
-                <div class="absolute bottom-0 z-0 w-full h-full bg-gradient-to-t from-white dark:from-black via-white/20 dark:black/20 to-transparent">
+                <div class="absolute bottom-0 z-20 w-full h-full bg-gradient-to-t from-white dark:from-black via-white/20 dark:black/20 to-transparent">
                 </div>
                 
                 <div class="z-20 flex justify-center w-full h-full pt-40">
-                    <div class="mb-16 max-w-[1000px] space-y-8">
+                    <div class="mb-16 max-w-[1000px] space-y-8 z-20">
                         <h1 class="text-6xl font-bold text-center text-white font-raleway">
                             Be the best partner to create solutions together
                         </h1>
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <div
-                        class="w-full p-4 sm:p-6 md:p-8 space-y-4 border-2 border-white/30 rounded-xl absolute bg-white/20 backdrop-blur max-w-[1000px] -bottom-20 md:-bottom-40">
+                        class="w-full z-30 p-4 sm:p-6 md:p-8 space-y-4 border-2 border-white/30 rounded-xl absolute bg-white/20 backdrop-blur max-w-[1000px] -bottom-20 md:-bottom-40">
                         <div class="flex items-center gap-4 sm:gap-6">
                             <div class="flex gap-1 sm:gap-2">
                                 <div class="block w-3 h-3 sm:w-3.5 sm:h-3.5 bg-white rounded-full"></div>

@@ -25,7 +25,7 @@ onMounted(async () => {
     <div class="relative h-screen max-h-[900px] mb-16 py-40">
         <div class="hero-section-bg absolute w-full h-full bg-no-repeat z-0 -mt-[48px]">
             <canvas ref="canvas" />
-            <span class="bg-gradient-to-b absolute bottom-0 from-transparent w-screen h-1/2 to-white dark:to-black z-[2]"></span>
+            <span class="bg-gradient-to-b absolute bottom-0 from-transparent w-full h-1/2 to-white dark:to-black z-[2]"></span>
         </div>
         <div class="absolute flex flex-col items-center -translate-x-1/2 left-1/2 -bottom-16 gap-9">
             <img src="@/assets/line.svg" alt="">

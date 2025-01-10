@@ -22,7 +22,7 @@
               <img src="@/assets/footer/ig.svg" alt="Instagram Icon" class="h-8" />
             </a>
             <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-              <img src="@/assets/footer/yt.svg" alt="YouTube Icon" class="h-8" />
+              <img src="@/assets/footer/yt.svg" alt="YouTube Icon" class="h-8" /> 
             </a>
           </div>
         </div>

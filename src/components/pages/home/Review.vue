@@ -48,11 +48,11 @@ const goToPage = (page) => {
         <!-- <img src="../../../assets/about-us/hexbottomshape.png" alt="" class="absolute -z-[1]  -bottom-[900px] right-52 "> -->
         <img src="../../../assets/about-us/hexsideshapelight.png" alt="" class="absolute right-0 z-0 block dark:hidden">
         <img src="../../../assets/about-us/hexsideshape.png" alt="" class="absolute right-0 z-0 hidden dark:block">
-        <div class="flex flex-col gap-9 items-center text-center mb-[78px]">
+        <div class="flex flex-col z-0 gap-9 items-center text-center mb-[78px]">
             <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">Review</span>
             <h1 class="font-raleway text-[30px] font-bold text-gray-800 dark:text-white">What Our Clients Say</h1>
         </div>
-        <div class="flex flex-col lg:flex-row gap-[18px] mb-[18px]">
+        <div class="flex flex-col lg:flex-row gap-[18px] mb-[18px] z-10">
             <div class="lg:max-w-[750px] w-full flex flex-col bg-[#2C7EF9] rounded-[20px] shadow-lg relative">
                 <div class="p-[56px] pt-[55px]">
                     <p class="text-[16px] text-white font-normal">{{ reviews[currentPage].text }}</p>
@@ -76,17 +76,19 @@ const goToPage = (page) => {
                 </div>
             </div>
 
-            <div class="max-w-[450px] w-full flex flex-col md:flex-col items-center rounded-[16px] p-[5px]">
-                <div class="flex flex-col items-center gap-2">
+            <div class="max-w-[450px] w-full flex flex-col md:flex-col items-center rounded-[16px] p-[5px] relative">
+                <div class="z-20 flex flex-col items-center gap-2">
+                    <!-- Top scroll button -->
                     <img src="@/assets/Top arrow.svg" @click="prevPage" :disabled="currentPage === 0" alt="Previous"
-                        class="cursor-pointer" />
+                        class="z-30 cursor-pointer" />
                     <div class="flex-col">
                         <img v-for="(review, index) in reviews" :key="index" src="@/assets/Dot.svg"
-                            @click="goToPage(index)" :class="{'active-dot': currentPage === index}" alt="Page Dot"
-                            class="pt-2 pb-2 cursor-pointer" />
+                            @click="goToPage(index)" :class="{ 'active-dot': currentPage === index }" alt="Page Dot"
+                            class="z-30 pt-2 pb-2 cursor-pointer" />
                     </div>
+                    <!-- Scroll button -->
                     <img src="@/assets/scroll.svg" @click="nextPage" :disabled="currentPage === totalPages - 1"
-                        alt="Next" class="cursor-pointer" />
+                        alt="Next" class="z-30 cursor-pointer" />
                 </div>
             </div>
         </div>
