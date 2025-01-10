@@ -11,6 +11,12 @@ export default {
   },
   theme: {
     extend: {
+      height: {
+        100: "400px",
+      },
+      width: {
+        25: "100px",
+      },
       colors: {
         'light-primary': '#0A58CA',
         'light-primary-2': '#084CAD',
@@ -25,8 +31,8 @@ export default {
         'blue-gradient-2': '#2F84FF',
       },
       fontFamily: {
-        'sans': ['Sora', 'sans-serif'],
-        'raleway': ['Raleway', 'sans-serif']
+        sans: ["Sora", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
       },
     },
   },

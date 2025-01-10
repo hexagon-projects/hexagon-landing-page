@@ -2,6 +2,7 @@
 import { ref, onMounted, watch } from "vue";
 
 const isLightMode = ref(false);
+
 const toggleNavbar = ref(false);
 const toggleDropdown = ref(false);
 
@@ -125,3 +126,4 @@ const navItems = [
         </div>
     </div>
 </template>
+
