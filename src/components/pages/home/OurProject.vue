@@ -78,7 +78,10 @@ onMounted(() => {
             </div>
         </div>
         <div class="flex justify-start gap-[24px] py-[56px] overflow-x-auto project-container">
-            <div v-for="(card, index) in cardItems" class="p-[24px] w-[395px] rounded-2xl flex-shrink-0" :class="{ 'ml-[56px] md:ml-[112px]' : index == 0, 'shadow-2xl' : index + 1 == activeCard }">
+            <div v-for="(card, index) in cardItems" 
+                 :key="index"
+                 class="p-[24px] w-[395px] rounded-2xl flex-shrink-0" 
+                 :class="{ 'ml-[56px] md:ml-[112px]' : index == 0, 'shadow-2xl' : index + 1 == activeCard }">
                 <img :src="card.image" :alt="card.alt" class="mb-[24px]">
                 <div class="space-y-[16px]">
                     <span class="px-3 py-2 bg-gray-100 rounded text-xs">{{ card.tag }}</span>

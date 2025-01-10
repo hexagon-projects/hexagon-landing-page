@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode : "class",
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./node_modules/flyonui/dist/js/*.js",
   ],
+  flyonui: {
+    themes: ["light", "dark", "gourmet"]
+  },
   theme: {
     extend: {
       colors: {
@@ -16,6 +21,8 @@ export default {
         'gray-700': '#344054',
         'gray-800': '#1D2939',
         'light-blue-100': '#E0F2FE',
+        'blue-gradient-1': '#0C57C3',
+        'blue-gradient-2': '#2F84FF',
       },
       fontFamily: {
         'sans': ['Sora', 'sans-serif'],
@@ -23,6 +30,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("flyonui"),
+    require("flyonui/plugin")
+  ],
 }
-

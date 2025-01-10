@@ -21,8 +21,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
             </div>
         </div>
         <div class="flex flex-col lg:flex-row gap-[18px] mb-[18px]">
-            <div
-                class="lg:max-w-[750px] w-full flex flex-col bg-[#F5F6FA] rounded-[16px] items-center">
+            <div class="lg:max-w-[750px] w-full flex flex-col bg-[#F5F6FA] rounded-[16px] items-center overflow-hidden">
                 <div class="p-[56px] pt-[55px]">
                     <h1 class="text-[32px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gray-800 mb-4">
                         IT Consultation: Digital Solutions For
@@ -30,48 +29,45 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                     <p class="text-[16px] text-gray-600">Collaborate with us to create a responsive,
                         high-performance website tailored to your business needs.</p>
                 </div>
-                <div class="px-[32px]">
-                    <img src="@/assets/about-us/it-consultation.png" alt="IT Consultation" />
+                <div class="w-full h-full">
+                    <img src="@/assets/about-us/it-consultation.png" alt="IT Consultation" class="w-full h-full object-cover"/>
                 </div>
             </div>
 
-            <div
-                class="lg:max-w-[450px] w-full flex flex-col lg:flex-col-reverse items-center bg-[#F5F6FA] rounded-[16px]">
-                <div class="p-[56px] pt-0">
+            <div class="lg:max-w-[450px] w-full flex flex-col lg:flex-col-reverse items-center bg-[#F5F6FA] rounded-[16px]">
+                <div class="p-[56px] pt-0 lg:pt-[56px]">
                     <h1 class="text-[32px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gray-800 mb-4">
                         Digital Marketing: Boost Your Brand's
                         Online Presence</h1>
                     <p class="text-[16px] text-gray-600">Boost your digital reach with targeted strategies, audience
                         engagement, and measurable growth for your brand.</p>
                 </div>
-                <div class="px-[56px] pt-[40px]">
-                    <img src="@/assets/about-us/digital-marketing.png" alt="Digital Marketing">
+                <div class="w-full px-[56px] pt-[40px]">
+                    <img src="@/assets/about-us/digital-marketing.png" alt="Digital Marketing" class="w-full h-auto object-cover rounded-xl">
                 </div>
             </div>
         </div>
         <div class="flex flex-col lg:flex-row gap-[18px]">
-            <div
-                class="lg:max-w-[450px] w-full flex flex-col items-center bg-[#F5F6FA] rounded-[16px]">
+            <div class="lg:max-w-[450px] w-full flex flex-col items-center bg-[#F5F6FA] rounded-[16px]">
                 <div class="px-[56px] pt-[40px]">
                     <h1 class="text-[32px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gray-800 mb-4">
                         Branding: Create a Distinct and Impactful Brand</h1>
                     <p class="text-[16px] text-gray-600">Craft a powerful brand identity to stand out, attract
                         customers, and build lasting industry impact.</p>
                 </div>
-                <div class="">
-                    <img src="@/assets/about-us/branding.png" alt="Branding">
+                <div class="w-full px-[56px] pb-[32px]">
+                    <img src="@/assets/about-us/branding.png" alt="Branding" class="w-full h-auto object-cover rounded-xl">
                 </div>
             </div>
-            <div
-                class="lg:max-w-[750px] w-full flex flex-col lg:flex-row-reverse items-center lg:items-start bg-[#F5F6FA] rounded-[16px]">
-                <div class="flex-initial px-[48px] pt-[55px]">
+            <div class="lg:max-w-[750px] w-full flex flex-col lg:flex-row-reverse items-center lg:items-start bg-[#F5F6FA] rounded-[16px] overflow-hidden">
+                <div class="flex-1 px-[48px] pt-[55px] pb-[32px] lg:pb-0">
                     <h1 class="text-[32px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gray-800 mb-4">
                         Media Consultant: Strategic Guide for Media Excellence</h1>
                     <p class="text-[16px] text-gray-600">Expert guidance to enhance media strategies, increase
                         visibility, and strengthen your brand's market position.</p>
                 </div>
-                <div class="lg:max-w-[382px] lg:w-full">
-                    <img src="@/assets/about-us/media-consultant.png" alt="Media Consultant" class="rounded-tl-2xl">
+                <div class="lg:max-w-[420px] w-full">
+                    <img src="@/assets/about-us/media-consultant.png" alt="Media Consultant" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
