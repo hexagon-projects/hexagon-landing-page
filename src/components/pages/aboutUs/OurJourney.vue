@@ -6,8 +6,10 @@
                 <h4 class="text-sm">Our Journey</h4>
             </div>
             <div class="space-y-5">
-                <h3 class="text-2xl md:text-4xl font-raleway text-[#272D3E]">A Legacy of Innovation and Growth</h3>
-                <p class="text-[#272D3E]/80 text-sm md:text-base">Founded under the name PT. Hexagon Karyatama
+                <h3 class="text-2xl md:text-4xl font-raleway text-[#272D3E] dark:text-white">A Legacy of Innovation and
+                    Growth</h3>
+                <p class="text-[#272D3E]/80 dark:text-gray-300 text-sm md:text-base">Founded under the name PT. Hexagon
+                    Karyatama
                     Indonesia, Hexagon Inc. is a
                     company that operates in
                     the field of digital artwork and IT solutions. With a focus on education and a commitment to
@@ -23,21 +25,21 @@
         <div class="flex flex-col items-center justify-between h-auto">
             <div class="flex justify-center w-full gap-4">
                 <div class="relative">
-                    <img :class="selectedImage === 1 ? 'w-72 h-100' : 'w-25 h-100'" src="https://picsum.photos/id/237/200/300"
-                        alt="Image 1"
+                    <img :class="selectedImage === 1 ? 'w-72 h-100' : 'w-25 h-100' + ' dark:filter dark:brightness-75'"
+                        src="https://picsum.photos/id/237/200/300" alt="Image 1"
                         class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
                         @click="selectImage(1)" />
                     <div v-if="selectedImage === 1"
-                        class="absolute inset-x-3.5 p-4 rounded-lg w-[90%] bottom-3.5 bg-white/30 backdrop-blur-md border border-white/50">
-                        <h3 class="text-lg font-bold text-black">Workshop 1</h3>
-                        <p class="text-sm text-black">
+                        class="absolute inset-x-3.5 p-4 rounded-lg w-[90%] bottom-3.5 bg-white/30 dark:bg-gray-700/50 backdrop-blur-md border border-white/50">
+                        <h3 class="text-lg font-bold text-black dark:text-white">Workshop 1</h3>
+                        <p class="text-sm text-black dark:text-gray-300">
                             Jl. Abdul Halim No.128, Cimahi Tengah, Kota Cimahi 40522
                         </p>
                     </div>
                 </div>
                 <div class="relative">
-                    <img :class="selectedImage === 2 ? 'w-72 h-100' : 'w-25 h-100'" src="https://picsum.photos/id/237/200/300"
-                        alt="Image 2"
+                    <img :class="selectedImage === 2 ? 'w-72 h-100' : 'w-25 h-100'"
+                        src="https://picsum.photos/id/237/200/300" alt="Image 2"
                         class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
                         @click="selectImage(2)" />
                     <div v-if="selectedImage === 2"
@@ -49,8 +51,8 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <img :class="selectedImage === 3 ? 'w-72 h-100' : 'w-25 h-100'" src="https://picsum.photos/id/237/200/300"
-                        alt="Image 3"
+                    <img :class="selectedImage === 3 ? 'w-72 h-100' : 'w-25 h-100'"
+                        src="https://picsum.photos/id/237/200/300" alt="Image 3"
                         class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
                         @click="selectImage(3)" />
                     <div v-if="selectedImage === 3"
@@ -76,3 +78,13 @@ const selectImage = (imageIndex) => {
     selectedImage.value = imageIndex;
 };
 </script>
+
+<style scoped>
+.dark {
+    /* Dark mode styles */
+    background-color: #1a202c;
+    /* Example dark background color */
+    color: #ffffff;
+    /* Example dark text color */
+}
+</style>

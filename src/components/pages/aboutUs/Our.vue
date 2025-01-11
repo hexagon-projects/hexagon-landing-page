@@ -1,33 +1,42 @@
 <template>
-    <div class="relative grid grid-cols-2 gap-8 px-32">
-        <img src="@/assets/about-us/side shape.svg" alt="" class="absolute top-0 right-0">
+    <div class="relative grid gap-8 px-6 sm:grid-cols-1 md:grid-cols-2 md:px-32">
+        <!-- Decorative Shape -->
+        <img src="@/assets/about-us/side shape.svg" alt="" class="absolute top-0 right-0 opacity-20 dark:opacity-30">
+
+        <!-- Left Section -->
         <div>
-            <h1 class="text-[#063B86] text-3xl font-bold font-raleway">
+            <h1 class="text-[#063B86] dark:text-[#2F84FF] text-2xl md:text-3xl font-bold font-raleway">
                 Empowering Growth with Purpose and Integrity
             </h1>
-            <h4 class="text-[#697B98] mt-4">
+            <h4 class="text-[#697B98] dark:text-gray-400 mt-4">
                 Guided by a commitment to excellence and innovation, we envision a future where digital solutions drive
                 positive impact. Our mission is to create sustainable growth by aligning business success with values
                 that benefit both clients and communities.
             </h4>
             <div class="mt-8 space-y-4">
-                <button v-for="(item, index) in items" :key="index" @click="selected = index"
-                    :class="['w-full text-left px-9 py-6 rounded-lg flex items-center justify-between ', selected === index ? 'bg-gradient-to-r from-[#0C57C3] to-[#2F84FF] text-white shadow-[0_30px_60px_0_rgba(59,130,246,0.25)]' : 'hover:border hover:border-[#0C57C3']">
+                <button v-for="(item, index) in items" :key="index" @click="selected = index" :class="[
+                    'w-full text-left px-6 py-4 rounded-lg flex items-center justify-between transition-all',
+                    selected === index
+                        ? 'bg-gradient-to-r from-[#0C57C3] to-[#2F84FF] text-white shadow-md dark:shadow-lg'
+                        : 'hover:border hover:border-[#0C57C3] dark:hover:border-[#2F84FF] dark:text-gray-300'
+                ]">
                     {{ item.title }}
                     <font-awesome-icon icon="arrow-right" />
                 </button>
             </div>
         </div>
-        
-        <div class="z-10 p-6 space-y-4 rounded-lg shadow bg-white/50 backdrop-blur-md">
-            <h2 class="text-2xl font-bold text-[#063B86]">
+
+        <!-- Right Section -->
+        <div
+            class="z-10 p-6 space-y-4 rounded-lg shadow bg-white/50 backdrop-blur-md dark:bg-gray-800/50 dark:shadow-lg">
+            <h2 class="text-2xl font-bold text-[#063B86] dark:text-[#2F84FF]">
                 {{ items[selected].title }}
             </h2>
-            <p class="mt-4 text-[#697B98]">
+            <p class="mt-4 text-[#697B98] dark:text-gray-400">
                 {{ items[selected].content }}
             </p>
             <div class="mt-4">
-                <img :src="items[selected].image" alt="Content Image" class="w-full" />
+                <img :src="items[selected].image" alt="Content Image" class="w-full rounded-lg shadow-md" />
             </div>
         </div>
     </div>
