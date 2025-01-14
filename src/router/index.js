@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import ServiceView from '@/views/ServiceView.vue'
 import PortolioView from '@/views/PortofolioView.vue'
 import AboutUsViewVue from '@/views/AboutUsView.vue'
+import CareerView from '@/views/CareerView.vue'
+import ContactView from '@/views/ContactView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,12 +37,12 @@ const router = createRouter({
     {
       path: '/career',
       name: 'career',
-      component: HomeView,
+      component: CareerView,
     },
     {
       path: '/contact',
       name: 'contact',
-      component: HomeView,
+      component: ContactView,
     },
   ],
 })

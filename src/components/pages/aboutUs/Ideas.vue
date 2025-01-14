@@ -40,8 +40,8 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
+<script setup>
+import { ref } from 'vue';
 
 const services = ref([
     'IT Consultation',
