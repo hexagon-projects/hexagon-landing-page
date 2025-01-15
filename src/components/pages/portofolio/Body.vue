@@ -6,50 +6,57 @@ import { onMounted, ref, computed } from 'vue';
 const cardItems = 
 [
     {
+        id: 1,
         tag: 'Digital Marketing',
-        title: 'Universitas Jendral Achmad Yani',
+        project: 'Universitas Jendral Achmad Yani',
         description: 'We successfully increased awareness and registration traffic by implementing social media optimization, digital marketing strategies, advertising, and press releases. As a result, we achieved up to 144% of the target registrations for the 2022 New Student Admissions.',
         image: '/src/assets/portofolio/Unjani.png',
         alt: 'Project'
     },
     {
+        id: 2,
         tag: 'Website Development',
-        title: 'Smartpol Application',
+        project: 'Smartpol Application',
         description: 'Smartpol is a digital service specifically designed for political campaigns, helping clients effectively manage their campaign strategies with advanced technological solutions.',
         image: '/src/assets/portofolio/Smartpol.png',
         alt: 'Project'
     },
     {
+        id: 3,
         tag: 'Website Development',
-        title: 'Berseka Application',
+        project: 'Berseka Application',
         description: 'Berseka is a waste management application designed to support efficient and eco-friendly waste management practices..',
         image: '/src/assets/portofolio/Berseka.png',
         alt: 'Project'
     },
     {
+        id: 4,
         tag: 'Website Development',
-        title: 'Jatidiri.app',
+        project: 'Jatidiri.app',
         description: 'Jatidiri is a super app focused on psychology, helping users discover their potential, interests, and talents, along with providing online psychological consultation services..',
         image: '/src/assets/portofolio/Jatidiri.png',
         alt: 'Project'
     },
     {
+        id: 5,
         tag: 'Digital Marketing',
-        title: 'ULBI',
+        project: 'ULBI',
         description: 'We optimized digital assets and marketing campaigns to boost student registrations at ULBI through various digital platforms. This project involved digital asset analysis, pixel integration for ad tracking, content creation and optimization, ad campaign launches, and campaign evaluations to meet conversion targets.',
         image: '/src/assets/portofolio/Ulbi.png',
         alt: 'Project'
     },
     {
+        id: 6,
         tag: 'web Development',
-        title: 'Edutama - Aplikasi Sistem Keauangan Sekolah dan Pesantren',
+        project: 'Edutama - Aplikasi Sistem Keauangan Sekolah dan Pesantren',
         description: 'Edutama is a financial application designed to assist private schools, boarding schools, and other educational institutions in managing their finances more efficiently.',
         image: '/src/assets/portofolio/Edutama.png',
         alt: 'Project'
     },
     {
+        id: 7,
         tag: 'Speaker',
-        title: 'KEMENKOP',
+        project: 'KEMENKOP',
         description: 'We delivered presentations for KEMENKOP, providing valuable insights and supporting their initiatives through in-depth education and comprehensive discussions.',
         image: '/src/assets/portofolio/Kemenkop.png',
         alt: 'Project'
@@ -83,16 +90,20 @@ function prevPage() {
 function goToPage(page) {
     currentPage.value = page
 }
+
+const redirectToPost = () => {
+  router.push(`/portfolio/${cardItems.id}`); // Langsung gunakan prop `id`
+};
 </script>
 
 <template>
     <div class="px-[56px] md:px-[112px] dark:bg-black">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div v-for="(card, index) in paginatedItems" :key="index" class="bg-white dark:bg-black dark:shadow-gray-600 shadow-lg overflow-hidden p-[24px] w-[395px] rounded-2xl flex-shrink-0">
+            <div @click="redirectToPost" v-for="(card, index) in paginatedItems" :key="index" class="bg-white dark:bg-black dark:hover:shadow-gray-800 transition-all duration-300 shadow-lg overflow-hidden p-[24px] w-[395px] rounded-2xl flex-shrink-0">
                 <img :src="card.image" :alt="card.alt" class="w-full h-48 object-cover mb-[24px] rounded-lg">
                 <div class="space-y-[16px]">
                     <span class="px-3 py-2 bg-gray-100 rounded text-xs dark:bg-gray-800">{{ card.tag }}</span>
-                    <h1 class="text-gray-800 font-raleway text-[32px] font-semibold dark:text-white">{{ card.title }}</h1>
+                    <h1 class="text-gray-800 font-raleway text-[32px] font-semibold dark:text-white">{{ card.project }}</h1>
                     <p class="text-[16px] text-gray-600 dark:text-gray-400">{{ card.description }}</p>
                     <RouterLink class="inline-block">
                         <span>See Details</span>

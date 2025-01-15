@@ -3,6 +3,9 @@ import HomeView from '../views/HomeView.vue'
 import ServiceView from '@/views/ServiceView.vue'
 import PortolioView from '@/views/PortofolioView.vue'
 import AboutUsViewVue from '@/views/AboutUsView.vue'
+import NewsView from '@/views/NewsView.vue'
+import BlogPostView from '@/views/BlogPostView.vue'
+import PortofolioPostView from '@/views/PortofolioPostView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,7 +33,7 @@ const router = createRouter({
     {
       path: '/news',
       name: 'news',
-      component: HomeView,
+      component: NewsView,
     },
     {
       path: '/career',
@@ -41,6 +44,16 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: HomeView,
+    },
+    {
+      path: '/news/:id',
+      name: 'News',
+      component: BlogPostView,
+    },
+    {
+      path: '/portfolio/:id',
+      name: 'Portfolio',
+      component: PortofolioPostView,
     },
   ],
 })

@@ -1,13 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode : "class",
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-    "./node_modules/flyonui/dist/js/*.js",
-  ],
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", "./node_modules/flyonui/dist/js/*.js"],
   flyonui: {
-    themes: ["light", "dark", "gourmet"]
+    themes: ["light", "dark", "gourmet"],
   },
   theme: {
     extend: {
@@ -18,26 +14,24 @@ export default {
         25: "100px",
       },
       colors: {
-        'light-primary': '#0A58CA',
-        'light-primary-2': '#084CAD',
-        'light-secondary': '#02B5FF',
-        'light-bg': '#F5F6FA',
-        'gray-100': '#F2F4F7',
-        'gray-600': '#475467',
-        'gray-700': '#344054',
-        'gray-800': '#1D2939',
-        'light-blue-100': '#E0F2FE',
-        'blue-gradient-1': '#0C57C3',
-        'blue-gradient-2': '#2F84FF',
+        "light-primary": "#0A58CA",
+        "light-primary-2": "#084CAD",
+        "light-secondary": "#02B5FF",
+        "light-bg": "#F5F6FA",
+        "gray-100": "#F2F4F7",
+        "gray-600": "#475467",
+        "gray-700": "#344054",
+        "gray-800": "#1D2939",
+        "light-blue-100": "#E0F2FE",
+        "blue-gradient-1": "#0C57C3",
+        "blue-gradient-2": "#2F84FF",
       },
       fontFamily: {
         sans: ["Sora", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
+        nunito: ["Nunito", "sans-serif"],
       },
     },
   },
-  plugins: [
-    require("flyonui"),
-    require("flyonui/plugin")
-  ],
-}
+  plugins: [require("flyonui"), require("flyonui/plugin"), require("@tailwindcss/typography")],
+};

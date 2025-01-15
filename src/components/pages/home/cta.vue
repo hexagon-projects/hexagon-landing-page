@@ -4,7 +4,7 @@ import Button from '@/components/button/Button.vue';
 
 <template>
 
-  <div class="relative h-screen max-h-[500px] mb-16 md:relative">
+  <div class="relative h-screen max-h-[500px] mb-16">
     <div
       class="flex flex-col items-center justify-center hero-section-bg absolute w-full h-full bg-no-repeat z-0 -mt-[48px]">
       <span class="bg-gradient-to-b absolute bottom-0 h-1/2 to-white z-[2]"></span>

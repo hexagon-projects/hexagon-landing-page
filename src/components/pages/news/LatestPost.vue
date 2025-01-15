@@ -6,7 +6,7 @@ import { onMounted, ref } from 'vue';
 const cardItems = [
     {
         tag: 'News',
-        Posted : 'Posted on 337 days ago' ,
+        Posted: 'Posted on 337 days ago',
         title: 'Industrial Visit of SMK NU Haurgeulis Kab. Indramayu: Building Strong Friendship..',
         description: 'On June 21, 2023, SMK NU Haurgeulis made a memorable industrial visit to PT. Hexagon Karyatama Indonesia. This visit is one of the school efforts in... ',
         image: '/src/assets/image1.png',
@@ -14,7 +14,7 @@ const cardItems = [
     },
     {
         tag: 'News',
-        Posted : 'Posted on 338 days ago' ,
+        Posted: 'Posted on 338 days ago',
         title: 'Tentang Hexagon',
         description: 'Ini Hexagon Inc., perusahaan di bidang branding dan pemasaran digital, telah mengumumkan kolaborasi strategis dengan tiga perusahaan terkemuka lainnya... ',
         image: '/src/assets/image1.png',
@@ -22,7 +22,7 @@ const cardItems = [
     },
     {
         tag: 'News',
-        Posted : 'Posted on 339 days ago' ,
+        Posted: 'Posted on 339 days ago',
         title: 'Hexagon Inc. Collaborates with 3 Well-Known Companies in Bandung City',
         description: 'Hexagon Inc., a company in the field of branding and digital marketing, has announced strategic collaborations with three other leading companies in B... ',
         image: '/src/assets/image1.png',
@@ -45,25 +45,16 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="pt-40">
+    <div class="py-24">
         <div class="px-[56px] md:px-[112px]">
-            <div class="mb-0">
-                <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">NEWS AND
-                    INSIGHT</span>
-                <div class="z-20 flex items-center justify-between">
-                    <h1 class="font-semibold text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">Get the latest
-                        articles from our journal, writing, discuss and share</h1>
-                    <Button>
-                        <font-awesome-icon icon="arrow-right" />
-                        Show All Articles
-                    </Button>
-                </div>
+            <div class="flex items-center justify-center mb-0">
+                <span class="inline text-3xl font-semibold text-[#212529] dark:text-white">Lates Posts</span>
             </div>
         </div>
         <div class="flex justify-start gap-[24px] py-[56px] overflow-x-auto project-container">
             <div v-for="(card, index) in cardItems"
                 class="p-[24px] w-[395px] flex-shrink-0 border-r-2 dark:border-none dark:bg-[#0D0D0D]"
-                :class="{ 'ml-[56px] md:ml-[112px]' : index == 0, '' : index + 1 == activeCard }">
+                :class="{ 'ml-[56px] md:ml-[112px]': index == 0, '': index + 1 == activeCard }">
                 <img :src="card.image" :alt="card.alt" class="mb-[24px] rounded-2xl">
                 <div class="space-y-[16px]">
                     <span class="px-3 py-2 text-xs font-bold text-blue-500">{{ card.tag }}</span> | <span
@@ -82,11 +73,11 @@ onMounted(() => {
 
 <style scoped>
 .project-container::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .project-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 </style>
