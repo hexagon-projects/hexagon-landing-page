@@ -16,7 +16,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                     <span class="h-2 w-2 bg-white block rounded-full"></span>
                     <span>Explore Position</span>
                 </Button>
-                <ButtonOutline>
+                <ButtonOutline @click="$router.push({ name: 'contact' })">
                     <span class="h-2 w-2 bg-light-secondary block rounded-full"></span>
                     <span class="dark:text-white">Request a Consultation</span>
                 </ButtonOutline>

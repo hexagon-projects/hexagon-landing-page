@@ -29,16 +29,16 @@
             </ul>
 
             <div class="flex flex-wrap gap-4">
-                <button
-                    class="flex items-center gap-3 py-3 text-white transition-colors bg-blue-600 rounded-full px-7 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600">
+                <Button
+                    @click="$router.push({ name: 'contact' })">
                     <div class="block w-2 h-2 bg-white rounded-full"></div>
                     See More
-                </button>
-                <button
-                    class="flex items-center gap-3 py-3 text-blue-600 transition-colors border rounded-full border-[#07439A] px-7 hover:bg-blue-50 dark:text-blue-400 dark:border-blue-400 dark:hover:bg-blue-900/20">
+                </Button>
+                <ButtonOutline
+                    @click="$router.push({ name: 'contact' })" >
                     <div class="block w-2 h-2 rounded-full bg-light-secondary dark:bg-blue-400"></div>
                     Request Consultation
-                </button>
+                </ButtonOutline>
             </div>
         </div>
     </div>
@@ -47,9 +47,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+import Button from '@/components/button/Button.vue';
+import ButtonOutline from '@/components/button/ButtonOutline.vue';
+
 const services = ref([
     'IT Consultation',
-    'Digital Marketing',
+    'Digital Marketing', 
     'Branding',
     'Media Consultant'
 ]);

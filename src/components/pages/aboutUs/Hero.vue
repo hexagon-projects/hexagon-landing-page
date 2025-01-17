@@ -1,3 +1,7 @@
+<script setup>
+import Button from '@/components/button/Button.vue';
+import ButtonOutline from '@/components/button/ButtonOutline.vue';
+</script>
 
 <template>
     <div class="relative">
@@ -18,14 +22,14 @@
                         <h3 class="text-center text-white">Come on,<br /> to see our other world of ideas & we will work
                             as a great team</h3>
                         <div class="flex justify-center w-full gap-3.5">
-                            <button class="flex items-center gap-2 px-5 py-3 text-white rounded-full bg-light-primary">
+                            <Button>
                                 <div class="block w-2 h-2 bg-white rounded-full"></div>
                                 Read More
-                            </button>
-                            <button class="flex items-center gap-2 px-5 py-3 text-white border-2 rounded-full ">
-                                <div class="block w-2 h-2 rounded-full bg-tertiary"></div>
+                            </Button>
+                            <ButtonOutline @click="$router.push({ name: 'services' })">
+                                <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
                                 Services Detail
-                            </button>
+                            </ButtonOutline>
                         </div>
                     </div>
                     <div

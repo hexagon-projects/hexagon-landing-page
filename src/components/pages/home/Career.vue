@@ -5,7 +5,7 @@ import Button from '@/components/button/Button.vue';
 <template>
     <div class="flex flex-col gap-9 mb-[78px] px-[56px] md:px-[112px] py-40">
         <span class="text-sm font-semibold px-[10px]">CAREER OPPORTUNITIES</span>
-        <div class="flex flex-col lg:flex-row gap-[50px] mb-[18px]">
+        <div class="flex flex-col lg:flex-row lg:justify-between gap-[50px] mb-[18px]">
             <div class="mb-6 lg:w-1/2">
                 <h1
                     class="text-[30px] md:text-[45px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-4">

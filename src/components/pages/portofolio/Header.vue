@@ -12,11 +12,11 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
             <h1 class="font-raleway text-[60px] font-bold text-gradient">Showcasing the excellence<br>and diversity of our projects.</h1>
             <p class="font-raleway text-[16px] font-semibold text-gray-600 dark:text-white">Empowering businesses, one solution at a time</p>
             <div class="flex flex-col sm:flex-row gap-[14px]">
-                <Button>
+                <Button >
                     <span class="h-2 w-2 bg-white block rounded-full"></span>
                     <span>Explore Our Works</span>
                 </Button>
-                <ButtonOutline>
+                <ButtonOutline @click="$router.push({ name: 'contact' })">
                     <span class="h-2 w-2 bg-light-secondary block rounded-full"></span>
                     <span class="dark:text-white">Request a Consultation</span>
                 </ButtonOutline>

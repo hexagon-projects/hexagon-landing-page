@@ -93,7 +93,7 @@ const handleSubmit = () => {
                 </div>
 
                 <button
-                    class="w-full btn-gradient font-medium py-3 px-6 rounded-full transition-all duration-300 hover:opacity-90 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 flex items-center justify-center gap-2">
+                    class="w-full bg-blue-500 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full transition-all duration-500 flex items-center justify-center gap-2">
                     Send Message
                     <font-awesome-icon icon="arrow-right" class="text-sm" />
                 </button>

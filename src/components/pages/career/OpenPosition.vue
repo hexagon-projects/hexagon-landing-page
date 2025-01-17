@@ -11,19 +11,19 @@ const positions = [
     },
     {
         type: 'Full Time', 
-        title: 'UI/UX Designer',
+        title: 'Backend Developer',
         description: 'Strong proficiency in design tools (Figma, Adobe XD), understanding of user-centered design principles, and ability to create engaging user interfaces and experiences.',
         postedDays: 3
     },
     {
-        type: 'Part Time',
-        title: 'Backend Developer',
+        type: 'Intership',
+        title: 'Mobile Developer',
         description: 'Experience with Node.js, Python or Java, knowledge of database systems, API development skills, and understanding of server architecture and cloud services.',
         postedDays: 1
     },
     {
-        type: 'Contract',
-        title: 'Project Manager',
+        type: 'Intrenship',
+        title: 'Full Stack Developer',
         description: 'Strong leadership and communication skills, experience with agile methodologies, ability to manage multiple projects, and track record of successful project delivery.',
         postedDays: 4
     }
@@ -39,40 +39,52 @@ const positions = [
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-[18px]">
             <div v-for="(position, index) in positions" :key="index" class="bg-[#F5F6FA] dark:bg-black rounded-[16px] p-6 hover:shadow-lg transition-all duration-300 dark:shadow-gray-600">
-                <div class="flex flex-col gap-4">
-                    <span class="text-sm text-blue-600 font-medium">{{ position.type }}</span>
-                    <h2 class="text-xl font-raleway font-semibold text-gray-800 dark:text-white">{{ position.title }}</h2>
-                    <p class="text-gray-600 dark:text-white text-sm">{{ position.description }}</p>
+                <div class="flex flex-col items-start bg-[#F5F6FA] rounded-[16px] p-[45px] pt-[35px] relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-800 hover:text-white hover:shadow-lg hover:scale-105">
+                    <p class="mb-2 text-xs text-gray-600 dark:text-gray-400">{{ position.type }}</p>
+                    <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-2">{{ position.title }}</h1>
+                    <p class="text-xs text-justify text-gray-600 dark:text-gray-400">{{ position.description }}</p>
                     <div class="flex justify-between items-center mt-4">
                         <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                             Apply Now
                         </button>
-                        <span class="text-gray-500 dark:text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-                            </svg>
-                            Posted {{ position.postedDays }} days ago
-                        </span>
+                    </div>
+                    <div class="absolute bottom-0 right-0 flex items-center justify-center">
+                        <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />
+                    </div>
+                    <div class="absolute bottom-0 right-0 flex gap-2 transition-opacity duration-300 opacity-0 hover:opacity-100">
+                        <img src="@/assets/Large unit.svg" alt="Large Unit Icon" class="w-[150px] h-[150]" />
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bg-gradient-to-r from-blue-gradient-1 to-blue-gradient-2 text-white rounded-2xl p-10 flex flex-col md:flex-row justify-between items-center mt-[50px] shadow-lg hover:shadow-xl transition-all duration-300">
+        <div class="frame-section-bg text-white rounded-2xl p-10 flex flex-col md:flex-row justify-between items-center mt-[50px] shadow-lg hover:shadow-xl transition-all duration-300">
             <div class="space-y-4 text-center md:text-left mb-6 md:mb-0">
                 <h1 class="text-3xl font-bold font-raleway">Work Together with Hexagon Inc.</h1>
                 <p class="text-white/90 max-w-xl">Join our innovative team where professionalism meets creativity. Experience a modern work environment with friendly colleagues and flexible payment options.</p>
             </div>
-            <Button class="bg-white text-blue-700 px-8 py-3 rounded-xl hover:bg-light-secondary hover:text-white transition-all duration-300 font-semibold shadow-md hover:shadow-lg flex items-center gap-2">
+            <ButtonOutline class="border-white text-white" @click="$router.push({ name: 'contact' })">
                 <span>Let's Chat</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg>
-            </Button>
+            </ButtonOutline>
         </div>
     </div>
 </template>
 
 <style>
+.active-dot {
+    content: url('@/assets/Active dot.svg');
+}
+</style>
+
+<style scoped>
+.frame-section-bg {
+    background-image: url(@/assets/frameworktogether.png), linear-gradient(to bottom, #2F84FF, #0C57C3);
+    background-position: center;
+    background-size: cover;
+}
+
 .active-dot {
     content: url('@/assets/Active dot.svg');
 }

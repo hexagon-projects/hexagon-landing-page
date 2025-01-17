@@ -19,6 +19,9 @@
     @apply bg-gradient-to-t from-white via-light-blue-100 to-white dark:from-black dark:via-gray-900 dark:to-black; 
   }
   .btn-gradient {
-    @apply bg-gradient-to-r from-blue-gradient-1 via-light-secondary to-blue-50 text-white;
+    @apply bg-gradient-to-r from-blue-gradient-1 via-light-secondary to-blue-50 text-white dark:from-black dark:via-light-primary dark:to-blue-gradient-1 dark:text-white;
+  }
+  .hover-gradient {
+    @apply hover:bg-gradient-to-r hover:from-blue-gradient-1 hover:via-light-secondary hover:to-blue-50 hover:text-white hover:dark:from-black hover:dark:via-light-primary hover:dark:to-blue-gradient-1 hover:dark:text-white;
   }
 }

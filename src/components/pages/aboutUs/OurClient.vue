@@ -3,7 +3,7 @@
         <!-- Header Section -->
         <div class="flex flex-col items-center justify-center">
             <div class="flex items-center gap-2.5">
-                <div class="w-8 h-1 bg-light-primary dark:bg-blue-400"></div>
+                <div class="w-8 h-0.5 bg-light-primary dark:bg-blue-400"></div>
                 <h4 class="text-gray-700 text-md dark:text-gray-300">Our Client</h4>
             </div>
             <p class="mt-2 text-2xl text-center text-[#272D3E] dark:text-gray-100">
@@ -25,6 +25,13 @@
             </Marquee>
 
             <!-- Second Marquee -->
+            <div class="flex items-center justify-center gap-2.5">
+                <div class="w-8 h-0.5 bg-light-primary dark:bg-blue-400"></div>
+                <h4 class="text-gray-700 text-md dark:text-gray-300">Our Media</h4>
+            </div>
+            <p class="mt-2 text-2xl text-center text-[#272D3E] dark:text-gray-100">
+                Integrated with over 100 mainstream media outlets
+            </p>
             <Marquee :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40"
                 class="overflow-hidden">
                 <div class="flex gap-4">

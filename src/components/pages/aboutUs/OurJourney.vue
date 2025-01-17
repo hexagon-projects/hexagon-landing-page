@@ -26,7 +26,7 @@
             <div class="flex justify-center w-full gap-4">
                 <div class="relative">
                     <img :class="selectedImage === 1 ? 'w-72 h-100' : 'w-25 h-100' + ' dark:filter dark:brightness-75'"
-                        src="https://picsum.photos/id/237/200/300" alt="Image 1"
+                        src="@/assets/gallery/Gallery_7.jpg" alt="Image 1"
                         class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
                         @click="selectImage(1)" />
                     <div v-if="selectedImage === 1"
@@ -39,7 +39,7 @@
                 </div>
                 <div class="relative">
                     <img :class="selectedImage === 2 ? 'w-72 h-100' : 'w-25 h-100'"
-                        src="https://picsum.photos/id/237/200/300" alt="Image 2"
+                        src="@/assets/gallery/Gallery_9.jpg" alt="Image 2"
                         class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
                         @click="selectImage(2)" />
                     <div v-if="selectedImage === 2"
@@ -52,7 +52,7 @@
                 </div>
                 <div class="relative">
                     <img :class="selectedImage === 3 ? 'w-72 h-100' : 'w-25 h-100'"
-                        src="https://picsum.photos/id/237/200/300" alt="Image 3"
+                        src="@/assets/gallery/Gallery_6.jpg" alt="Image 3"
                         class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
                         @click="selectImage(3)" />
                     <div v-if="selectedImage === 3"
