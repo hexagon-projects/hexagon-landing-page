@@ -15,7 +15,7 @@
 
         <div class="grid grid-cols-1 gap-8 px-4 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:px-16 max-w-7xl">
             <div v-for="(member, index) in teamMembers" :key="index"
-                class="relative overflow-hidden transition-all duration-500 shadow-lg group rounded-2xl hover:scale-110 hover:shadow-2xl hover:-translate-y-2">
+                class="relative overflow-hidden transition-all duration-500 shadow-lg group rounded-2xl hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
                 <div class="aspect-w-3 aspect-h-4">
                     <img :src="member.image" :alt="`Image of ${member.name}`"
                         class="object-cover w-full h-full transition-transform duration-500" />

@@ -1,7 +1,7 @@
 <template>
     <div class=" pt-52">
-        <img src="@/assets/about-us/ser_shape.png" class="absolute right-0" />
-        <img src="@/assets/about-us/ser_shape_r.png" class="absolute" />
+        <img src="@/assets/about-us/ser_shape.png" class="absolute right-0 hidden md:block" />
+        <img src="@/assets/about-us/ser_shape_r.png" class="absolute hidden md:block" />
         <div class="max-w-[1000px] flex justifty-center mx-auto pb-32 pt-20">
             <div class="flex flex-col items-center justify-center gap-2.5 mt-8">
                 <div class="flex items-center gap-2.5">

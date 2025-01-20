@@ -47,6 +47,31 @@ export const fetchVisionMission = async (type) => {
     return { error: "Failed to fetch about data. Please try again later." };
   }
 };
+export const fetchCareer = async (params = {}) => {
+  try {
+    const response = await axiosInstance.get("/api/Career", { params });
+
+    if (response.data) {
+      return {
+        data: response.data.data,
+        meta: {
+          current_page: response.data.current_page,
+          last_page: response.data.last_page,
+          per_page: response.data.per_page,
+          total: response.data.total,
+        },
+      };
+    }
+
+    throw new Error("No data found in response");
+  } catch (error) {
+    console.error("Error fetching career data:", error);
+    return {
+      error: error.response?.data?.message || "Failed to fetch career data. Please try again later.",
+    };
+  }
+};
+
 export const fetchValue = async (type) => {
   try {
     const response = await axiosInstance.get("/api/values", {

@@ -62,7 +62,7 @@ onMounted(() => {
                     </div>
                     <div class="hidden dark:block">
                         <Button @click="$router.push({ name: 'portfolio' })">
-                            <span>Show All Portfolio</span>
+                            <span class="hidden md:block">Show All Portfolio</span>
                             <font-awesome-icon icon="arrow-right" />
                         </Button>
                     </div>

@@ -55,7 +55,9 @@ onMounted(() => {
                         articles from our journal, writing, discuss and share</h1>
                     <Button @click="$router.push({ name: 'news' })">
                         <font-awesome-icon icon="arrow-right" />
-                        Show All Articles
+                        <span  class="hidden md:block">
+                            Show All Articles
+                        </span>
                     </Button>
                 </div>
             </div>
