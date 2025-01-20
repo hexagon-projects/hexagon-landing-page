@@ -43,7 +43,7 @@
                         </div>
                         <div class="p-4 bg-white sm:p-6 rounded-xl">
                             <iframe
-                                src="https://www.youtube-nocookie.com/embed/qJi7nM1U_m4?controls=0&modestbranding=1&rel=0"
+                                :src=" aboutData?.youtube_url"
                                 title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media"
                                 allowfullscreen class="w-full rounded-lg aspect-video">
                             </iframe>
@@ -58,3 +58,24 @@
 </template>
 
 
+<script setup>
+import { ref, onMounted } from "vue";
+import { fetchAboutData } from "@/service"; // Mengimpor fungsi dari service
+
+const aboutData = ref(null);
+
+// Fungsi untuk mengambil data tentang perusahaan
+const getAboutData = async () => {
+    const data = await fetchAboutData();
+    // Cek apakah data yang diterima mengandung error
+    if (data.error) {
+        console.error(data.error); // Menampilkan error yang datang dari service
+    } else {
+        aboutData.value = data; // Menyimpan data jika berhasil
+    }
+};
+
+onMounted(() => {
+    getAboutData(); // Panggil fungsi saat komponen dimuat
+});
+</script>

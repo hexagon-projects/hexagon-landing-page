@@ -30,13 +30,13 @@
           <div class="flex flex-col mb-6 mr-20 md:mb-0">
             <h2 class="mb-3 font-semibold text-sl">QUICK LINKS</h2>
             <ul class="flex-col mt-2 space-y-3">
-              <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">About us</a></li>
-              <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Services</a></li>
-              <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Portfolio</a></li>
-              <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Career </a><a
+              <li><a href="/about-us" class="text-blue-600 dark:text-blue-400 hover:underline">About us</a></li>
+              <li><a href="/services" class="text-blue-600 dark:text-blue-400 hover:underline">Services</a></li>
+              <li><a href="/portofolio" class="text-blue-600 dark:text-blue-400 hover:underline">Portfolio</a></li>
+              <li><a href="/career" class="text-blue-600 dark:text-blue-400 hover:underline">Career </a><a
                   class="text-white text-[10px] bg-[#136FF8] rounded-3xl px-3 py-1 ml-2" href="">Hiring!</a></li>
-              <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">News</a></li>
-              <li><a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Contact us</a></li>
+              <li><a href="/news" class="text-blue-600 dark:text-blue-400 hover:underline">News</a></li>
+              <li><a href="/contact" class="text-blue-600 dark:text-blue-400 hover:underline">Contact us</a></li>
             </ul>
           </div>
           <div class="flex-col mb-6 mr-10 md:flex">

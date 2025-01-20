@@ -6,20 +6,14 @@
                 <h4 class="text-sm">Our Journey</h4>
             </div>
             <div class="space-y-5">
-                <h3 class="text-2xl md:text-4xl font-raleway text-[#272D3E] dark:text-white">A Legacy of Innovation and
-                    Growth</h3>
-                <p class="text-[#272D3E]/80 dark:text-gray-300 text-sm md:text-base">Founded under the name PT. Hexagon
-                    Karyatama
-                    Indonesia, Hexagon Inc. is a
-                    company that operates in
-                    the field of digital artwork and IT solutions. With a focus on education and a commitment to
-                    providing high-quality services, we have established ourselves as a leading provider in our
-                    industry.<br /><br />
-
-                    Starting its business in 2017 as a Strategic Business Unit of PT. Mizab Nusantara Kemilau, Hexagon
-                    Inc. has now grown into an independent company that thrives as a digital services provider. The
-                    company was reestablished in response to the growing demand in the digital industry while empowering
-                    potential and professional individuals during the pandemic situation.</p>
+                <h3 class="text-2xl md:text-4xl font-raleway text-[#272D3E] dark:text-white">
+                    {{ aboutData?.journey_title || "Loading..." }}
+                </h3>
+                <p class="text-[#272D3E]/80 dark:text-gray-300 text-sm md:text-base">
+                    {{ aboutData?.journey_text_1 || "Loading..." }}
+                    <br /><br />
+                    {{ aboutData?.journey_text_2 || "Loading..." }}
+                </p>
             </div>
         </div>
         <div class="flex flex-col items-center justify-between h-auto">
@@ -70,14 +64,29 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { fetchAboutData } from "@/service"; // Mengimpor fungsi dari service
 
 const selectedImage = ref(1);
+const aboutData = ref(null);
 
-const selectImage = (imageIndex) => {
-    selectedImage.value = imageIndex;
+// Fungsi untuk mengambil data tentang perusahaan
+const getAboutData = async () => {
+    const data = await fetchAboutData();
+    // Cek apakah data yang diterima mengandung error
+    if (data.error) {
+        console.error(data.error); // Menampilkan error yang datang dari service
+    } else {
+        aboutData.value = data; // Menyimpan data jika berhasil
+    }
 };
+
+onMounted(() => {
+    getAboutData(); // Panggil fungsi saat komponen dimuat
+});
 </script>
+
+
 
 <style scoped>
 .dark {

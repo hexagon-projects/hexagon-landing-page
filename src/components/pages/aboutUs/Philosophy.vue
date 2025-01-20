@@ -11,14 +11,30 @@
                 <h1 class="text-4xl font-normal font-raleway text-[#272D3E] dark:text-white">Guided by the Wisdom of the
                     Bee</h1>
                 <img src="@/assets/about-us/bee.png" class="" />
-                <p class="text-gray-600 md:text-base dark:text-gray-400">At Hexagon Inc., we are inspired by the bee, a
-                    creature esteemed
-                    in Islamic teachings as a special
-                    creation bestowed with wisdom (Surat An-Nahl, 68-69). Bees live with purpose, gathering from the
-                    best of nature and producing with goodness and benefit. Their loyalty, intelligence, and strength
-                    resonate with us. Just as bees always find their way home, we aim to navigate challenges with
-                    resilience and integrity, finding solutions regardless of the journey’s difficulty.</p>
+                <p class="text-gray-600 md:text-base dark:text-gray-400">{{ aboutData?.philosophy || "Loading..." }}</p>
             </div>
         </div>
     </div>
 </template>
+
+<script setup>
+import { ref, onMounted } from "vue";
+import { fetchAboutData } from "@/service"; // Mengimpor fungsi dari service
+
+const aboutData = ref(null);
+
+// Fungsi untuk mengambil data tentang perusahaan
+const getAboutData = async () => {
+    const data = await fetchAboutData();
+    // Cek apakah data yang diterima mengandung error
+    if (data.error) {
+        console.error(data.error); // Menampilkan error yang datang dari service
+    } else {
+        aboutData.value = data; // Menyimpan data jika berhasil
+    }
+};
+
+onMounted(() => {
+    getAboutData(); // Panggil fungsi saat komponen dimuat
+});
+</script>

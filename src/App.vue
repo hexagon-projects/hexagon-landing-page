@@ -4,7 +4,7 @@ import Footer from '@/components/Footer/Footer.vue';
 </script>
 
 <template>
-  <div class="mx-auto max-w-screen-2xl dark:bg-black">
+  <div class="mx-auto dark:bg-black">
     <Navbar />
     <RouterView />
     <Footer />

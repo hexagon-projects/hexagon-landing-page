@@ -32,7 +32,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                         high-performance website tailored to your business needs.</p>
                 </div>
                 <div class="w-full h-full">
-                    <img src="@/assets/about-us/it-consultation.png" alt="IT Consultation" class="w-full h-full object-cover"/>
+                    <img src="@/assets/about-us/it-consultation.png" alt="IT Consultation" class="object-cover w-full h-full"/>
                 </div>
             </div>
 
@@ -46,11 +46,11 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                         engagement, and measurable growth for your brand.</p>
                 </div>
                 <div class="w-full px-[56px] pt-[40px]">
-                    <img src="@/assets/about-us/digital-marketing.png" alt="Digital Marketing" class="w-full h-auto object-cover rounded-xl">
+                    <img src="@/assets/about-us/digital-marketing.png" alt="Digital Marketing" class="object-cover w-full h-auto rounded-xl">
                 </div>
             </div>
         </div>
-        <div class="flex flex-col lg:flex-row gap-[18px] py-40">
+        <div class="flex flex-col lg:flex-row gap-[18px] pb-20">
             <div
                 class="lg:max-w-[450px] w-full flex flex-col items-center bg-[#F5F6FA] rounded-[16px] dark:bg-[#252728]">
                 <div class="px-[56px] pt-[40px]">
@@ -60,7 +60,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                         customers, and build lasting industry impact.</p>
                 </div>
                 <div class="w-full px-[56px] pb-[32px]">
-                    <img src="@/assets/about-us/branding.png" alt="Branding" class="w-full h-auto object-cover rounded-xl">
+                    <img src="@/assets/about-us/branding.png" alt="Branding" class="object-cover w-full h-auto rounded-xl">
                 </div>
             </div>
             <div
@@ -72,7 +72,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                         visibility, and strengthen your brand's market position.</p>
                 </div>
                 <div class="lg:max-w-[420px] w-full">
-                    <img src="@/assets/about-us/media-consultant.png" alt="Media Consultant" class="w-full h-full object-cover">
+                    <img src="@/assets/about-us/media-consultant.png" alt="Media Consultant" class="object-cover w-full h-full">
                 </div>
             </div>
         </div>
