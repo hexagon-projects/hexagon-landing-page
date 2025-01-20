@@ -9,7 +9,8 @@ const cardItems = [
         Posted: 'Posted on 337 days ago',
         title: 'Industrial Visit of SMK NU Haurgeulis Kab. Indramayu: Building Strong Friendship..',
         description: 'On June 21, 2023, SMK NU Haurgeulis made a memorable industrial visit to PT. Hexagon Karyatama Indonesia. This visit is one of the school efforts in... ',
-        image: '/src/assets/image1.png',
+                image: '/src/assets/home/artikel1.png',
+
         alt: 'Project'
     },
     {
@@ -17,7 +18,8 @@ const cardItems = [
         Posted: 'Posted on 338 days ago',
         title: 'Tentang Hexagon',
         description: 'Ini Hexagon Inc., perusahaan di bidang branding dan pemasaran digital, telah mengumumkan kolaborasi strategis dengan tiga perusahaan terkemuka lainnya... ',
-        image: '/src/assets/image1.png',
+                image: '/src/assets/home/artikel2.png',
+
         alt: 'Project'
     },
     {
@@ -25,7 +27,8 @@ const cardItems = [
         Posted: 'Posted on 339 days ago',
         title: 'Hexagon Inc. Collaborates with 3 Well-Known Companies in Bandung City',
         description: 'Hexagon Inc., a company in the field of branding and digital marketing, has announced strategic collaborations with three other leading companies in B... ',
-        image: '/src/assets/image1.png',
+                image: '/src/assets/home/artikel3.png',
+
         alt: 'Project'
     },
 ]

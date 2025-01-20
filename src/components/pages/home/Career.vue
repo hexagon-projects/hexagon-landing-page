@@ -5,7 +5,7 @@ import Button from '@/components/button/Button.vue';
 <template>
     <div class="flex flex-col gap-9  px-[56px] md:px-[112px] pt-40 pb-20">
         <span class="text-sm font-semibold px-[10px]">CAREER OPPORTUNITIES</span>
-        <div class="flex flex-col lg:flex-row gap-[50px] mb-[18px]">
+        <div class="flex flex-col lg:flex-row lg:justify-between gap-[50px] mb-[18px]">
             <div class="mb-6 lg:w-1/2">
                 <h1
                     class="text-[30px] md:text-[45px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-4">
@@ -15,7 +15,7 @@ import Button from '@/components/button/Button.vue';
                     the chance to make a real impact in digital services. Ready to shape the future with us? Explore our
                     open roles today!</p>
                 <div class="mt-4">
-                    <Button>
+                    <Button  @click="$router.push({ name: 'career' })">
                         <span class="text-xs">See All Job Offer</span>
                         <font-awesome-icon icon="arrow-right" />
                     </Button>

@@ -2,7 +2,12 @@
 import Button from '@/components/button/Button.vue';
 import ButtonOutline from '@/components/button/ButtonOutline.vue';
 
-
+const scrollToSection = () => {
+  const element = document.querySelector('#our');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' }); // Scroll halus ke elemen
+  }
+};
 </script>
 
 <template>
@@ -12,12 +17,12 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
             <h1 class="font-raleway text-[60px] font-bold text-gradient">Join With Us!</h1>
             <p class="font-raleway text-[16px] font-semibold text-gray-600 dark:text-white">Be part of a dynamic team that values innovation, growth, and collaboration.</p>
             <div class="flex flex-col sm:flex-row gap-[14px]">
-                <Button>
-                    <span class="h-2 w-2 bg-white block rounded-full"></span>
+                <Button  @click="scrollToSection">
+                    <span class="block w-2 h-2 bg-white rounded-full"></span>
                     <span>Explore Position</span>
                 </Button>
-                <ButtonOutline>
-                    <span class="h-2 w-2 bg-light-secondary block rounded-full"></span>
+                <ButtonOutline @click="$router.push({ name: 'contact' })">
+                    <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
                     <span class="dark:text-white">Request a Consultation</span>
                 </ButtonOutline>
             </div>

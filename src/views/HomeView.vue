@@ -7,6 +7,7 @@ import Review from '@/components/pages/home/Review.vue';
 import Career from '@/components/pages/home/Career.vue';
 import News from '@/components/pages/home/News.vue';
 import Cta from '@/components/pages/home/cta.vue';
+import OurClient from '@/components/pages/aboutUs/OurClient.vue';
 
 </script>
 

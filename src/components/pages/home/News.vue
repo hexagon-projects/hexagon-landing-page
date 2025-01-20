@@ -9,7 +9,7 @@ const cardItems = [
         Posted : 'Posted on 337 days ago' ,
         title: 'Industrial Visit of SMK NU Haurgeulis Kab. Indramayu: Building Strong Friendship..',
         description: 'On June 21, 2023, SMK NU Haurgeulis made a memorable industrial visit to PT. Hexagon Karyatama Indonesia. This visit is one of the school efforts in... ',
-        image: '/src/assets/image1.png',
+        image: '/src/assets/home/artikel1.png',
         alt: 'Project'
     },
     {
@@ -17,7 +17,7 @@ const cardItems = [
         Posted : 'Posted on 338 days ago' ,
         title: 'Tentang Hexagon',
         description: 'Ini Hexagon Inc., perusahaan di bidang branding dan pemasaran digital, telah mengumumkan kolaborasi strategis dengan tiga perusahaan terkemuka lainnya... ',
-        image: '/src/assets/image1.png',
+        image: '/src/assets/home/artikel2.png',
         alt: 'Project'
     },
     {
@@ -25,7 +25,7 @@ const cardItems = [
         Posted : 'Posted on 339 days ago' ,
         title: 'Hexagon Inc. Collaborates with 3 Well-Known Companies in Bandung City',
         description: 'Hexagon Inc., a company in the field of branding and digital marketing, has announced strategic collaborations with three other leading companies in B... ',
-        image: '/src/assets/image1.png',
+        image: '/src/assets/home/artikel3.png',
         alt: 'Project'
     },
 ]
@@ -46,14 +46,14 @@ onMounted(() => {
 
 <template>
     <div class="pt-40">
-        <div class="px-[56px] md:px-[112px]">
+        <div class="px-[56px] md:px-[112px] mt-[56px]">
             <div class="mb-0">
                 <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">NEWS AND
                     INSIGHT</span>
-                <div class="z-20 flex items-center justify-between">
+                <div class="z-20 flex items-center justify-between mt-[14px]">
                     <h1 class="font-semibold text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">Get the latest
                         articles from our journal, writing, discuss and share</h1>
-                    <Button>
+                    <Button @click="$router.push({ name: 'news' })">
                         <font-awesome-icon icon="arrow-right" />
                         Show All Articles
                     </Button>

@@ -15,13 +15,13 @@ import Button from '@/components/button/Button.vue';
         Build the Future with <br>Us! Start Your <br> Partnership Now!
       </h1>
       <div class="flex items-center mt-15 space-x-4 md:flex">
-        <Button class="px-4 py-2 text-white rounded md:bg-blue-600 hover:bg-blue-700">
-          <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
-          <span class="text-white">Let’s Chat!</span>
+        <Button class="px-4 py-2 text-gray-800 bg-transparent border-white dark:bg-[#2C7EF9] dark:bg-opacity-50 border dark:border-blue-400 rounded hover-gradient " @click="$router.push({ name: 'contact' })">
+          <span class="block w-2 h-2 rounded-full bg-white"></span>
+          <span class="text-white">Let's Chat!</span>
         </Button>
-        <Button class="px-4 py-2 text-gray-800 bg-transparent border border-white rounded hover:bg-blue-600 ">
+        <Button @click="$router.push({ name: 'contact' })" class="px-4 py-2 text-white rounded bg-white dark:bg-gray-400 dark:bg-opacity-50 border border-white hover-gradient group">
           <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
-          <span class="text-white">Request Consultation</span>
+          <span class="text-black dark:text-white  group-hover:text-white">Request a Consultation</span>
         </Button>
       </div>
     </div>

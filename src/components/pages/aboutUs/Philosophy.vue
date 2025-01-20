@@ -11,7 +11,7 @@
                 <h1 class="text-4xl font-normal font-raleway text-[#272D3E] dark:text-white">Guided by the Wisdom of the
                     Bee</h1>
                 <img src="@/assets/about-us/bee.png" class="" />
-                <p class="text-gray-600 md:text-base dark:text-gray-400">{{ aboutData?.philosophy || "Loading..." }}</p>
+                <p class="text-center text-gray-600 md:text-base dark:text-gray-400">{{ aboutData?.philosophy || "Loading..." }}</p>
             </div>
         </div>
     </div>

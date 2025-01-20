@@ -17,13 +17,13 @@ const selectImage = (imageIndex) => {
             </div>
             <div class="space-y-5">
                 <h3 class="text-2xl md:text-4xl font-raleway text-gradient font-semibold">Our Offices Across the World</h3>
-                <p class="text-[#272D3E]/80 text-sm md:text-base">Our offices are strategically located worldwide to serve you better. Find us<br>near you and experience our exceptional services.</p>
+                <p class="text-[#272D3E]/80 dark:text-white text-sm md:text-base">Our offices are strategically located worldwide to serve you better. Find us<br>near you and experience our exceptional services.</p>
             </div>
         </div>
         <div class="flex flex-col items-center justify-between h-auto">
             <div class="flex justify-center w-full gap-4">
                 <div class="relative">
-                    <img :class="selectedImage === 1 ? 'w-72 h-100' : 'w-25 h-100'" src="https://picsum.photos/id/237/200/300"
+                    <img :class="selectedImage === 1 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/office2.png"
                         alt="Image 1"
                         class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
                         @click="selectImage(1)" />
@@ -36,7 +36,7 @@ const selectImage = (imageIndex) => {
                     </div>
                 </div>
                 <div class="relative">
-                    <img :class="selectedImage === 2 ? 'w-72 h-100' : 'w-25 h-100'" src="https://picsum.photos/id/237/200/300"
+                    <img :class="selectedImage === 2 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/office1.png"
                         alt="Image 2"
                         class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
                         @click="selectImage(2)" />
@@ -49,7 +49,7 @@ const selectImage = (imageIndex) => {
                     </div>
                 </div>
                 <div class="relative">
-                    <img :class="selectedImage === 3 ? 'w-72 h-100' : 'w-25 h-100'" src="https://picsum.photos/id/237/200/300"
+                    <img :class="selectedImage === 3 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/office3.png"
                         alt="Image 3"
                         class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
                         @click="selectImage(3)" />

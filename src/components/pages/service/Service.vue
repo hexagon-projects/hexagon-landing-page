@@ -44,6 +44,13 @@ const prevPage = () => {
 const goToPage = (page) => {
     currentPage.value = page;
 };
+
+const scrollToSection = () => {
+  const element = document.querySelector('#service');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' }); // Scroll halus ke elemen
+  }
+};
 </script>
 
 <template>
@@ -55,16 +62,16 @@ const goToPage = (page) => {
             <p class="font-raleway text-[16px] font-semibold text-gray-600 dark:text-white">We Provide Perfect IT Solutions For Your
                 Business</p>
             <div class="flex flex-col sm:flex-row gap-[14px]">
-                <Button>
-                    <span class="h-2 w-2 bg-white block rounded-full"></span>
-                    <span>More About Us</span>
+                <Button  @click="scrollToSection">
+                    <span class="block w-2 h-2 bg-white rounded-full"></span>
+                    <span>Explore Our Service</span>
                 </Button>
-                <ButtonOutline>
-                    <span class="h-2 w-2 bg-light-secondary block rounded-full"></span>
-                    <span class="dark:text-white">Services Detail</span>
+                <ButtonOutline @click="$router.push({ name: 'contact' })">
+                    <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
+                    <span class="dark:text-white">Request A Consultation</span>
                 </ButtonOutline>
             </div>
-            <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline mt-[50px]">Service</span>
+            <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline mt-[50px]" id="service">Service</span>
             <h1 class="font-raleway text-[30px] font-semibold text-gray-800 dark:text-gradient">Discover Solutions Crafted For Your
                 Business Growth<br>Effeciency, and Brand Impact</h1>
         </div>
@@ -78,8 +85,8 @@ const goToPage = (page) => {
                         high-performance website tailored to your business needs.</p>
                 </div>
                 <div class="w-full h-full">
-                    <img src="@/assets/about-us/it-consultation.png" alt="IT Consultation"
-                        class="w-full h-full object-cover" />
+                    <img src="@/assets/about-us/itc.png" alt="IT Consultation"
+                        class="object-cover w-full h-full" />
                 </div>
             </div>
 
@@ -93,8 +100,8 @@ const goToPage = (page) => {
                         engagement, and measurable growth for your brand.</p>
                 </div>
                 <div class="w-full px-[56px] pt-[40px]">
-                    <img src="@/assets/about-us/digital-marketing.png" alt="Digital Marketing"
-                        class="w-full h-auto object-cover rounded-xl">
+                    <img src="@/assets/about-us/newDigitalMarketing.png" alt="Digital Marketing"
+                        class="object-cover w-full h-auto rounded-xl">
                 </div>
             </div>
         </div>
@@ -107,8 +114,8 @@ const goToPage = (page) => {
                         customers, and build lasting industry impact.</p>
                 </div>
                 <div class="w-full px-[56px] pb-[32px]">
-                    <img src="@/assets/about-us/branding.png" alt="Branding"
-                        class="w-full h-auto object-cover rounded-xl">
+                    <img src="@/assets/about-us/newBranding.png" alt="Branding"
+                        class="object-cover w-full h-auto rounded-xl">
                 </div>
             </div>
             <div
@@ -120,8 +127,8 @@ const goToPage = (page) => {
                         visibility, and strengthen your brand's market position.</p>
                 </div>
                 <div class="lg:max-w-[420px] w-full">
-                    <img src="@/assets/about-us/media-consultant.png" alt="Media Consultant"
-                        class="w-full h-full object-cover">
+                    <img src="@/assets/about-us/newMediaConsultant.png" alt="Media Consultant"
+                        class="object-cover w-full h-full">
                 </div>
             </div>
         </div>
@@ -132,12 +139,12 @@ const goToPage = (page) => {
                     <h1
                         class="text-[30px] md:text-[45px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-4">
                         Why Choose <span class="text-gradient">Hexagon inc</span> ?</h1>
-                    <p class="text-xs text-gray-600 dark:text-white text-justify">Discover the advantages of partnering with us—tailored
+                    <p class="text-xs text-justify text-gray-600 dark:text-white">Discover the advantages of partnering with us—tailored
                         solutions, dedicated support, and proven results that set us apart.</p>
                     <div class="mt-4">
-                        <div class="accordion divide-neutral/20 divide-y">
+                        <div class="divide-y accordion divide-neutral/20">
                             <div class="accordion-item active" id="payment-arrow">
-                                <button class="accordion-toggle inline-flex items-center gap-x-4 text-start dark:text-white"
+                                <button class="inline-flex items-center accordion-toggle gap-x-4 text-start dark:text-white"
                                     aria-controls="payment-arrow-collapse" aria-expanded="true">
                                     <span
                                         class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180 dark:text-white"></span>
@@ -147,7 +154,7 @@ const goToPage = (page) => {
                                     class="accordion-content w-full overflow-hidden transition-[height] duration-300"
                                     aria-labelledby="payment-arrow" role="region">
                                     <div class="px-5 pb-4">
-                                        <p class="text-base-content/80 font-normal dark:text-white">
+                                        <p class="font-normal text-blue-500 text-base-content/80 dark:text-white">
                                             We understand that every business has unique needs. That's why our services
                                             are flexible and tailored to align with your specific business goals.
                                         </p>
@@ -155,7 +162,7 @@ const goToPage = (page) => {
                                 </div>
                             </div>
                             <div class="accordion-item" id="delivery-arrow">
-                                <button class="accordion-toggle inline-flex items-center gap-x-4 text-start dark:text-white"
+                                <button class="inline-flex items-center accordion-toggle gap-x-4 text-start dark:text-white"
                                     aria-controls="delivery-arrow-collapse" aria-expanded="false">
                                     <span
                                         class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180 dark:text-white"></span>
@@ -165,7 +172,7 @@ const goToPage = (page) => {
                                     class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
                                     aria-labelledby="delivery-arrow" role="region">
                                     <div class="px-5 pb-4">
-                                        <p class="text-base-content/80 font-normal dark:text-white">
+                                        <p class="font-normal text-blue-500 text-base-content/80 dark:text-white">
                                             Stay ahead of the curve with our cutting-edge technology. We provide the
                                             best solutions that leverage the latest advancements to enhance your
                                             business operations, ensuring seamless integration and maximum efficiency.
@@ -174,7 +181,7 @@ const goToPage = (page) => {
                                 </div>
                             </div>
                             <div class="accordion-item" id="cancel-arrow">
-                                <button class="accordion-toggle inline-flex items-center gap-x-4 text-start dark:text-white"
+                                <button class="inline-flex items-center accordion-toggle gap-x-4 text-start dark:text-white"
                                     aria-controls="cancel-arrow-collapse" aria-expanded="false">
                                     <span
                                         class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180 dark:text-white"></span>
@@ -184,7 +191,7 @@ const goToPage = (page) => {
                                     class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
                                     aria-labelledby="cancel-arrow" role="region">
                                     <div class="px-5 pb-4">
-                                        <p class="text-base-content/80 font-normal dark:text-white">
+                                        <p class="font-normal text-blue-500 text-base-content/80 dark:text-white">
                                             Our proactive strategies keep you ahead of market trends. By continuously
                                             innovating and anticipating changes, we help your business thrive in a
                                             competitive landscape.
@@ -193,7 +200,7 @@ const goToPage = (page) => {
                                 </div>
                             </div>
                             <div class="accordion-item" id="cancel-arrow">
-                                <button class="accordion-toggle inline-flex items-center gap-x-4 text-start dark:text-white"
+                                <button class="inline-flex items-center accordion-toggle gap-x-4 text-start dark:text-white"
                                     aria-controls="cancel-arrow-collapse" aria-expanded="false">
                                     <span
                                         class="icon-[tabler--chevron-right] accordion-item-active:rotate-90 size-5 shrink-0 transition-transform duration-300 rtl:rotate-180 dark:text-white"></span>
@@ -203,7 +210,7 @@ const goToPage = (page) => {
                                     class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
                                     aria-labelledby="cancel-arrow" role="region">
                                     <div class="px-5 pb-4">
-                                        <p class="text-base-content/80 font-normal dark:text-white">
+                                        <p class="font-normal text-blue-500 text-base-content/80 dark:text-white">
                                             Experience cost-effective solutions without compromising quality. Our
                                             services are designed to deliver exceptional value, balancing affordability
                                             with outstanding performance
@@ -224,80 +231,38 @@ const goToPage = (page) => {
                 <div class="flex flex-col lg:w-1/2">
                     <img src="@/assets/services/timeline.png" alt="services">
                 </div>
-                <div class="flex flex-col mb-6 lg:w-1/2 justify-center">
+                <div class="flex flex-col justify-center mb-6 lg:w-1/2">
                     <div>
                         <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline">Why Choose Us</span>
                     </div>
                     <h1
                         class="text-[30px] md:text-[40px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gradient mb-4 mt-[36px]">
                         Experienced <span class="text-gradient-switch">, Dedicated Team</span></h1>
-                    <p class="text-xs text-gray-600 dark:text-white text-justify">Our professionals are not only skilled but passionate
+                    <p class="text-xs text-justify text-gray-600 dark:text-white">Our professionals are not only skilled but passionate
                         about helping you achieve your goals.</p>
                 </div>
             </div>
         </div>
         <div class="flex flex-col gap-9 mb-[78px] mt-[36px]">
             <div class="flex flex-col lg:flex-row gap-[50px] mb-[18px]">
-                <div class="flex flex-col mb-6 lg:w-1/2 justify-center">
+                <div class="flex flex-col justify-center mb-6 lg:w-1/2">
                     <div>
                         <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline">Who We Are</span>
                     </div>
                     <h1
                         class="text-[30px] md:text-[40px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 mb-4 mt-[36px] dark:text-white">
                         More Than 100 Companies<br> Trust and Choose <span class="text-gradient">Hexagon inc</span></h1>
-                    <p class="text-xs text-gray-600 text-justify dark:text-white">Over 100 companies trust us for reliable, tailored
+                    <p class="text-xs text-justify text-gray-600 dark:text-white">Over 100 companies trust us for reliable, tailored
                         digital solutions that enhance their business presence.</p>
                     <div class="mt-4">
-                        <Button>
-                            <span class="text-xs">See All Job Offer</span>
+                        <Button  @click="$router.push({ name: 'contact' })">
+                            <span class="text-xs">Let's Work</span> 
                             <font-awesome-icon icon="arrow-right" />
                         </Button>
                     </div>
                 </div>
                 <div class="flex flex-col lg:w-1/2">
                     <img src="@/assets/services/100+client.png" alt="100client">
-                </div>
-            </div>
-        </div>
-        <div class="flex flex-col gap-9 items-center text-center mb-[78px]">
-            <span class="bg-gray-100 px-4 py-2 rounded-lg text-xs font-medium inline dark:bg-[#121212]">Review</span>
-            <h1 class="font-raleway text-[45px] font-bold text-gray-800 dark:text-gradient-switch">What Our Clients Say</h1>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-[18px] mb-[18px]">
-            <div class="lg:max-w-[750px] w-full flex flex-col bg-[#2F54E8] rounded-[16px] shadow-lg relative">
-                <!-- Added relative positioning -->
-                <div class="p-[56px] pt-[55px]">
-                    <p class="text-[16px] text-white font-normal">{{ reviews[currentPage].text }}</p>
-                </div>
-                <div class="p-[56px] pt-0 flex items-center">
-                    <div
-                        class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-500 font-bold">
-                        {{ reviews[currentPage].initials }}
-                    </div>
-                    <div class="ml-4">
-                        <h3 class="text-white">{{ reviews[currentPage].name }}</h3>
-                        <p class="text-white font-normal">{{ reviews[currentPage].position }}</p>
-                    </div>
-                </div>
-                <div class="absolute bottom-0 right-0 flex gap-2">
-                    <img src="@/assets/Large unit.svg" alt="Large Unit Icon" class="hidden md:w-[200px] h-[200]" />
-                </div>
-                <div class="absolute bottom-0 right-0 flex gap-2">
-                    <img src="@/assets/Group 11.svg" alt="Group Icon" class="hidden md:w-15 h-15" />
-                </div>
-            </div>
-
-            <div class="max-w-[450px] w-full flex flex-col md:flex-col items-center rounded-[16px] p-[5px]">
-                <div class="flex flex-col items-center gap-2">
-                    <img src="@/assets/Top arrow.svg" @click="prevPage" :disabled="currentPage === 0" alt="Previous"
-                        class="cursor-pointer" />
-                    <div class="flex-col">
-                        <img v-for="(review, index) in reviews" :key="index" src="@/assets/Dot.svg"
-                            @click="goToPage(index)" :class="{ 'active-dot': currentPage === index }" alt="Page Dot"
-                            class="cursor-pointer pt-2 pb-2" />
-                    </div>
-                    <img src="@/assets/scroll.svg" @click="nextPage" :disabled="currentPage === totalPages - 1"
-                        alt="Next" class="cursor-pointer" />
                 </div>
             </div>
         </div>

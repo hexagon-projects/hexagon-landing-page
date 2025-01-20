@@ -56,12 +56,12 @@ onMounted(() => {
                         We provide perfect IT solutions for your business
                     </h1>
                     <div class="block dark:hidden">
-                        <ButtonOutline>
+                        <ButtonOutline @click="$router.push({ name: 'portfolio' })">
                             <font-awesome-icon icon="arrow-right" />
                         </ButtonOutline>
                     </div>
                     <div class="hidden dark:block">
-                        <Button>
+                        <Button @click="$router.push({ name: 'portfolio' })">
                             <span>Show All Portfolio</span>
                             <font-awesome-icon icon="arrow-right" />
                         </Button>
@@ -73,8 +73,8 @@ onMounted(() => {
             <div 
                 v-for="(card, index) in cardItems" 
                 :key="index"
-                class="p-[24px] w-[395px] rounded-2xl flex-shrink-0"
-                :class="{ 'ml-[56px] md:ml-[112px]' : index == 0, 'shadow-2xl' : index + 1 == activeCard }"
+                class="p-[24px] w-[395px] rounded-2xl flex-shrink-0 hover:shadow-2xl transition-all duration-300"
+                :class="{ 'ml-[56px] md:ml-[112px]' : index == 0, '' : index + 1 == activeCard }"
             >
                 <img v-if="card.image" :src="card.image" :alt="card.alt" class="mb-[24px] rounded-lg">
                 <div class="space-y-[16px]">

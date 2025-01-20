@@ -1,63 +1,74 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ServiceView from '@/views/ServiceView.vue'
-import PortolioView from '@/views/PortofolioView.vue'
-import AboutUsViewVue from '@/views/AboutUsView.vue'
-import NewsView from '@/views/NewsView.vue'
-import BlogPostView from '@/views/BlogPostView.vue'
-import PortofolioPostView from '@/views/PortofolioPostView.vue'
-import CareerView from '@/views/CareerView.vue'
-import ContactView from '@/views/ContactView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
+import ServiceView from "@/views/ServiceView.vue";
+import PortolioView from "@/views/PortofolioView.vue";
+import AboutUsViewVue from "@/views/AboutUsView.vue";
+import NewsView from "@/views/NewsView.vue";
+import BlogPostView from "@/views/BlogPostView.vue";
+import PortofolioPostView from "@/views/PortofolioPostView.vue";
+import CareerView from "@/views/CareerView.vue";
+import ContactView from "@/views/ContactView.vue";
 
+// Array routes
+const routes = [
+  {
+    path: "/",
+    name: "home",
+    component: HomeView,
+  },
+  {
+    path: "/about-us",
+    name: "about-us",
+    component: AboutUsViewVue,
+  },
+  {
+    path: "/services",
+    name: "services",
+    component: ServiceView,
+  },
+  {
+    path: "/portfolio",
+    name: "portfolio",
+    component: PortolioView,
+  },
+  {
+    path: "/news",
+    name: "news",
+    component: NewsView,
+  },
+  {
+    path: "/career",
+    name: "career",
+    component: CareerView,
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: ContactView,
+  },
+  {
+    path: "/news/:id",
+    name: "news-detail",
+    component: BlogPostView,
+  },
+  {
+    path: "/portfolio/:id",
+    name: "portfolio-detail",
+    component: PortofolioPostView,
+  },
+];
+
+// Router instance
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView,
-    },
-    {
-      path: '/about-us',
-      name: 'about-us',
-      component: AboutUsViewVue,
-    },
-    {
-      path: '/services',
-      name: 'services',
-      component: ServiceView,
-    },
-    {
-      path: '/portfolio',
-      name: 'portfolio',
-      component: PortolioView,
-    },
-    {
-      path: '/news',
-      name: 'news',
-      component: NewsView,
-    },
-    {
-      path: '/career',
-      name: 'career',
-      component: CareerView,
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: ContactView,
-    },
-    {
-      path: '/news/:id',
-      name: 'News',
-      component: BlogPostView,
-    },
-    {
-      path: '/portfolio/:id',
-      name: 'Portfolio',
-      component: PortofolioPostView,
-    },
-  ],
-})
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition; // Jika ada posisi sebelumnya, kembali ke posisi itu
+    } else {
+      return { top: 0 }; // Scroll ke paling atas
+    }
+  },
+});
 
-export default router
+export default router;

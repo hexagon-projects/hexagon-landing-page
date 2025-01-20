@@ -61,7 +61,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="px-[56px] md:px-[112px] dark:bg-black">
+    <div class="px-[56px] md:px-[112px] dark:bg-black" id="portofolio">
         <div class="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3">
             <div v-for="(card, index) in cardItems" :key="card.id" class="bg-white dark:bg-black dark:hover:shadow-gray-800 transition-all duration-300 hover:shadow-2xl hover:shadow-gray-200  overflow-hidden p-[24px] w-[395px] rounded-2xl flex-shrink-0">
                 <img :src="card.image" :alt="card.alt" class="w-full h-64 object-cover mb-[24px] rounded-lg">

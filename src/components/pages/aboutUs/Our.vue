@@ -1,5 +1,5 @@
 <template>
-  <div class="relative grid items-center gap-8 px-6 sm:grid-cols-1 md:grid-cols-2 md:px-32">
+  <div class="relative grid items-center gap-8 px-6 sm:grid-cols-1 md:grid-cols-2 md:px-32" id="our">
     <!-- Decorative Shape -->
     <img src="@/assets/about-us/side shape.svg" alt="" class="absolute top-0 right-0 dark:opacity-30" />
 

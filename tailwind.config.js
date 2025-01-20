@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+// import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
+import { setupInspiraUI } from "@inspira-ui/plugins";
+
 export default {
   darkMode: "class",
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", "./node_modules/flyonui/dist/js/*.js"],
@@ -33,5 +38,5 @@ export default {
       },
     },
   },
-  plugins: [require("flyonui"), require("flyonui/plugin"), require("@tailwindcss/typography")],
+  plugins: [require("flyonui"), require("flyonui/plugin"), require("@tailwindcss/typography"), animate, setupInspiraUI],
 };

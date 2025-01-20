@@ -44,7 +44,7 @@ const goToPage = (page) => {
 
 <template>
     <div
-        class="px-[10px] md:px-[112px] relative bg-gradient-to-b from-[#F3F8FF] to-white pt-40 dark:bg-gradient-to-b dark:from-[#1c1c1d] dark:to-black">
+        class="px-[10px] md:px-[112px] relative bg-gradient-to-b from-[#F3F8FF] to-white pt-40 dark:bg-gradient-to-b dark:from-black dark:to-black">
         <!-- <img src="../../../assets/about-us/hexbottomshape.png" alt="" class="absolute -z-[1]  -bottom-[900px] right-52 "> -->
         <img src="../../../assets/about-us/hexsideshapelight.png" alt="" class="absolute right-0 z-0 block dark:hidden">
         <img src="../../../assets/about-us/hexsideshape.png" alt="" class="absolute right-0 z-0 hidden dark:block">

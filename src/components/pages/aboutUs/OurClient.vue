@@ -14,8 +14,8 @@
 
     <!-- Marquee Section -->
     <div class="flex flex-col gap-12">
-        <!-- First Marquee -->
-         <Marquee :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40" class="overflow-hidden">
+      <!-- First Marquee -->
+      <Marquee :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40" class="overflow-hidden">
         <div class="flex gap-4">
           <div
             v-for="(logo, index) in ourClientData"
@@ -27,12 +27,20 @@
           </div>
         </div>
       </Marquee>
-      
-        <!-- Second Marquee -->
+
+      <div>
+        <!-- <div class="flex items-center justify-center gap-2.5">
+          <div class="w-8 h-0.5 bg-light-primary dark:bg-blue-400"></div>
+          <h4 class="text-gray-700 text-md dark:text-gray-300">Our Media</h4>
+        </div> -->
+        <p class=" text-2xl text-center text-[#272D3E] dark:text-gray-100">Integrated with over 100 mainstream media outlets</p>
+      </div>
+
+      <!-- Second Marquee -->
       <Marquee :fade="true" direction="left" :reverse="false" :pauseOnHover="false" :speed="40" class="overflow-hidden">
         <div class="flex gap-4">
           <div
-            v-for="(logo, index) in marqueeOneLogos"
+            v-for="(logo, index) in logos"
             :key="'marquee1-' + index"
             class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
           >
@@ -40,7 +48,6 @@
           </div>
         </div>
       </Marquee>
-
     </div>
   </div>
 </template>
@@ -77,13 +84,10 @@ onMounted(() => {
   getOurClient(); // Panggil fungsi saat komponen dimuat
 });
 
-
 const logos = [];
-for (let i = 1597883474; i <= 1597883499; i++) {
-  logos.push(new URL(`../../../assets/about-us/OurClient/Frame ${i}.png`, import.meta.url).href);
+for (let i = 1; i <= 19; i++) {
+  logos.push(new URL(`../../../assets/about-us/OurMedia/Frame (${i}).png`, import.meta.url).href);
 }
 
-const halfLength = Math.ceil(logos.length / 2);
-const marqueeOneLogos = logos.slice(0, halfLength);
-const marqueeTwoLogos = logos.slice(halfLength);
 </script>
+)
