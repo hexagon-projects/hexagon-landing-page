@@ -6,7 +6,7 @@ import Review from '@/components/pages/home/Review.vue';
 </script>
 
 <template>
-    <div class="space-y-[156px] dark:bg-black">
+    <div class="dark:bg-black">
         <Service />
         <Review />
         <CTA />

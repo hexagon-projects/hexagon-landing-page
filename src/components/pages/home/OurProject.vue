@@ -45,13 +45,13 @@ onMounted(() => {
 
 
 <template>
-    <div class="bg-gradient-to-t from-[#F3F8FF] to-white dark:bg-gradient-to-t dark:from-[#1c1c1d] dark:to-black">
+    <div class="bg-gradient-to-t from-[#F3F8FF] to-white dark:bg-gradient-to-t dark:from-black dark:to-black">
         <div class="px-[56px] md:px-[112px]">
             <div class="mb-[56px]">
                 <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">
                     Our Projects
                 </span>
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify-between mt-[24px]">
                     <h1 class="text-gray-800 dark:text-white font-semibold text-[32px] font-raleway tracking-[-0.64px]">
                         We provide perfect IT solutions for your business
                     </h1>
