@@ -4,7 +4,9 @@
       <div class="flex flex-col justify-between md:flex-row">
         <div class="flex flex-col w-full mb-6 md:mb-0 md:w-1/3">
           <div class="flex items-center">
-            <img src="@/assets/footer/logohexagon.svg" alt="Hexagon Logo" class="h-15" />
+            <a href="/">
+              <img src="@/assets/footer/logohexagon.svg" alt="Hexagon Logo" class="h-15" />
+            </a>
           </div>
           <p class="text-sm font-normal text-justify text-gray-900 dark:text-gray-300">
             Founded under the name PT. Hexagon Karyatama Indonesia, Hexagon Inc. is a company that operates in the field
