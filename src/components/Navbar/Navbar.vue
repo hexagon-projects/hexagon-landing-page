@@ -63,11 +63,12 @@ const navItems = [
 </script>
 
 <template>
-    <nav class="bg-white h-[96px] w-full relative z-20 dark:bg-black">
+    <nav class="bg-white h-[96px] w-full relative z-20 dark:bg-black" id="navbar">
         <div class="px-[56px] md:px-[112px] h-full">
             <div class="flex items-center justify-between h-full">
                 <div class="flex items-center gap-[40px]">
-                    <img class="flex-initial dark:saturate-0" src="@/assets/hexagon.svg" alt="Hexagon Inc.">
+                    <img v-if="!isLightMode" class="flex-initial" src="@/assets/darkHexa.png" alt="Hexagon Inc.">
+                    <img v-else class="flex-initial" src="@/assets/hexagon.svg" alt="Hexagon Inc.">
                     <div class="flex-none hidden gap-8 lg:flex">
                         <RouterLink v-for="item in navItems" :key="item.route" :to="{ name: item.route }" class="relative dark:text-white"
                             active-class="font-medium mb-1 after:content-[''] after:block after:absolute after:left-1/2 after:-translate-x-1/2 after:w-2 after:h-2 after:rounded-full after:bg-light-primary dark:after:bg-white after:mt-4">
@@ -126,4 +127,3 @@ const navItems = [
         </div>
     </div>
 </template>
-

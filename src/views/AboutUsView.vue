@@ -7,6 +7,7 @@ import OurClient from '@/components/pages/aboutUs/OurClient.vue';
 import Ideas from '@/components/pages/aboutUs/Ideas.vue';
 import Gallery from '@/components/pages/aboutUs/Gallery.vue';
 import OurTeam from '@/components/pages/aboutUs/OurTeam.vue';
+import cta from '@/components/pages/home/cta.vue';
 
 </script>
 
@@ -20,5 +21,6 @@ import OurTeam from '@/components/pages/aboutUs/OurTeam.vue';
         <OurClient />
         <Gallery />
         <OurTeam/>
+        <cta />
     </div>
 </template>

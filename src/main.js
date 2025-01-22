@@ -1,5 +1,7 @@
 import './assets/main.css'
 import "flyonui/flyonui";
+import axios from "./axios";
+
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -10,6 +12,12 @@ import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faArrowRight, faBars, faEllipsisVertical, faXmark } from '@fortawesome/free-solid-svg-icons'
+
+axios.get("/sanctum/csrf-cookie").then(() => {
+    console.log("CSRF cookie initialized.");
+}).catch(error => {
+    console.error("Failed to initialize CSRF cookie:", error);
+});
 
 library.add(faEllipsisVertical, faBars, faXmark, faArrowRight)
 
