@@ -55,6 +55,7 @@ const routes = [
     path: "/portfolio/:id",
     name: "portfolio-detail",
     component: PortofolioPostView,
+    props: true,
   },
 ];
 
