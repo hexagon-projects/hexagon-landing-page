@@ -57,8 +57,8 @@ const scrollToSection = () => {
 </script>
 
 <template>
-    <div
-        class="px-[56px] md:px-[112px] bg-gradient-to-b from-white to-[#F3F8FF] dark:bg-gradient-to-b dark:from-black dark:to-black">
+
+    <div class="px-[56px] md:px-[112px] bg-gradient-to-b from-white to-[#F3F8FF] dark:bg-gradient-to-b dark:from-black dark:to-black">
         <div class="flex flex-col gap-9 items-center text-center mb-[60px]">
             <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline">Our
                 Service</span>
@@ -302,82 +302,82 @@ const scrollToSection = () => {
                     <div
                         class="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-transparent">
                         <img src="@/assets/services/100+ Client Choose Us.png" alt="services"
-                            class="pointer-events-none text-center text-8xl font-semibold leading-none" />
+                            class="font-semibold leading-none text-center pointer-events-none text-8xl" />
 
                         <!-- Inner Circles 70px -->
                         <!-- Inner Circle (70px) - Radius 80 -->
                         <Orbit class="size-[70px] items-center justify-center border-none bg-transparent" :duration="25"
                             :delay="0" :radius="80" path :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/Frame 1597883479.png" alt="Client 1"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <Orbit class="size-[70px] items-center justify-center border-none bg-transparent" :duration="25"
                             :delay="6" :radius="80" :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/Frame 1597883480.png" alt="Client 2"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <Orbit class="size-[70px] items-center justify-center border-none bg-transparent" :duration="25"
                             :delay="12" :radius="80" :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/Frame 1597883490.png" alt="Client 3"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <Orbit class="size-[70px] items-center justify-center border-none bg-transparent" :duration="25"
                             :delay="18" :radius="80" :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/Frame 1597883495.png" alt="Client 4"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <!-- Middle Circle (90px) - Radius 140 -->
                         <Orbit class="size-[90px] items-center justify-center border-none bg-transparent" :radius="140"
                             :delay="0" :duration="30" path :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/Frame 1597883496.png" alt="Client 5"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <Orbit class="size-[90px] items-center justify-center border-none bg-transparent" :radius="140"
                             :delay="10" :duration="30" :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/kartika.png" alt="Client 6"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <Orbit class="size-[90px] items-center justify-center border-none bg-transparent" :radius="140"
                             :delay="20" :duration="30" :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/ulbi.png" alt="Client 7"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <!-- Outer Circle (110px) - Radius 190 -->
                         <Orbit class="size-[110px] items-center justify-center border-none bg-transparent" :radius="190"
                             :duration="35" :delay="0" path :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/Frame 1597883481.png" alt="Client 8"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <Orbit class="size-[110px] items-center justify-center border-none bg-transparent" :radius="190"
                             :duration="35" :delay="7" :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/Frame 1597883497.png" alt="Client 9"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <Orbit class="size-[110px] items-center justify-center border-none bg-transparent" :radius="190"
                             :duration="35" :delay="14" :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/Frame 1597883490.png" alt="Client 10"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <Orbit class="size-[110px] items-center justify-center border-none bg-transparent" :radius="190"
                             :duration="35" :delay="21" :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/Frame 1597883475.png" alt="Client 11"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
 
                         <Orbit class="size-[110px] items-center justify-center border-none bg-transparent" :radius="190"
                             :duration="35" :delay="28" :direction="ORBIT_DIRECTION.CounterClockwise">
                             <img src="@/assets/about-us/OurClient/Frame 1597883494.png" alt="Client 12"
-                                class="w-full h-full object-contain" />
+                                class="object-contain w-full h-full" />
                         </Orbit>
                     </div>
                 </div>
