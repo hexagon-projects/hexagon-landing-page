@@ -29,7 +29,9 @@ onMounted(async () => {
         </div>
         <div class="absolute flex flex-col items-center -translate-x-1/2 left-1/2 -bottom-16 gap-9">
             <img src="@/assets/line.svg" alt="">
-            <img src="@/assets/scroll.svg" alt="">
+            <div class="animate-wiggle">
+                <img src="@/assets/scroll.svg" alt="">
+            </div>
         </div>
     </div>
 </template>

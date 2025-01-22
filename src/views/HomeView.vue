@@ -13,7 +13,7 @@ import OurClient from '@/components/pages/aboutUs/OurClient.vue';
 
 <template>
     <div class=" dark:bg-black">
-        <!-- <Hero /> -->
+        <Hero />
         <OurPartner />
         <AboutUs />
         <OurProject />

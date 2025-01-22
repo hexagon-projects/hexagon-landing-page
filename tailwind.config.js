@@ -1,13 +1,12 @@
 import animate from "tailwindcss-animate";
-// import { setupInspiraUI } from "@inspira-ui/plugins";
 
 export default {
-  darkMode: "class", // Menggunakan mode "class" dari config pertama
+  darkMode: "class",
   safelist: ["dark"],
   prefix: "",
   content: [
-    "./index.html", 
-    "./src/**/*.{vue,js,ts,jsx,tsx}", 
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
     "./node_modules/flyonui/dist/js/*.js"
   ],
   flyonui: {
@@ -15,6 +14,15 @@ export default {
   },
   theme: {
     extend: {
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'translateY(-55%)' },
+          '50%': { transform: 'translateY(0)' },
+        }
+      },
+      animation: {
+        wiggle: "wiggle 3s ease-in-out infinite", // Tambahkan animasi di sini
+      },
       height: {
         100: "400px",
       },
@@ -85,6 +93,5 @@ export default {
     require("flyonui/plugin"),
     require("@tailwindcss/typography"),
     animate,
-    // setupInspiraUI,
   ],
 };
