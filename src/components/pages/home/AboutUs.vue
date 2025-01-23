@@ -1,6 +1,7 @@
 <script setup>
 import Button from '@/components/button/Button.vue';
 import ButtonOutline from '@/components/button/ButtonOutline.vue';
+import { Icon } from "@iconify/vue";
 </script>
 
 <template>
@@ -23,10 +24,11 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
         </div>
         <div class="flex flex-col lg:flex-row gap-[18px] mb-[18px] justify-center">
             <div
-                class="lg:max-w-[650px] w-full flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] items-center overflow-hidden">
-                <div class="flex flex-col p-[56px] pt-[55px] justify-center items-center">
+                class="lg:max-w-[650px] w-full flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] items-center overflow-hidden dark:card-bg">
+                <div class="flex flex-col p-[28px] pt-[28px] justify-center items-center">
                     <ButtonOutline @click="$router.push({ name: 'contact' })">
-                        <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
+                        <!-- <span class="block w-2 h-2 rounded-full bg-light-secondary"><Icon icon="meteocons:star-fill" /></span> -->
+                        <Icon icon="meteocons:star-fill" class="w-6 h-6"/>
                         <span class="dark:text-white">IT Solution</span>
                     </ButtonOutline>
                     <h1 class="text-[40px] font-raleway font-semibold text-gradient-dark mt-5">Digital Solutions
@@ -40,7 +42,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
             </div>
 
             <div
-                class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] ">
+                class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] dark:card-bg">
                 <div class="flex h-full">
                     <div class="flex items-end  w-1/2">
                         <img src="@/assets/services/Union5.png" alt="Digital Marketing" class="">
@@ -61,7 +63,7 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
         </div>
         <div class="flex flex-col lg:flex-row gap-[18px] mb-[90px] justify-center">
             <div
-                class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] ">
+                class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] dark:card-bg ">
                 <div class="flex h-full">
                     <div class="flex justify-between flex-col">
                         <div>
@@ -81,8 +83,8 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                 </div>
             </div>
             <div
-                class="lg:max-w-[650px] w-full flex flex-col items-center  bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] overflow-hidden ">
-                <div class="p-[58px]">
+                class="lg:max-w-[650px] w-full flex flex-col items-center  bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] overflow-hidden dark:card-bg">
+                <div class="p-[38px]">
                     <img src="@/assets/services/3d2.png" alt="Media Consultant" class="object-cover w-full h-auto">
                 </div>
                 <div class="flex flex-col items-center">
@@ -92,7 +94,8 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
                             Strategic Guide for Media Excellence</h1>
                     </div>
                     <ButtonOutline @click="$router.push({ name: 'contact' })" class="mt-5 mb-8">
-                        <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
+                        <!-- <span class="block w-2 h-2 rounded-full bg-light-secondary"></span> -->
+                        <Icon icon="meteocons:star-fill" class="w-6 h-6" />
                         <span class="dark:text-white">Digital Artwork</span>
                     </ButtonOutline>
                 </div>
@@ -100,3 +103,16 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
         </div>
     </div>
 </template>
+
+<style scoped>
+.active-dot {
+    content: url('@/assets/Active dot.svg');
+}
+
+.card-bg {
+    background-image: url(@/assets/services/bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+</style>
