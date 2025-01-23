@@ -63,7 +63,7 @@ const navItems = [
 </script>
 
 <template>
-  <nav class="bg-white h-[96px] w-full relative z-20 dark:bg-black" id="navbar">
+  <nav class="bg-white h-[96px] w-full  z-[999] dark:bg-black fixed" id="navbar">
     <div class="px-[56px] md:px-[112px] h-full">
       <div class="flex items-center justify-between h-full a">
         <div class="flex items-center gap-[40px]">

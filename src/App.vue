@@ -10,7 +10,7 @@ const isLoading = ref(true);
 onMounted(() => {
   setTimeout(() => {
     isLoading.value = false; // Matikan loading setelah 3 detik
-  }, 5000);
+  }, 1000);
 });
 </script>
 
@@ -18,7 +18,8 @@ onMounted(() => {
   <Loading :isVisible="isLoading" v-if="isLoading"/>
   <div class="mx-auto dark:bg-black" v-else>
     <div>
-      <Navbar />
+      <Navbar/>
+      <div class="pt-16"></div>
       <RouterView />
       <Footer />
     </div>
