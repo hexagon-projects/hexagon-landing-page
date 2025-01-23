@@ -31,21 +31,21 @@ export const fetchContact = async () => {
     return { error: "Failed to fetch about data. Please try again later." };
   }
 };
-// export const fetchNews = async () => {
-//   try {
-//     const response = await axiosInstance.get("/api/news");
-//     // Cek apakah response memiliki data yang valid
-//     if (response.data && response.data.data) {
-//       return response.data.data;
-//     } else {
-//       throw new Error("No data found in response");
-//     }
-//   } catch (error) {
-//     console.error("Error fetching about data:", error);
-//     // Mengembalikan pesan error yang dapat dipakai di komponen
-//     return { error: "Failed to fetch about data. Please try again later." };
-//   }
-// };
+export const fetchNews = async () => {
+  try {
+    const response = await axiosInstance.get("/api/News");
+    // Cek apakah response memiliki data yang valid
+    if (response.data) {
+      return response.data;
+    } else {
+      throw new Error("No data found in response");
+    }
+  } catch (error) {
+    console.error("Error fetching about data:", error);
+    // Mengembalikan pesan error yang dapat dipakai di komponen
+    return { error: "Failed to fetch about data. Please try again later." };
+  }
+};
 export const fetchVisionMission = async (type) => {
   try {
     const response = await axiosInstance.get("/api/vision_mission", {
