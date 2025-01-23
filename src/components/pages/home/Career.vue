@@ -52,7 +52,7 @@ import Button from '@/components/button/Button.vue';
                         <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />
                     </div>
                     <div
-                        class="absolute bottom-0 right-0 flex gap-2 transition-opacity duration-300 opacity-0 hover:opacity-100">
+                        class="absolute bottom-0 right-0 flex gap-2 transition-opacity duration-300 opacity-0 hover:opacity-100 w-">
                         <img src="@/assets/Large unit.svg" alt="Large Unit Icon" class="w-[150px] h-[150]" />
                     </div>
                 </div>
