@@ -1,5 +1,6 @@
 <template>
-  <div class="h-[500px] flex flex-col pt-72 md:flex-row items-center justify-center gap-10 mx-4 md:mx-28" id="our-journey">
+  <div class="h-[500px] flex flex-col pt-72 md:flex-row items-center justify-center gap-10 mx-4 md:mx-28"
+    id="our-journey">
     <div v-if="aboutData" class="w-full md:w-1/2 space-y-2.5">
       <div class="flex items-center gap-2.5 mt-8">
         <div class="w-8 h-1 bg-light-primary"></div>
@@ -33,28 +34,33 @@
     <div class="flex flex-col items-center justify-between h-auto">
       <div class="flex justify-center w-full gap-4">
         <div class="relative">
-          <img
-            :class="selectedImage === 1 ? 'w-72 h-100' : 'w-25 h-100' + ' dark:filter dark:brightness-75'"
-            src="@/assets/gallery/1.jpg"
-            alt="Image 1"
+          <img :class="selectedImage === 1 ? 'w-72 h-100' : 'w-25 h-100' + ' dark:filter dark:brightness-75'"
+            src="@/assets/gallery/1.jpg" alt="Image 1"
             class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
-            @click="selectImage(1)"
-          />
-          <div v-if="selectedImage === 1" class="absolute inset-x-3.5 p-4 rounded-lg w-[90%] bottom-3.5 bg-white/30 dark:bg-gray-700/50 backdrop-blur-md border border-white/50">
+            @click="selectImage(1)" />
+          <div v-if="selectedImage === 1"
+            class="absolute inset-x-3.5 p-4 rounded-lg w-[90%] bottom-3.5 bg-white/30 dark:bg-gray-700/50 backdrop-blur-md border border-white/50">
             <h3 class="text-lg font-bold text-black dark:text-white">Workshop 1</h3>
-            <p class="text-sm text-black dark:text-gray-300">Jl. Abdul Halim No.128, Cimahi Tengah, Kota Cimahi 40522</p>
+            <p class="text-sm text-black dark:text-gray-300">Jl. Abdul Halim No.128, Cimahi Tengah, Kota Cimahi 40522
+            </p>
           </div>
         </div>
         <div class="relative">
-          <img :class="selectedImage === 2 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/gallery/2.png" alt="Image 2" class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer" @click="selectImage(2)" />
-          <div v-if="selectedImage === 2" class="absolute inset-x-3.5 p-4 rounded-lg w-[90%] bottom-3.5 bg-white/30 backdrop-blur-md border border-white/50">
+          <img :class="selectedImage === 2 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/gallery/2.png" alt="Image 2"
+            class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
+            @click="selectImage(2)" />
+          <div v-if="selectedImage === 2"
+            class="absolute inset-x-3.5 p-4 rounded-lg w-[90%] bottom-3.5 bg-white/30 backdrop-blur-md border border-white/50">
             <h3 class="text-lg font-bold text-black">Workshop 2</h3>
             <p class="text-sm text-black">Jl. Terusan Jakarta No. 175, Antapani Kulon, Kec Antapani, Kota Bandung</p>
           </div>
         </div>
         <div class="relative">
-          <img :class="selectedImage === 3 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/gallery/3.jpg" alt="Image 3" class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer" @click="selectImage(3)" />
-          <div v-if="selectedImage === 3" class="absolute inset-x-3.5 p-4 rounded-lg w-[90%] bottom-3.5 bg-white/30 backdrop-blur-md border border-white/50">
+          <img :class="selectedImage === 3 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/gallery/3.jpg" alt="Image 3"
+            class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
+            @click="selectImage(3)" />
+          <div v-if="selectedImage === 3"
+            class="absolute inset-x-3.5 p-4 rounded-lg w-[90%] bottom-3.5 bg-white/30 backdrop-blur-md border border-white/50">
             <h3 class="text-lg font-bold text-black">Workshop 3</h3>
             <p class="text-sm text-black">BTC (Baros Information, Technology & Creative Center)</p>
           </div>

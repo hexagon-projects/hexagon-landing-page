@@ -31,7 +31,7 @@ async function fetchProjectData(page = 1) {
         alt: item.judul_news,
         timeAgo: "1 day ago",
       }));
-      
+
       currentPage.value = response.data.meta.current_page;
       totalPages.value = response.data.meta.last_page;
     }
@@ -120,35 +120,19 @@ fetchProjectData();
       <!-- Articles -->
       <div class="col-span-8">
         <div class="space-y-8">
-          <BlogPost
-            v-for="(post, index) in paginatedFilteredPosts"
-            :key="index"
-            :image="post.image"
-            :category="post.category"
-            :timeAgo="post.timeAgo"
-            :title="post.title"
-            :description="post.description"
-            :id="post.id"
-          />
+          <BlogPost v-for="(post, index) in paginatedFilteredPosts" :key="index" :image="post.image"
+            :category="post.category" :timeAgo="post.timeAgo" :title="post.title" :description="post.description"
+            :id="post.id" />
         </div>
 
         <!-- Pagination -->
-        <Pagination
-          :currentPage="currentPage"
-          :totalPages="totalPages"
-          @previous="previousPage"
-          @next="nextPage"
-          @go-to-page="goToPage"
-        />
+        <Pagination :currentPage="currentPage" :totalPages="totalPages" @previous="previousPage" @next="nextPage"
+          @go-to-page="goToPage" />
       </div>
 
       <!-- Sidebar -->
       <div class="col-span-4">
-        <Sidebar
-          :categories="categories"
-          :onSearch="debouncedSearch"
-          @selectCategory="selectCategory"
-        />
+        <Sidebar :categories="categories" :onSearch="debouncedSearch" @selectCategory="selectCategory" />
       </div>
     </div>
   </div>
