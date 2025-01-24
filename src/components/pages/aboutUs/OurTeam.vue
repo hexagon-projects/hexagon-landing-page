@@ -28,7 +28,7 @@
                             <div class="flex gap-4 mt-4">
                                 <a href="#" class="text-white transition-colors hover:text-blue-400">
                                     <i class="text-lg fab fa-linkedin"></i>
-                                </a>
+                                </a>nya
                                 <a href="#" class="text-white transition-colors hover:text-blue-400">
                                     <i class="text-lg fab fa-github"></i>
                                 </a>
@@ -46,37 +46,37 @@ import { ref } from "vue";
 
 const teamMembers = ref([
     {
-        image: new URL('@/assets/about-us/OurTeam/PakTaufiq.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/PakTaufiq.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/Endar.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/Endar.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/Ghiar.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/Ghiar.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/Ambu.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/Ambu.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/Dherri.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/Dherri.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/sari.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/sari.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/Diar.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/Diar.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/fauzan.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/fauzan.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/gina.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/gina.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/salwa.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/salwa.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/yoyo.png', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/yoyo.webp', import.meta.url).href,
     },
 ]);
 </script>
