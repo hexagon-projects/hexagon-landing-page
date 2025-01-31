@@ -12,7 +12,7 @@ const activeCard = ref(1);
 async function fetchProjectData() {
     try {
         const response = await axiosInstance.get('/api/Portofolio'); // Endpoint Laravel Anda
-        console.log(response.data);
+        console.log("Response:", response.data);
         if (response.data && response.data.data) {
             cardItems.value = response.data.data.map((item) => ({
                 tag: item.Kategori,

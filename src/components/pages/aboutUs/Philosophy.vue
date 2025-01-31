@@ -1,20 +1,30 @@
 <template>
-    <div class=" pt-52">
-        <img src="@/assets/about-us/ser_shape.png" class="absolute right-0 hidden md:block" />
-        <img src="@/assets/about-us/ser_shape_r.png" class="absolute hidden md:block" />
-        <div class="max-w-[1000px] flex justifty-center mx-auto pb-32 pt-20">
-            <div class="flex flex-col items-center justify-center gap-2.5 mt-8">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-8 h-1 bg-light-secondary"></div>
-                    <h4 class="text-md dark:text-light-secondary">Our Business Philosophy</h4>
-                </div>
-                <h1 class="text-4xl font-normal font-raleway text-[#272D3E] dark:text-white">Guided by the Wisdom of the
-                    Bee</h1>
-                <img src="@/assets/about-us/bee.png" class="" />
-                <p class="text-center text-gray-600 md:text-base dark:text-gray-400">{{ aboutData?.philosophy || "Loading..." }}</p>
-            </div>
+  <div class="pt-52">
+    <img src="@/assets/about-us/ser_shape.png" class="absolute right-0 hidden md:block" />
+    <img src="@/assets/about-us/ser_shape_r.png" class="absolute hidden md:block" />
+    <div v-if="aboutData" class="max-w-[1000px] flex justifty-center mx-auto pb-32 pt-20">
+      <div class="flex flex-col items-center justify-center gap-2.5 mt-8">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-1 bg-light-secondary"></div>
+          <h4 class="text-md dark:text-light-secondary">Our Business Philosophy</h4>
         </div>
+        <h1 class="text-4xl font-normal font-raleway text-[#272D3E] dark:text-white">Guided by the Wisdom of the Bee</h1>
+        <img src="@/assets/about-us/bee.png" class="" />
+        <p class="text-center text-gray-600 md:text-base dark:text-gray-400">{{ aboutData?.philosophy || "Loading..." }}</p>
+      </div>
     </div>
+    <div v-else class="bg-white max-w-[1000px] flex justify-center mx-auto pb-32 pt-20">
+      <div class="flex flex-col items-center justify-center gap-2.5 mt-8">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-1 bg-gray-300 animate-pulse"></div>
+          <div class="w-32 h-4 bg-gray-300 rounded animate-pulse"></div>
+        </div>
+        <div class="w-64 h-10 bg-gray-300 rounded animate-pulse"></div>
+        <div class="w-48 h-48 bg-gray-300 rounded animate-pulse"></div>
+        <div class="w-64 h-6 bg-gray-300 rounded animate-pulse"></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -25,16 +35,16 @@ const aboutData = ref(null);
 
 // Fungsi untuk mengambil data tentang perusahaan
 const getAboutData = async () => {
-    const data = await fetchAboutData();
-    // Cek apakah data yang diterima mengandung error
-    if (data.error) {
-        console.error(data.error); // Menampilkan error yang datang dari service
-    } else {
-        aboutData.value = data; // Menyimpan data jika berhasil
-    }
+  const data = await fetchAboutData();
+  // Cek apakah data yang diterima mengandung error
+  if (data.error) {
+    console.error(data.error); // Menampilkan error yang datang dari service
+  } else {
+    aboutData.value = data; // Menyimpan data jika berhasil
+  }
 };
 
 onMounted(() => {
-    getAboutData(); // Panggil fungsi saat komponen dimuat
+  getAboutData(); // Panggil fungsi saat komponen dimuat
 });
 </script>

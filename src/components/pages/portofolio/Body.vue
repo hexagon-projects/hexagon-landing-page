@@ -26,9 +26,9 @@ async function fetchProjectData(page = 1) {
       }));
 
       // Update pagination data
-      currentPage.value = response.data.meta.current_page;
-      totalPages.value = response.data.meta.last_page;
-      itemsPerPage.value = response.data.meta.per_page;
+      currentPage.value = response.data.current_page;
+      totalPages.value = response.data.last_page;
+      itemsPerPage.value = response.data.per_page;
     }
   } catch (error) {
     console.error("Error fetching project data:", error);
