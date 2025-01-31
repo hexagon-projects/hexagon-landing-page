@@ -9,21 +9,11 @@ import { Icon } from "@iconify/vue";
         <!-- Bagian About Us (Tetap Sama) -->
         <div class="hidden md:block">
             <div class="flex flex-col gap-9 items-center text-center mb-[78px]">
-                <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">ABOUT
-                    US</span>
-                <h1 class="font-raleway text-[30px] font-semibold text-gray-800 dark:text-white">Digital Artwork & IT
-                    Solution<br>Be the
-                    best partner to create solution together</h1>
-                <div class="flex flex-col sm:flex-row gap-[14px]">
-                    <Button @click="$router.push({ name: 'about-us' })">
-                        <span class="block w-2 h-2 bg-white rounded-full"></span>
-                        <span>More About Us</span>
-                    </Button>
-                    <ButtonOutline @click="$router.push({ name: 'services' })">
-                        <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
-                        <span>Services Detail</span>
-                    </ButtonOutline>
-                </div>
+                <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline mt-[50px]"
+                id="service">Service</span>
+                <h1 class="font-raleway text-[30px] font-semibold text-gray-800 dark:text-gradient">Discover Solutions
+                Crafted For Your
+                Business Growth<br>Effeciency, and Brand Impact</h1>
             </div>
         </div>
 

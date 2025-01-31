@@ -35,7 +35,7 @@
       <div class="flex justify-center w-full gap-4">
         <div class="relative">
           <img :class="selectedImage === 1 ? 'w-72 h-100' : 'w-25 h-100' + ' dark:filter dark:brightness-75'"
-            src="@/assets/gallery/1.jpg" alt="Image 1"
+            src="@/assets/gallery/1.webp" alt="Image 1"
             class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
             @click="selectImage(1)" />
           <div v-if="selectedImage === 1"
@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="relative">
-          <img :class="selectedImage === 2 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/gallery/2.png" alt="Image 2"
+          <img :class="selectedImage === 2 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/gallery/2.webp" alt="Image 2"
             class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
             @click="selectImage(2)" />
           <div v-if="selectedImage === 2"
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="relative">
-          <img :class="selectedImage === 3 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/gallery/3.jpg" alt="Image 3"
+          <img :class="selectedImage === 3 ? 'w-72 h-100' : 'w-25 h-100'" src="@/assets/gallery/3.webp" alt="Image 3"
             class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"
             @click="selectImage(3)" />
           <div v-if="selectedImage === 3"

@@ -46,7 +46,7 @@ onMounted(() => {
 
 <template>
     <div class="bg-gradient-to-t from-[#F3F8FF] to-white dark:bg-gradient-to-t dark:from-black dark:to-black">
-        <div class="px-[56px] md:px-[112px]">
+        <div class="px-[56px] md:px-[112px] mt-[56px]">
             <div class="mb-[56px]">
                 <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">
                     Our Projects
