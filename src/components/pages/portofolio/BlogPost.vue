@@ -1,7 +1,5 @@
 <template>
-  <div v-if="loading" class="px-[56px] md:px-[112px] pt-20 dark:bg-black">
-    Loading...
-  </div>
+  <div v-if="loading" class="px-[56px] md:px-[112px] pt-20 dark:bg-black">Loading...</div>
   <div v-else-if="error" class="px-[56px] md:px-[112px] pt-20 dark:bg-black">
     {{ error }}
   </div>
@@ -19,11 +17,7 @@
         </li>
       </ul>
     </div>
-    <img 
-      :src="portofolio.images[0]" 
-      :alt="portofolio.judul_porto" 
-      class="w-full mt-10 aspect-video rounded-2xl" 
-    />
+    <img :src="portofolio.images[0]" :alt="portofolio.judul_porto" class="w-full mt-10 aspect-video rounded-2xl" />
     <div class="grid grid-cols-1 gap-6 mt-10 md:grid-cols-12">
       <div class="flex flex-col col-span-4 gap-6 p-6 bg-gray-50 dark:bg-black rounded-2xl">
         <div class="flex flex-col gap-4">
@@ -32,9 +26,7 @@
         </div>
         <div v-if="portofolio.url_youtube" class="flex flex-col gap-4">
           <h4 class="font-semibold text-black dark:text-white">Link :</h4>
-          <a :href="portofolio.url_youtube" class="text-light-primary hover:underline">
-            Visit Website
-          </a>
+          <a :href="portofolio.url_youtube" class="text-light-primary hover:underline"> Visit Website </a>
         </div>
         <div class="flex flex-col gap-4">
           <h4 class="font-semibold text-black dark:text-white">Category :</h4>
@@ -49,9 +41,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useRoute } from 'vue-router';
-import axiosInstance from '@/axios';
+import { ref } from "vue";
+import { useRoute } from "vue-router";
+import axiosInstance from "@/axios";
 
 const portofolio = ref(null);
 const loading = ref(true);
@@ -59,18 +51,18 @@ const error = ref(null);
 const route = useRoute();
 
 const fetchPortofolio = async () => {
-    const id = route.params.id;
-    try {
-        loading.value = true;
-        error.value = null;
-        const response = await axiosInstance.get(`/api/Portofolio/${id}`);
-        portofolio.value = response.data;
-    } catch (err) {
-        error.value = 'Error loading portfolio: ' + err.message;
-        console.error('Error fetching project:', err);
-    } finally {
-        loading.value = false;
-    }
+  const id = route.params.id;
+  try {
+    loading.value = true;
+    error.value = null;
+    const response = await axiosInstance.get(`/api/Portofolio/${id}`);
+    portofolio.value = response.data;
+  } catch (err) {
+    error.value = "Error loading portfolio: " + err.message;
+    console.error("Error fetching project:", err);
+  } finally {
+    loading.value = false;
+  }
 };
 
 fetchPortofolio();

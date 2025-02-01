@@ -1,5 +1,33 @@
 <script setup>
 import Button from '@/components/button/Button.vue';
+import { ref, onMounted, watch } from 'vue';
+import { fetchCareer } from '@/service';
+
+const positions = ref([]);
+const loading = ref(false);
+
+const getCareerData = async () => {
+  loading.value = true;
+
+  try {
+    const response = await fetchCareer();
+    if (response.error) {
+      throw new Error(response.error);
+    }
+
+    positions.value = response;
+    console.log("Data:", positions.value);
+  } catch (err) {
+    error.value = err.message;
+    console.error('Error fetching career data:', err);
+  } finally {
+    loading.value = false;
+  }
+};
+
+onMounted(() => {
+  getCareerData();
+});
 </script>
 
 <template>
@@ -22,32 +50,14 @@ import Button from '@/components/button/Button.vue';
                 </div>
             </div>
             <div class="flex flex-col lg:max-w-[450px] w-full">
-                <div
+                
+                <div v-for="(position, index) in positions" :key="index"
                     class="flex flex-col items-start bg-[#F5F6FA] rounded-[16px] mb-4 p-[45px] pt-[35px] relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-800 hover:text-white hover:shadow-lg hover:scale-105">
-                    <p class="mb-2 text-xs text-gray-600 dark:text-gray-400">Intern</p>
-                    <h1
-                        class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-2">
-                        Front End Developer</h1>
-                    <p class="text-xs text-justify text-gray-600 dark:text-gray-400">Responsible for developing and
-                        maintaining back-end systems, managing databases, and developing secure APIs. Collaborate with
-                        the Front-End team to ensure optimal application performance.</p>
-                    <div class="absolute bottom-0 right-0 flex items-center justify-center">
-                        <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />
-                    </div>
-                    <div
-                        class="absolute bottom-0 right-0 flex gap-2 transition-opacity duration-300 opacity-0 hover:opacity-100">
-                        <img src="@/assets/Large unit.svg" alt="Large Unit Icon" class="w-[150px] h-[150]" />
-                    </div>
-                </div>
-                <div
-                    class="flex flex-col items-start bg-[#F5F6FA] rounded-[16px] mb-4 p-[45px] pt-[35px] relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-800 hover:text-white hover:shadow-lg hover:scale-105">
-                    <p class="mb-2 text-xs text-gray-600 dark:text-gray-400">Intern</p>
+                    <p class="mb-2 text-xs text-gray-600 dark:text-gray-400">{{ position.tipe }}</p>
                     <h1
                         class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold mb-2 text-gray-800 dark:text-white">
-                        Back End Developer</h1>
-                    <p class="text-xs text-justify text-gray-600 dark:text-gray-400">Responsible for developing and
-                        maintaining back-end systems, managing databases, and developing secure APIs. Collaborate with
-                        the Front-End team to ensure optimal application performance.</p>
+                        {{ position.lowong_krj }}</h1>
+                    <p class="text-xs text-justify text-gray-600 dark:text-gray-400">{{ position.ket_lowong }}</p>
                     <div class="absolute bottom-0 right-0 flex items-center justify-center">
                         <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />
                     </div>

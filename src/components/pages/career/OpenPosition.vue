@@ -4,33 +4,18 @@ import { fetchCareer } from '@/service';
 
 const positions = ref([]);
 const loading = ref(false);
-const error = ref(null);
 
-// Search and filter states
-const searchQuery = ref('');
-const selectedType = ref('');
-const currentPage = ref(1);
-const perPage = ref(10);
-
-// Fetch career data with parameters
 const getCareerData = async () => {
   loading.value = true;
-  error.value = null;
-  
+
   try {
-    const params = {
-      search: searchQuery.value,
-      type: selectedType.value,
-      page: currentPage.value,
-      per_page: perPage.value
-    };
-    
-    const response = await fetchCareer(params);
+    const response = await fetchCareer();
     if (response.error) {
       throw new Error(response.error);
     }
-    
-    positions.value = response.data;
+
+    positions.value = response;
+    console.log("Data:", positions.value);
   } catch (err) {
     error.value = err.message;
     console.error('Error fetching career data:', err);
@@ -38,11 +23,6 @@ const getCareerData = async () => {
     loading.value = false;
   }
 };
-
-// Watch for changes in filters and search
-watch([searchQuery, selectedType, currentPage], () => {
-  getCareerData();
-});
 
 onMounted(() => {
   getCareerData();
