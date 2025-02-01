@@ -11,7 +11,9 @@ const scrollToSection = () => {
 </script>
 
 <template>
-  <div class="px-[24px] md:px-[112px] dark:bg-black">
+  <img src="@/assets/news/Background.png" alt="Background"
+            class="absolute inset-0 object-cover w-full h-full -z-10"/>
+  <div class="px-[24px] md:px-[112px] dark:bg-black pt-20">
     <div class="flex flex-col gap-9 items-center text-center mb-[60px]">
       <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline">Portofolio Kami</span>
       <h1 class="font-raleway text-[32px] md:text-[58px] break-all font-bold text-gradient ">Menampilkan Keunggulan <br class="hidden md:block"/>dan Keanekaragaman Proyek Kami.</h1>

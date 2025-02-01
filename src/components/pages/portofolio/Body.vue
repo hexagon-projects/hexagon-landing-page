@@ -9,7 +9,7 @@ const currentPage = ref(1);
 const totalPages = ref(1);
 const itemsPerPage = ref(10); // Default items per page dari API
 const activeTag = ref("All"); // State untuk menyimpan tag yang aktif
-const tags = ref([]); // State untuk menyimpan daftar tag dari API
+const tags = ref([]); // State untuk menyimpan daftar tag yang diekstrak dari data portofolio
 
 // Fungsi untuk mengambil data dari API
 async function fetchProjectData(page = 1) {
@@ -32,22 +32,20 @@ async function fetchProjectData(page = 1) {
       currentPage.value = response.data.current_page;
       totalPages.value = response.data.last_page;
       itemsPerPage.value = response.data.per_page;
+
+      // Ekstrak tag dari data portofolio
+      extractTags(cardItems.value);
     }
   } catch (error) {
     console.error("Error fetching project data:", error);
   }
 }
 
-// Fungsi untuk mengambil daftar tag dari API
-async function fetchTags() {
-  try {
-    const response = await axiosInstance.get("/api/Tags"); // Sesuaikan endpoint dengan API Anda
-    if (response.data && response.data.data) {
-      tags.value = response.data.data; // Simpan daftar tag
-    }
-  } catch (error) {
-    console.error("Error fetching tags:", error);
-  }
+// Fungsi untuk mengekstrak tag dari data portofolio
+function extractTags(items) {
+  const allTags = items.map(item => item.tag); // Ambil semua tag
+  const uniqueTags = [...new Set(allTags)]; // Buat daftar tag yang unik
+  tags.value = uniqueTags; // Simpan daftar tag
 }
 
 // Fungsi navigasi
@@ -86,32 +84,31 @@ const filteredItems = computed(() => {
 // Panggil data saat komponen dimuat
 onMounted(() => {
   fetchProjectData();
-  fetchTags(); // Ambil daftar tag dari API
 });
 </script>
 
 <template>
-  <div class="flex items-center justify-center w-full">
-    <div class="flex w-1/2 gap-4">
+  <div class="flex items-center justify-center w-full py-5">
+    <div class="flex flex-wrap justify-center w-1/2 gap-4">
       <!-- Tombol "All" -->
       <div 
-        class="flex items-center justify-center gap-2 p-3 rounded-md cursor-pointer" 
+        class="flex items-center justify-center gap-2 px-4.5 py-3 rounded-md cursor-pointer" 
         :class="activeTag === 'All' ? 'bg-blue-50' : ''" 
         @click="setActiveTag('All')"
       >
         All
       </div>
 
-      <!-- Tombol untuk setiap tag yang diambil dari API -->
+      <!-- Tombol untuk setiap tag yang diekstrak dari data portofolio -->
       <div 
         v-for="tag in tags" 
         :key="tag" 
-        class="flex items-center justify-center gap-2 p-3 rounded-md cursor-pointer" 
-        :class="activeTag === tag ? 'bg-blue-50' : ''" 
+        class="flex items-center justify-center gap-2 px-4.5 py-3 rounded-md cursor-pointer" 
+        :class="activeTag === tag ? 'bg-blue-50 font-semibold' : ''" 
         @click="setActiveTag(tag)"
       >
         {{ tag }}
-        <Icon v-if="activeTag === tag" icon="radix-icons:cross-1" width="15" height="15" @click.stop="setActiveTag('All')" />
+        <Icon v-if="activeTag === tag" icon="maki:cross" width="15" height="15" @click.stop="setActiveTag('All')" />
       </div>
     </div>
   </div>
