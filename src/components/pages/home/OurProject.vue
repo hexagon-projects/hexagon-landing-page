@@ -1,24 +1,22 @@
 <script setup>
 import Button from '@/components/button/Button.vue';
 import ButtonOutline from '@/components/button/ButtonOutline.vue';
-import { onMounted, ref } from 'vue';
+import { ref, onMounted, nextTick } from 'vue';
 import axiosInstance from '@/axios'; // Pastikan path sesuai
 
-// State untuk menyimpan data dari API
 const cardItems = ref([]);
 const activeCard = ref(1);
+const projectContainer = ref(null); // Add a ref for the container
 
-// Fungsi untuk mengambil data dari API
 async function fetchProjectData() {
     try {
-        const response = await axiosInstance.get('/api/Portofolio'); // Endpoint Laravel Anda
-        console.log(response.data);
+        const response = await axiosInstance.get('/api/Portofolio');
         if (response.data && response.data.data) {
             cardItems.value = response.data.data.map((item) => ({
                 tag: item.Kategori,
                 title: item.judul_porto,
                 description: item.ket_porto,
-                 image: item.images.length ? item.images[0] : '', 
+                image: item.images.length ? item.images[0] : '',
                 alt: item.judul_porto
             }));
         }
@@ -27,22 +25,23 @@ async function fetchProjectData() {
     }
 }
 
-// Mengatur scroll untuk container
 function handleScroll() {
-    const container = document.querySelector('.project-container');
-    const activeCardIndex = Math.ceil(container.scrollLeft / container.children[0].offsetWidth);
-    activeCard.value = activeCardIndex === 0 ? 1 : activeCardIndex;
+    if (projectContainer.value) {
+        const activeCardIndex = Math.ceil(projectContainer.value.scrollLeft / projectContainer.value.children[0].offsetWidth);
+        activeCard.value = activeCardIndex === 0 ? 1 : activeCardIndex;
+    }
 }
 
-// Panggil data saat komponen dimuat
 onMounted(() => {
     fetchProjectData();
 
-    const container = document.querySelector('.project-container');
-    container.addEventListener('scroll', handleScroll);
+    nextTick(() => {
+        if (projectContainer.value) {
+            projectContainer.value.addEventListener('scroll', handleScroll);
+        }
+    });
 });
 </script>
-
 
 <template>
     <div class="bg-gradient-to-t from-[#F3F8FF] to-white dark:bg-gradient-to-t dark:from-black dark:to-black">
@@ -69,7 +68,7 @@ onMounted(() => {
                 </div>
             </div>
         </div>
-        <div class="flex justify-start gap-[24px] py-[56px] overflow-x-auto project-container">
+        <div ref="projectContainer" class="flex justify-start gap-[24px] py-[56px] overflow-x-auto project-container">
             <div 
                 v-for="(card, index) in cardItems" 
                 :key="index"

@@ -86,7 +86,7 @@ onMounted(() => {
 
 const logos = [];
 for (let i = 1; i <= 19; i++) {
-  logos.push(new URL(`../../../assets/about-us/OurMedia/Frame (${i}).png`, import.meta.url).href);
+  logos.push(new URL(`../../../assets/about-us/OurMedia/Frame (${i}).webp`, import.meta.url).href);
 }
 
 </script>

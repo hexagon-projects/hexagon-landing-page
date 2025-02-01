@@ -6,9 +6,10 @@ import Body from '@/components/pages/portofolio/Body.vue';
 </script>
 
 <template>
-    <div class="space-y-[156px] dark:bg-black">
+    <div class=" dark:bg-black">
         <Header />
         <Body />
+        <div class="pb-20"></div>
         <CTA />
     </div>
 </template>
