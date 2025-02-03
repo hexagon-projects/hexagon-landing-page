@@ -118,8 +118,8 @@ import { Icon } from "@iconify/vue";
                 <!-- Card 1 -->
                 <div class="mobile-card">
                     <div
-                        class="flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] items-center overflow-hidden card-bg">
-                        <div class="flex flex-col p-[16px] pt-[28px] justify-center items-center">
+                        class="flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-3xl items-center overflow-hidden card-bg">
+                        <div class="flex flex-col p-[8px] pt-[28px] justify-center items-center">
                             <ButtonOutline @click="$router.push({ name: 'contact' })">
                                 <Icon icon="meteocons:star-fill" class="w-6 h-6" />
                                 <span class="dark:text-white">IT Solution</span>
@@ -186,15 +186,15 @@ import { Icon } from "@iconify/vue";
                 <div class="mobile-card">
                     <div
                         class="flex flex-col items-center bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] overflow-hidden card-bg">
-                        <div class="p-[38px]">
+                        <div class="p-[18px]">
                             <img src="@/assets/services/3d2.png" alt="Media Consultant"
-                                class="object-cover w-full h-auto">
+                                class="object-cover w-28 h-28">
                         </div>
                         <div class="flex flex-col items-center w-full px-4">
                             <!-- Tambahkan padding horizontal di sini -->
                             <div class="w-full px-4"> <!-- Tambahkan padding horizontal untuk h1 -->
                                 <h1
-                                    class="text-[32px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gradient-dark">
+                                    class="text-[32px] font-raleway tracking-[-0.64px] leading-9 text-center font-semibold text-gradient-dark">
                                     Strategic Guide for Media Excellence
                                 </h1>
                             </div>
@@ -236,23 +236,22 @@ import { Icon } from "@iconify/vue";
 .mobile-card {
     flex: 0 0 auto;
     /* Mencegah card menyusut */
-    width: 300px;
+    width: 250px;
     /* Lebar card yang sama */
-    min-height: 400px;
+    height: 350px;
     /* Tinggi card yang sama */
     background-color: #F5F6FA;
     /* Warna latar card */
-    border-radius: 16px;
+    border-radius: 24px;
     /* Sudut card */
     overflow: hidden;
     /* Hindari overflow */
 }
 
 @media (max-width: 767px) {
-    .mobile-card {
-        min-height: 300px;
-        /* Kurangi tinggi card pada mobile */
-    }
+    /* .mobile-card {
+        min-height: 100px;
+    } */
 
     .mobile-card h1 {
         font-size: 24px;

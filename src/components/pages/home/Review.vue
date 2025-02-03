@@ -46,7 +46,7 @@ const goToPage = (page) => {
 <template>
     <div
         class="px-[10px] md:px-[112px] relative bg-gradient-to-b z-0 pb-[78px] pt-[78px] from-[#F3F8FF] to-white dark:bg-gradient-to-b dark:from-black dark:to-black">
-        <img src="../../../assets/about-us/hexsideshapelight.png" alt="" class="absolute right-0 z-0 block dark:hidden">
+        <img src="../../../assets/about-us/hexsideshapelight.png" alt="" class="absolute right-0 -z-10 block dark:hidden">
         <img src="../../../assets/about-us/hexsideshape.png" alt="" class="absolute right-0 z-0 hidden dark:block">
         <div class="flex flex-col z-0 gap-9 items-center text-center mb-[78px]">
             <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">Review</span>
