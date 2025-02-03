@@ -5,20 +5,22 @@ import LatestNews from '@/components/News/LatestNews.vue';
 </script>
 
 <template>
-    <div class="pt-40">
-        <div class="px-[56px] md:px-[112px] mt-[56px]">
+    <div class="md:pt-40">
+        <div class="px-[16px] md:px-[112px] md:mt-[56px]">
             <div class="mb-0">
-                <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">NEWS AND
-                    INSIGHT</span>
-                <div class="z-20 flex items-center justify-between mt-[14px]">
-                    <h1 class="font-semibold text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">Get the latest
+                <div class="flex items-center justify-between">
+                    <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">NEWS AND
+                        INSIGHT</span>
+                        <ButtonOutline @click="$router.push({ name: 'news' })">
+                            <Icon icon="heroicons-solid:arrow-sm-right" width="18" height="18" />
+                            <span class="hidden md:block">
+                                Show All Articles
+                            </span>
+                        </ButtonOutline>
+                </div>
+                <div class="z-20 flex items-center justify-center mt-[14px]">
+                    <h1 class="font-semibold text-[16px] md:text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">Get the latest
                         articles from our journal, writing, discuss and share</h1>
-                    <Button @click="$router.push({ name: 'news' })">
-                        <font-awesome-icon icon="arrow-right" />
-                        <span  class="hidden md:block">
-                            Show All Articles
-                        </span>
-                    </Button>
                 </div>
             </div>
         </div>
@@ -30,11 +32,11 @@ import LatestNews from '@/components/News/LatestNews.vue';
 
 <style scoped>
 .project-container::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .project-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 </style>

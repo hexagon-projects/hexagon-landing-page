@@ -9,21 +9,11 @@ import { Icon } from "@iconify/vue";
         <!-- Bagian About Us (Tetap Sama) -->
         <div class="hidden md:block">
             <div class="flex flex-col gap-9 items-center text-center mb-[78px]">
-                <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">ABOUT
-                    US</span>
-                <h1 class="font-raleway text-[30px] font-semibold text-gray-800 dark:text-white">Digital Artwork & IT
-                    Solution<br>Be the
-                    best partner to create solution together</h1>
-                <div class="flex flex-col sm:flex-row gap-[14px]">
-                    <Button @click="$router.push({ name: 'about-us' })">
-                        <span class="block w-2 h-2 bg-white rounded-full"></span>
-                        <span>More About Us</span>
-                    </Button>
-                    <ButtonOutline @click="$router.push({ name: 'services' })">
-                        <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
-                        <span>Services Detail</span>
-                    </ButtonOutline>
-                </div>
+                <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline mt-[50px]"
+                id="service">Service</span>
+                <h1 class="font-raleway text-[30px] font-semibold text-gray-800 dark:text-gradient">Discover Solutions
+                Crafted For Your
+                Business Growth<br>Effeciency, and Brand Impact</h1>
             </div>
         </div>
 
@@ -118,8 +108,8 @@ import { Icon } from "@iconify/vue";
                 <!-- Card 1 -->
                 <div class="mobile-card">
                     <div
-                        class="flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-3xl items-center overflow-hidden card-bg">
-                        <div class="flex flex-col p-[8px] pt-[28px] justify-center items-center">
+                        class="flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] items-center overflow-hidden card-bg">
+                        <div class="flex flex-col p-[16px] pt-[28px] justify-center items-center">
                             <ButtonOutline @click="$router.push({ name: 'contact' })">
                                 <Icon icon="meteocons:star-fill" class="w-6 h-6" />
                                 <span class="dark:text-white">IT Solution</span>
@@ -186,15 +176,15 @@ import { Icon } from "@iconify/vue";
                 <div class="mobile-card">
                     <div
                         class="flex flex-col items-center bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] overflow-hidden card-bg">
-                        <div class="p-[18px]">
+                        <div class="p-[38px]">
                             <img src="@/assets/services/3d2.png" alt="Media Consultant"
-                                class="object-cover w-28 h-28">
+                                class="object-cover w-full h-auto">
                         </div>
                         <div class="flex flex-col items-center w-full px-4">
                             <!-- Tambahkan padding horizontal di sini -->
                             <div class="w-full px-4"> <!-- Tambahkan padding horizontal untuk h1 -->
                                 <h1
-                                    class="text-[32px] font-raleway tracking-[-0.64px] leading-9 text-center font-semibold text-gradient-dark">
+                                    class="text-[32px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gradient-dark">
                                     Strategic Guide for Media Excellence
                                 </h1>
                             </div>
@@ -236,22 +226,23 @@ import { Icon } from "@iconify/vue";
 .mobile-card {
     flex: 0 0 auto;
     /* Mencegah card menyusut */
-    width: 250px;
+    width: 300px;
     /* Lebar card yang sama */
-    height: 350px;
+    min-height: 400px;
     /* Tinggi card yang sama */
     background-color: #F5F6FA;
     /* Warna latar card */
-    border-radius: 24px;
+    border-radius: 16px;
     /* Sudut card */
     overflow: hidden;
     /* Hindari overflow */
 }
 
 @media (max-width: 767px) {
-    /* .mobile-card {
-        min-height: 100px;
-    } */
+    .mobile-card {
+        min-height: 300px;
+        /* Kurangi tinggi card pada mobile */
+    }
 
     .mobile-card h1 {
         font-size: 24px;

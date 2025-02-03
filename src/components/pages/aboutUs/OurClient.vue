@@ -6,8 +6,8 @@
         <div class="w-8 h-1 bg-light-primary dark:bg-blue-400"></div>
         <h4 class="text-gray-700 text-md dark:text-gray-300">Our Client</h4>
       </div>
-      <p class="mt-2 text-2xl text-center text-[#272D3E] dark:text-gray-100">
-        More than 100 companies trust and <br />
+      <p class="mt-2 text-2xl text-center text-[#272D3E] dark:text-gray-100 md:text-4xl">
+        More than 100 companies trust and <br class="hidden md:block" />
         choose Hexagon Inc.
       </p>
     </div>
@@ -22,32 +22,43 @@
             :key="'marquee2-' + index"
             class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
           >
-            <!-- Tampilkan gambar dari foto_client_url -->
             <img :src="logo.foto_client_url" alt="Client Logo" class="max-w-[120px] object-contain" />
           </div>
         </div>
       </Marquee>
 
       <div>
-        <!-- <div class="flex items-center justify-center gap-2.5">
-          <div class="w-8 h-0.5 bg-light-primary dark:bg-blue-400"></div>
-          <h4 class="text-gray-700 text-md dark:text-gray-300">Our Media</h4>
-        </div> -->
-        <p class=" text-2xl text-center text-[#272D3E] dark:text-gray-100">Integrated with over 100 mainstream media outlets</p>
+        <p class="text-2xl text-center text-[#272D3E] dark:text-gray-100 md:text-4xl">
+          Integrated with over 100 mainstream <br class="hidden md:block" />
+          media outlets
+        </p>
       </div>
 
       <!-- Second Marquee -->
-      <Marquee :fade="true" direction="left" :reverse="false" :pauseOnHover="false" :speed="40" class="overflow-hidden">
-        <div class="flex gap-4">
-          <div
-            v-for="(logo, index) in logos"
-            :key="'marquee1-' + index"
-            class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
-          >
-            <img :src="logo" alt="Client Logo" class="max-w-[120px] object-contain" />
+      <div class="flex flex-col md:flex-row gap-4">
+        <Marquee :fade="true" direction="left" :reverse="false" :pauseOnHover="false" :speed="40" class="flex-1 overflow-hidden">
+          <div class="flex gap-4">
+            <div
+              v-for="(logo, index) in logos.slice(0, 7)"
+              :key="'marquee1-' + index"
+              class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
+            >
+              <img :src="logo" alt="Client Logo" class="max-w-[120px] object-contain" />
+            </div>
           </div>
-        </div>
-      </Marquee>
+        </Marquee>
+        <Marquee :fade="true" direction="left" :reverse="false" :pauseOnHover="false" :speed="40" class="flex-1 overflow-hidden">
+          <div class="flex gap-4">
+            <div
+              v-for="(logo, index) in logos.slice(7)"
+              :key="'marquee1-' + (index + 7)"
+              class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
+            >
+              <img :src="logo" alt="Client Logo" class="max-w-[120px] object-contain" />
+            </div>
+          </div>
+        </Marquee>
+      </div>
     </div>
   </div>
 </template>
@@ -90,4 +101,3 @@ for (let i = 1; i <= 19; i++) {
 }
 
 </script>
-)

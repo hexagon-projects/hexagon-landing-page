@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, computed } from "vue";
 import { fetchReview } from "@/service";
+import { Icon } from "@iconify/vue";
 
 // State Management
 const reviewData = ref([]);
@@ -167,9 +168,23 @@ onMounted(() => {
                             @click="goToPage(index)" :class="{ 'active-dot': currentPage === index }" alt="Page Dot"
                             class="z-30 pt-2 pb-2 cursor-pointer" />
                     </div>
-                    <!-- Scroll button -->
-                    <img src="@/assets/scroll.svg" @click="nextPage" :disabled="currentPage === totalPages - 1"
-                        alt="Next" class="z-30 cursor-pointer" />
+                </div>
+            
+                <!-- Carousel Navigation -->
+                <div class="flex items-center justify-center gap-4 mt-6">
+                    <button @click="prevPage" :disabled="currentPage === 0"
+                        class="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
+                        <Icon icon="line-md:arrow-left" class="w-4 h-4" />
+                    </button>
+                    <div class="flex gap-2">
+                        <button v-for="(review, index) in reviews" :key="index" @click="goToPage(index)"
+                            :class="{ 'bg-blue-500': currentPage === index, 'bg-gray-300': currentPage !== index }"
+                            class="w-3 h-3 rounded-full transition-colors duration-200"></button>
+                    </div>
+                    <button @click="nextPage" :disabled="currentPage === totalPages - 1"
+                        class="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
+                        <Icon icon="line-md:arrow-right" class="w-4 h-4" />
+                    </button>
                 </div>
             </div>
         </div>
@@ -188,16 +203,5 @@ onMounted(() => {
 <style scoped>
 .active-dot {
   content: url('@/assets/Active dot.svg');
-}
-
-/* Optional: Add transitions for smooth page changes */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>
