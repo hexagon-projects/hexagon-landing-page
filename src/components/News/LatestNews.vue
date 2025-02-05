@@ -5,15 +5,20 @@ import { fetchNews } from "@/service"; // Import fungsi fetchNews
 const newsLatestData = ref([]);
 
 // Fungsi untuk mengambil data berita
-const getLatestData = async () => {
+const getLatestData = async () => { 
     const data = await fetchNews();
     if (data.error) {
         console.error("Error fetching news:", data.error);
     } else {
-        newsLatestData.value = data.data; // Sesuaikan dengan struktur API Laravel
+        newsLatestData.value = data.data.map(item => ({
+            ...item,
+            // Memecah string kategori dan mengambil elemen pertama
+            Kategori: item.Kategori ? item.Kategori.split(",")[0] : ""
+        }));
         console.log(newsLatestData.value, "Latest data berhasil diambil");
     }
 };
+
 
 // Panggil saat komponen dimuat
 onMounted(() => {
@@ -22,7 +27,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="flex justify-start gap-[24px] py-[56px] overflow-x-auto project-container">
+    <div class="flex justify-start gap-[24px] py-[56px] flex-col md:flex-row project-container">
       <div v-if="newsLatestData.length == 0" class="bg-white p-[24px] w-[395px] flex-shrink-0 border-r-2 dark:border-none dark:bg-[#0D0D0D] animate-pulse" aria-label="Loading latest">
         <div class="mb-[24px] rounded-2xl bg-gray-300 h-[150px] w-full"></div>
         <div class="space-y-[16px]">
@@ -40,7 +45,7 @@ onMounted(() => {
         v-for="(latest, index) in newsLatestData.slice(0, 3)"
         class="p-[24px] w-[395px] flex-shrink-0 border-r-2 dark:border-none dark:bg-[#0D0D0D]"
         :class="{
-          'ml-[56px] md:ml-[112px]': index == 0,
+          'md:ml-[112px]': index == 0,
           '': index + 1 == activeCard,
         }"
       >

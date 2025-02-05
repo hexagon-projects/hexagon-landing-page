@@ -133,7 +133,6 @@ onMounted(() => {
                 :src="reviewData[currentPage].foto"
                 :alt="reviewData[currentPage].nama"
                 class="object-cover w-full h-full"
-                @error="$event.target.src = '/placeholder-avatar.png'"
               />
             </div>
             <div class="ml-4">

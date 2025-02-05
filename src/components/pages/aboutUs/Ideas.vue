@@ -24,17 +24,26 @@
         </li>
       </ul>
 
-      <div class="flex flex-wrap gap-4">
-        <Button @click="$router.push({ name: 'contact', hash: '#navbar' })">
-          <div class="block w-2 h-2 bg-white rounded-full"></div>
-          See More
-        </Button>
-
-        <ButtonOutline @click="$router.push({ name: 'contact' })">
+      <div class="block md:hidden">
+        <button @click="$router.push({ name: 'contact' })" class="flex items-center justify-center gap-2 px-5 py-3 md:rounded-full rounded-lg w-full border-[#0A58CA] dark:border-white border dark:border-2 text-light-primary hover:scale-105 transition-all duration-300">
           <div class="block w-2 h-2 rounded-full bg-light-secondary dark:bg-blue-400"></div>
-          Request Consultation
-        </ButtonOutline>
+          See More
+        </button>
       </div>
+
+      <div class="hidden md:flex flex-wrap gap-4">
+        <!-- <div class="hidden md:block"> -->
+          <Button @click="$router.push({ name: 'contact', hash: '#navbar' })">
+            <div class="block w-2 h-2 bg-white rounded-full"></div>
+            See More
+          </Button>
+
+          <ButtonOutline @click="$router.push({ name: 'contact' })">
+            <div class="block w-2 h-2 rounded-full bg-light-secondary dark:bg-blue-400"></div>
+            Request Consultation
+          </ButtonOutline>
+        </div>
+      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -42,8 +51,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-import Button from "@/components/button/Button.vue";
-import ButtonOutline from "@/components/button/ButtonOutline.vue";
+import Button from "../../button/Button.vue";
+import ButtonOutline from "../../button/ButtonOutline.vue";
 
 const services = ref(["IT Consultation", "Digital Marketing", "Branding", "Media Consultant"]);
 </script>
