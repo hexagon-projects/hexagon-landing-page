@@ -1,11 +1,14 @@
 <template>
-    <div class="px-[56px] md:px-[112px] bg-white dark:bg-gradient-to-b dark:from-black dark:to-black pt-[78px]">
-        <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline">Benefits</span>
-        <div class="flex flex-col gap-9 mb-[78px] mt-[36px]">
+    <div class="bg-white dark:bg-gradient-to-b dark:from-black dark:to-black pt-3 md:pt-[78px]">
+        <div class="flex flex-col gap-9 mb-3 md:mb-[78px] mt-[36px]">
             <div class="flex flex-col lg:flex-row gap-[50px] mb-[18px]">
-                <div class="mb-6 lg:w-1/2">
+                <div class="px-[36px] md:px-[112px] mb-6 lg:w-1/2">
+                    <div>
+                        <span
+                            class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline">Benefits</span>
+                    </div>
                     <h1
-                        class="text-[30px] md:text-[45px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-4">
+                        class="text-[30px] md:text-[45px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-4 mt-[36px]">
                         Why Choose <span class="text-gradient">Hexagon inc</span> ?</h1>
                     <p class="text-xs text-justify text-gray-600 dark:text-white">Discover the advantages of partnering
                         with us—tailored
@@ -94,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col lg:w-1/2">
+                <div class="px-[36px] md:px-[112px]  flex flex-col lg:w-1/2">
                     <img src="@/assets/services/service.png" alt="services">
                 </div>
             </div>
@@ -112,5 +115,4 @@
     background-position: center;
     background-size: cover;
 }
-
 </style>

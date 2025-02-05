@@ -6,7 +6,7 @@ import LatestNews from '@/components/News/LatestNews.vue';
 
 <template>
     <div class="md:pt-40">
-        <div class="px-[16px] md:px-[112px] md:mt-[56px]">
+        <!-- <div class="px-[16px] md:px-[112px] md:mt-[56px]">
             <div class="mb-0">
                 <div class="flex items-center justify-between">
                     <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">NEWS AND
@@ -23,7 +23,7 @@ import LatestNews from '@/components/News/LatestNews.vue';
                         articles from our journal, writing, discuss and share</h1>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="flex justify-start gap-[24px] py-[56px] overflow-x-auto project-container">
             <LatestNews></LatestNews>
         </div>
