@@ -12,7 +12,7 @@ import cta from '@/components/pages/home/cta.vue';
 </script>
 
 <template>
-    <div class="space-y-16">
+    <div class="px-3 space-y-16 md:px-0">
         <Hero />
         <OurJourney/>
         <Philosophy />

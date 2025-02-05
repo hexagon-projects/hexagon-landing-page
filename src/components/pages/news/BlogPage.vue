@@ -23,15 +23,16 @@ async function fetchProjectData(page = 1) {
     if (response.data && response.data.data) {
       cardItems.value = response.data.data.map((item) => ({
         id: item.id,
-        category: item.Kategori,
+        // Memecah string kategori dan mengambil elemen pertama
+        category: item.Kategori ? item.Kategori.split(',').map(tag => tag.trim())[0] : "",
         title: item.judul_news,
         description: item.ket_news,
         image: item.images?.length ? item.images[0] : "",
         urlYoutube: item.url_youtube,
         alt: item.judul_news,
-        timeAgo: "1 day ago",
+        timeAgo: "1 ",
       }));
-
+      console.log("Card Items:", cardItems.value);
       currentPage.value = response.data.current_page;
       totalPages.value = response.data.last_page;
     }
@@ -101,20 +102,21 @@ fetchProjectData();
       <p class="mt-2 text-gray-600 dark:text-gray-400">Get the latest articles from our journal, writing, discuss, and share</p>
     </div>
 
-    <!-- Main Content -->
-    <div class="grid grid-cols-12 gap-8">
-      <!-- Articles -->
-      <div class="col-span-8">
+    <!-- Grid Wrapper -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <!-- Blog Posts (Mobile: order-1, Desktop: left column 8/12) -->
+      <div class="order-1 md:col-span-8">
         <div class="space-y-8">
-          <div class="flex items-start gap-4 p-4 bg-white border-b cursor-pointer border-black/30 " v-if="!paginatedFilteredPosts.length">
+          <!-- Tampilkan placeholder jika belum ada data -->
+          <div class="flex items-start gap-4 p-4 bg-white border-b cursor-pointer border-black/30 dark:bg-black dark:border-white/30" v-if="!paginatedFilteredPosts.length">
             <div class="h-40 overflow-hidden bg-gray-300 rounded-lg w-80 animate-pulse"></div>
             <div class="flex flex-col justify-between w-full h-full">
               <div>
-                <p class="w-1/3 h-4 mb-2 text-sm text-gray-500 bg-gray-300 rounded animate-pulse"></p>
-                <h2 class="w-1/2 h-6 mb-2 text-xl font-bold text-gray-800 bg-gray-300 rounded animate-pulse"></h2>
-                <p class="w-3/4 h-4 mt-2 text-sm text-gray-600 bg-gray-300 rounded animate-pulse"></p>
+                <p class="w-1/3 h-4 mb-2 text-sm text-gray-500 bg-gray-300 rounded animate-pulse dark:text-white"></p>
+                <h2 class="w-1/2 h-6 mb-2 text-xl font-bold text-gray-800 bg-gray-300 rounded animate-pulse dark:text-white"></h2>
+                <p class="w-3/4 h-4 mt-2 text-sm text-gray-600 bg-gray-300 rounded animate-pulse dark:text-white"></p>
               </div>
-              <div class="flex items-center justify-between gap-2 mt-4 text-sm text-gray-500">
+              <div class="flex items-center justify-between gap-2 mt-4 text-sm text-gray-500 dark:text-white">
                 <div class="flex gap-2">
                   <div class="w-5 h-5 bg-gray-300 rounded-full animate-pulse"></div>
                 </div>
@@ -122,16 +124,20 @@ fetchProjectData();
               </div>
             </div>
           </div>
+
+          <!-- BlogPost Components -->
           <BlogPost v-else v-for="(post, index) in paginatedFilteredPosts" :key="index" :image="post.image" :category="post.category" :timeAgo="post.timeAgo" :title="post.title" :description="post.description" :id="post.id" />
         </div>
-
-        <!-- Pagination -->
-        <Pagination :currentPage="currentPage" :totalPages="totalPages" @previous="previousPage" @next="nextPage" @go-to-page="goToPage" />
       </div>
 
-      <!-- Sidebar -->
-      <div class="col-span-4">
+      <!-- Sidebar (Mobile: order-2, Desktop: right column 4/12) -->
+      <div class="order-3 md:order-2 md:col-span-4">
         <Sidebar :categories="categories" :onSearch="debouncedSearch" @selectCategory="selectCategory" />
+      </div>
+
+      <!-- Pagination (Mobile: order-3, Desktop: berada di bawah blog posts di kolom kiri) -->
+      <div class="order-2 md:order-3 md:col-span-8">
+        <Pagination :currentPage="currentPage" :totalPages="totalPages" @previous="previousPage" @next="nextPage" @go-to-page="goToPage" />
       </div>
     </div>
   </div>

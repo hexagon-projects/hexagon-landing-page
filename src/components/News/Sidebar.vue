@@ -97,6 +97,7 @@ const props = defineProps({
     required: true,
   },
 });
+
 const tags = ["Wordpress", "PHP", "HTML/CSS", "Figma", "Technology", "Marketing", "Consultation", "SEO", "Envato", "Psd"];
 
 // Define emits

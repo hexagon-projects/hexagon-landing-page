@@ -9,21 +9,22 @@ const cardItems = ref([]);
 const activeCard = ref(1);
 
 // Fungsi untuk mengambil data berita
-const getLatestData = async () => {
+const getLatestData = async () => { 
     const data = await fetchNews();
     if (data.error) {
         console.error("Error fetching news:", data.error);
     } else {
-        cardItems.value = data.data; // Sesuaikan dengan struktur API Laravel
-        console.log(cardItems.value, "Latest data berhasil diambil");
+        newsLatestData.value = data.data.map(item => ({
+            ...item,
+            // Memecah string kategori dan mengambil elemen pertama
+            Kategori: item.Kategori ? item.Kategori.split(",")[0] : ""
+        }));
+        console.log(newsLatestData.value, "Latest data berhasil diambil");
     }
 };
 
-function handleScroll() {
-    const container = document.querySelector('.project-container')
-    const activeCardIndex = Math.ceil(container.scrollLeft / container.children[0].offsetWidth)
-    activeCard.value = activeCardIndex == 0 ? 1 : activeCardIndex
-}
+
+// Panggil saat komponen dimuat
 
 onMounted(() => {
     const container = document.querySelector('.project-container')
@@ -70,15 +71,15 @@ onMounted(() => {
                     </div>
                 </div>
                 <div v-else
-                    v-for="(card, index) in cardItems.slice(0, 3)"
+                    v-for="(latest, index) in newsLatestData.slice(0, 3)"
                     class="p-[24px] w-[395px] flex-shrink-0 border-r-2 dark:border-none dark:bg-[#0D0D0D]"
                     :class="{ 'ml-[56px] md:ml-[112px]': index == 0, '': index + 1 == activeCard }">
-                    <img :src="card.images[0]" :alt="card.alt" class="mb-[24px] rounded-2xl w-full aspect-[3/2] object-cover" />
+                    <img :src="latest.images[0]" :alt="card.alt" class="mb-[24px] rounded-2xl w-full aspect-[3/2] object-cover" />
                     <div class="space-y-[16px]">
-                        <span class="px-3 py-2 text-xs font-bold text-blue-500">{{ card.Kategori }}</span> | <span
-                            class="px-3 py-2 text-xs text-black font-semibold dark:text-[#D6DADE]">{{ card.dibuat }}</span>
-                        <h1 class="text-gray-800 dark:text-white font-raleway text-[25px] font-bold">{{ card.judul_news }}</h1>
-                        <p class="text-[13px] text-gray-600 font-light dark:text-[#D6DADE]">{{ card.ket_news }}</p>
+                        <span class="px-3 py-2 text-xs font-bold text-blue-500">{{ latest.Kategori }}</span> | <span
+                            class="px-3 py-2 text-xs text-black font-semibold dark:text-[#D6DADE]">{{ latest.dibuat }}</span>
+                        <h1 class="text-gray-800 dark:text-white font-raleway text-[25px] font-bold">{{ latest.judul_news }}</h1>
+                        <p class="text-[13px] text-gray-600 font-light dark:text-[#D6DADE]">{{ latest.ket_news }}</p>
                         <div class="flex items-center gap-2">
                             <img src="@/assets/logoA.png" alt="">
                             <span class="inline-block text-gray-900 dark:text-white">Admin Hexagon</span>
@@ -111,18 +112,18 @@ onMounted(() => {
                         <div class="w-32 h-24 rounded-lg bg-gray-300"></div>
                     </div>
                 </div>
-                <div v-else v-for="(card, index) in cardItems" :key="index" class="py-6">
+                <div v-else v-for="(latest, index) in newsLatestData" :key="index" class="py-6">
                     <div class="flex justify-between gap-4">
                         <!-- Konten Teks -->
                         <div class="flex flex-col gap-2 flex-1">
                             <!-- Judul -->
                             <h1 class="text-gray-800 dark:text-white font-raleway text-[16px] font-bold line-clamp-2">
-                                {{ card.judul_news }}
+                                {{ latest.judul_news }}
                             </h1>
 
                             <!-- Deskripsi -->
                             <p class="text-sm text-gray-600 font-light dark:text-[#D6DADE] line-clamp-2">
-                                {{ card.ket_news }}
+                                {{ latest.ket_news }}
                             </p>
 
                             <!-- Tombol Baca Selengkapnya -->
@@ -134,7 +135,7 @@ onMounted(() => {
                         </div>
 
                         <!-- Gambar -->
-                        <img :src="card.images[0]" :alt="card.alt" class="w-32 h-24 rounded-lg object-cover">
+                        <img :src="latest.images[0]" :alt="card.alt" class="w-32 h-24 rounded-lg object-cover">
                     </div>
                 </div>
             </div>

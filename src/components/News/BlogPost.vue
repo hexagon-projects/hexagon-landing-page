@@ -50,6 +50,7 @@ const props = defineProps({
   // views: String,
   id: Number, // ID untuk routing
 });
+console.log(props);
 
 const router = useRouter();
 

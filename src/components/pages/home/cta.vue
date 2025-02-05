@@ -8,19 +8,17 @@ import Button from '@/components/button/Button.vue';
       <span class="bg-gradient-to-b absolute bottom-0 h-1/2 to-white z-[2]"></span>
 
       <!-- Desktop Layout -->
-      <div class="hidden md:block">
-        <div class="flex justify-center">
-          <p class="mt-15 text-white">
-            <a href="#" class="text-white bg-light-secondary rounded-3xl px-3 py-2">Subscribe</a> Free for basic Plan
-          </p>
-        </div>
+
+      <div class="hidden md:block mx-auto">
+        <p class="mt-15 text-white text-center">
+          <a href="#" class="text-white bg-light-secondary rounded-3xl px-3 py-2">Subscribe</a> Free for basic Plan
+        </p>
+
         <h1 class="mt-10 text-5xl font-bold text-center text-white mb-15">
           Build the Future with <br>Us! Start Your <br> Partnership Now!
         </h1>
         <div class="flex items-center justify-center mt-15 space-x-4">
-          <Button
-            class="px-4 py-2 text-gray-800 bg-transparent border-white dark:bg-[#2C7EF9] dark:bg-opacity-50 border dark:border-blue-400 rounded hover-gradient"
-            @click="$router.push({ name: 'contact' })">
+          <Button class="px-4 py-2 text-gray-800 bg-transparent border-white dark:bg-[#2C7EF9] dark:bg-opacity-50 border dark:border-blue-400 rounded hover-gradient" @click="$router.push({ name: 'contact' })">
             <span class="block w-2 h-2 rounded-full bg-white"></span>
             <span class="text-white">Let's Chat!</span>
           </Button>
@@ -47,8 +45,7 @@ import Button from '@/components/button/Button.vue';
             <span class="block w-2 h-2 rounded-full bg-white"></span>
             <span class="text-white">Let's Chat!</span>
           </Button>
-          <Button @click="$router.push({ name: 'contact' })"
-            class="px-4 py-2 text-white rounded bg-white dark:bg-gray-400 dark:bg-opacity-50 border border-white hover-gradient group w-full max-w-[200px]">
+          <Button @click="$router.push({ name: 'contact' })" class="px-4 py-2 text-white rounded bg-white dark:bg-gray-400 dark:bg-opacity-50 border border-white hover-gradient group ">
             <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
             <span class="text-black dark:text-white group-hover:text-white">Request a Consultation</span>
           </Button>
