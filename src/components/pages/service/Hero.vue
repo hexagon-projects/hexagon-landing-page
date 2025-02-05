@@ -12,12 +12,13 @@ const scrollToSection = () => {
 </script>
 
 <template>
-
-    <div class="px-[56px] md:px-[112px] bg-white dark:bg-gradient-to-b dark:from-black dark:to-black">
+    <img src="@/assets/news/Background.png" alt="Background"
+    class="absolute inset-0 object-cover w-full h-full -z-10"/>
+    <div class="px-[36px] md:px-[112px] bg-white dark:bg-gradient-to-b dark:from-black dark:to-black pt-20 md:pt-16">
         <div class="flex flex-col gap-9 items-center text-center mb-[60px]">
             <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline">Our
                 Service</span>
-            <h1 class="font-raleway text-[60px] font-bold text-gradient">Empowering your business<br>with smart
+            <h1 class="font-raleway text-[40px] md:text-[60px] font-bold text-gradient">Empowering your business<br>with smart
                 solutions</h1>
             <p class="font-raleway text-[16px] font-semibold text-gray-600 dark:text-white">We Provide Perfect IT
                 Solutions For Your

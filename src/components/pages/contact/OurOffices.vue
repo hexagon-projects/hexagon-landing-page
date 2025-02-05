@@ -9,7 +9,7 @@ const selectImage = (imageIndex) => {
 </script>
 
 <template>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-10 mx-4 md:mx-28 py-[70px]">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10 mx-4 md:mx-28 py-0 md:py-[70px]">
         <div class="w-full md:w-1/2 space-y-2.5">
             <div class="flex items-center gap-2.5 mt-8">
                 <div class="w-8 h-0.5 bg-light-primary"></div>
