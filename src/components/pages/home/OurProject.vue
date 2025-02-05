@@ -45,7 +45,7 @@ onMounted(() => {
 
 <template>
     <div class="bg-gradient-to-t from-[#F3F8FF] to-white dark:bg-gradient-to-t dark:from-black dark:to-black">
-        <div class="px-[56px] md:px-[112px] mt-[56px]">
+        <!-- <div class="px-[56px] md:px-[112px] mt-[56px]">
             <div class="mb-[56px]">
                 <div class="flex justify-between">
                     <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">
@@ -68,6 +68,23 @@ onMounted(() => {
                             <font-awesome-icon icon="arrow-right" />
                         </Button>
                     </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="px-[16px] md:px-[112px] mt-4 md:mt-[56px]">
+            <div class="mb-[56px]">
+                <div class="flex items-center justify-between">
+                    <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">Our Projects</span>
+                        <ButtonOutline @click="$router.push({ name: 'portfolio' })">
+                            <!-- <Icon icon="heroicons-solid:arrow-sm-right" width="18" height="18" /> -->
+                            <font-awesome-icon icon="arrow-right" />
+                            <span class="hidden md:block">
+                                Show All Portfolio
+                            </span>
+                        </ButtonOutline>
+                </div>
+                <div class="z-20 flex items-center justify-center mt-[14px]">
+                    <h1 class="font-semibold text-[16px] md:text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">We provide perfect IT solutions for your business</h1>
                 </div>
             </div>
         </div>
@@ -98,10 +115,10 @@ onMounted(() => {
         </div>
 
         <!-- Mobile Layout -->
-        <div class="md:hidden block">
-            <div class="flex justify-start gap-4 py-4 overflow-x-auto project-container">
+        <div class="md:hidden block mx-4">
+            <div class="flex justify-start gap-4 py-4 overflow-x-auto project-container pb-13">
                 <div v-for="(card, index) in cardItems" :key="index"
-                    class="p-4 w-[80vw] rounded-2xl flex-shrink-0 hover:shadow-2xl transition-all duration-300">
+                    class="p-4 w-[80vw] rounded-2xl flex-shrink-0 hover:shadow-2xl hover:shadow-blue-200 transition-all duration-300">
                     <img v-if="card.image" :src="card.image" :alt="card.alt" class="mb-4 rounded-lg">
                     <div class="space-y-3">
                         <span class="inline px-3 py-1 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">

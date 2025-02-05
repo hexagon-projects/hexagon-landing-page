@@ -24,12 +24,12 @@ const handleSubmit = () => {
 
 <template>
     <div
-        class="flex flex-col md:flex-row items-start justify-between gap-10 px-[56px] md:px-[112px] py-16 bg-gradient">
+        class="flex flex-col md:flex-row items-start justify-between gap-10 px-[56px] md:px-[112px] py-0 md:py-16 bg-gradient">
         <!-- Left Section -->
         <div class="w-full space-y-6 md:w-1/2">
-            <h2 class="text-3xl font-bold text-blue-900 md:text-4xl dark:text-white">Have a project idea?<br>Drop me a
+            <h2 class="text-3xl font-bold text-blue-900 md:text-4xl text text-center md:text-left dark:text-white">Have a project idea?<br>Drop me a
                 line.</h2>
-            <p class="text-gray-600 dark:text-gray-400">Got a project? Drop me a line if you want to work together on
+            <p class="text-[14px] md:text-[18px] text-gray-600 dark:text-gray-400">Got a project? Drop me a line if you want to work together on
                 something exciting. Even the smallest seed can grow into something beautiful.</p>
 
             <div class="flex items-center gap-3">

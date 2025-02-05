@@ -137,22 +137,26 @@ import { Icon } from "@iconify/vue";
 
                 <!-- Card 2 -->
                 <div class="mobile-card">
-                    <div class="flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg">
+                    <div
+                        class="flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg h-full">
                         <div class="flex h-full">
                             <div class="flex items-end w-1/2">
-                                <img src="@/assets/services/Union5.png" alt="Digital Marketing" class="">
+                                <img src="@/assets/services/Union5.png" alt="Digital Marketing" class="w-full h-auto">
                             </div>
                             <div class="flex justify-end w-1/2">
                                 <div>
-                                    <img src="@/assets/services/Union1.png" alt="Digital Marketing" class="">
+                                    <img src="@/assets/services/Union1.png" alt="Digital Marketing"
+                                        class="w-full h-auto">
                                 </div>
                             </div>
                         </div>
-                        <div class="px-8 pb-10 pt-2">
+                        <div class="px-4 pb-6 pt-2">
                             <h1
-                                class="text-[24px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gray-800 dark:text-[#E3E9ff] mb-4">
-                                Digital Marketing</h1>
-                            <p class="text-[16px] text-gray-600 dark:text-[#A0ABE9]">Boost your brand's online presence
+                                class="text-[20px] font-raleway tracking-[-0.64px] leading-7 font-semibold text-gray-800 dark:text-[#E3E9ff] mb-2">
+                                Digital Marketing
+                            </h1>
+                            <p class="text-[14px] text-gray-600 dark:text-[#A0ABE9]">
+                                Boost your brand's online presence
                             </p>
                         </div>
                     </div>
@@ -160,23 +164,27 @@ import { Icon } from "@iconify/vue";
 
                 <!-- Card 3 -->
                 <div class="mobile-card">
-                    <div class="flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg">
+                    <div
+                        class="flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg h-full">
                         <div class="flex h-full">
-                            <div class="flex justify-between flex-col">
+                            <div class="flex justify-between flex-col w-full">
                                 <div>
-                                    <img src="@/assets/services/Union7.png" alt="Digital Marketing" class="">
+                                    <img src="@/assets/services/Union7.png" alt="Digital Marketing"
+                                        class="">
                                 </div>
-                                <div class="">
-                                    <img src="@/assets/services/Union6.png" alt="Digital Marketing" class="">
+                                <div class="flex w-1/2">
+                                    <img src="@/assets/services/Union6.png" alt="Digital Marketing"
+                                        class="">
                                 </div>
                             </div>
                         </div>
-                        <div class="px-8 pb-10 pt-2">
+                        <div class="px-4 pb-6 pt-2">
                             <h1
-                                class="text-[24px] font-raleway tracking-[-0.64px] leading-9 font-semibold text-gray-800 dark:text-[#E3E9ff] mb-4">
-                                Media Consultant</h1>
-                            <p class="text-[16px] text-gray-600 dark:text-[#A0ABE9]">Create a Distinct and <br>
-                                Impactful Brand
+                                class="text-[20px] font-raleway tracking-[-0.64px] leading-7 font-semibold text-gray-800 dark:text-[#E3E9ff] mb-2">
+                                Media Consultant
+                            </h1>
+                            <p class="text-[14px] text-gray-600 dark:text-[#A0ABE9]">
+                                Create a Distinct and Impactful Brand
                             </p>
                         </div>
                     </div>
@@ -187,8 +195,7 @@ import { Icon } from "@iconify/vue";
                     <div
                         class="flex flex-col items-center bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] overflow-hidden card-bg">
                         <div class="p-[18px]">
-                            <img src="@/assets/services/3d2.png" alt="Media Consultant"
-                                class="object-cover w-28 h-28">
+                            <img src="@/assets/services/3d2.png" alt="Media Consultant" class="object-cover w-28 h-28">
                         </div>
                         <div class="flex flex-col items-center w-full px-4">
                             <!-- Tambahkan padding horizontal di sini -->
