@@ -1,4 +1,7 @@
 <script setup>
+import Image1 from "@/assets/testimoni/seys.jpg";
+import Image2 from "@/assets/testimoni/bud.png";
+import Image3 from "@/assets/female.png";
 import { ref, onMounted, onUnmounted } from "vue";
 import Button from "@/components/button/Button.vue";
 import ButtonOutline from "@/components/button/ButtonOutline.vue";
@@ -8,21 +11,21 @@ const employeeStories = [
     name: "Rifa Radwa Prasetya",
     position: "Fullstack Developer",
     testimony: "Intern at Hexagon has been an incredible journey. The collaborative environment and opportunities for growth have helped me develop both professionally and personally.",
-    image: "/src/assets/testimoni/seys.jpg",
+    image: Image1,
     type: "Full Time",
   },
   {
     name: "Budi Imam Prasetyo",
     position: "Full Stack Developer",
     testimony: "I love the innovative culture here. Were always encouraged to think outside the box and implement new technologies to solve complex problems.",
-    image: "/src/assets/testimoni/bud.png",
+    image: Image2,
     type: "Full Time",
   },
   {
     name: "Emily Rodriguez",
     position: "Project Manager",
     testimony: "The supportive team and flexible work environment make Hexagon a great place to work. Ive grown so much in my role here.",
-    image: "/src/assets/female.png",
+    image: Image3,
     type: "Full Time",
   },
 ];

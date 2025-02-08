@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full py-8 space-y-4 md:space-y-12  bg-white dark:bg-black">
+  <div class="relative w-full py-8 space-y-4 md:space-y-12 bg-white dark:bg-black">
     <!-- Our Client Section -->
     <div class="flex flex-col items-center justify-center">
       <div class="flex items-center gap-2.5">
@@ -12,15 +12,17 @@
       </p>
     </div>
 
-
     <!-- Marquee Section -->
     <div class="flex flex-col gap-12">
       <!-- Marquee Pertama (Desktop) -->
       <div class="hidden md:block">
         <Marquee :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40" class="overflow-hidden">
           <div class="flex gap-4">
-            <div v-for="(client, index) in ourClientData" :key="'marquee-desktop-' + index"
-              class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300">
+            <div
+              v-for="(client, index) in ourClientData"
+              :key="'marquee-desktop-' + index"
+              class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
+            >
               <img :src="client.foto_client_url" alt="client.name" class="max-w-[120px] object-contain" />
             </div>
           </div>
@@ -31,8 +33,11 @@
       <div class="block md:hidden">
         <Marquee :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40" class="overflow-hidden">
           <div class="flex gap-4">
-            <div v-for="(client, index) in ourClientData" :key="'marquee-mobile-' + index"
-              class="flex items-center justify-center w-48 h-24 p-2 bg-white border rounded-[10px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300">
+            <div
+              v-for="(client, index) in ourClientData"
+              :key="'marquee-mobile-' + index"
+              class="flex items-center justify-center w-48 h-24 p-2 bg-white border rounded-[10px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
+            >
               <img :src="client.foto_client_url" alt="Client Logo" class="max-w-[80px] object-contain" />
             </div>
           </div>
@@ -48,11 +53,13 @@
 
       <!-- Marquee Kedua (Desktop) -->
       <div class="hidden md:block">
-        <Marquee  v-for="(marquee, mIdx) in mediaMarquees" :key="'media-marquee-' + mIdx" :fade="true" direction="left" :reverse="false" :pauseOnHover="false" :speed="40" class="overflow-hidden">
+        <Marquee v-for="(marquee, mIdx) in mediaMarquees" :key="'media-marquee-' + mIdx" :fade="true" direction="left" :reverse="false" :pauseOnHover="false" :speed="40" class="overflow-hidden">
           <div class="flex gap-4">
-            <div v-for="(media, index) in marquee"
+            <div
+              v-for="(media, index) in marquee"
               :key="'media-' + index"
-              class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300">
+              class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
+            >
               <img :src="media.foto_client_url" :alt="media.status_label" class="max-w-[120px] object-contain" />
             </div>
           </div>
@@ -62,19 +69,25 @@
       <!-- Marquee Kedua (Mobile) -->
       <div class="block md:hidden">
         <div class="flex flex-col gap-4">
-          <Marquee  v-for="(marquee, mIdx) in mediaMarquees" :key="'media-marquee-1-' + mIdx" :fade="true" direction="left" :reverse="false" :pauseOnHover="false" :speed="40" class="overflow-hidden">
+          <Marquee v-for="(marquee, mIdx) in mediaMarquees" :key="'media-marquee-1-' + mIdx" :fade="true" direction="left" :reverse="false" :pauseOnHover="false" :speed="40" class="overflow-hidden">
             <div class="flex gap-4">
-              <div v-for="(media, index) in marquee.slice(0, Math.ceil(media.length / 2))" :key="'media-1-' + index"
-                class="flex items-center justify-center w-48 h-24 p-2 bg-white border rounded-[10px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300">
-                <img :src="logo" alt="Client Logo" class="max-w-[80px] object-contain" />
+              <div
+                v-for="(media, index) in marquee.slice(0, Math.ceil(marquee.length / 2))"
+                :key="'media-1-' + index"
+                class="flex items-center justify-center w-48 h-24 p-2 bg-white border rounded-[10px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
+              >
+                <img :src="media.foto_client_url" alt="Client Logo" class="max-w-[80px] object-contain" />
               </div>
             </div>
           </Marquee>
-          <Marquee v-for="(marquee, mIdx) in mediaMarquees" :key="'media-marquee-2-' :fade="true" direction="left" :reverse="false" :pauseOnHover="false" :speed="40" class="overflow-hidden">
+          <Marquee v-for="(marquee, mIdx) in mediaMarquees" :key="'media-marquee-2-' + mIdx" :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40" class="overflow-hidden">
             <div class="flex gap-4">
-              <div v-for="(media, index) in marquee.slice(0, Math.ceil(media.length / 2))" :key="'media-2-' + index"
-                class="flex items-center justify-center w-48 h-24 p-2 bg-white border rounded-[10px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300">
-                <img :src="logo" alt="Client Logo" class="max-w-[80px] object-contain" />
+              <div
+                v-for="(media, index) in marquee.slice(0, Math.ceil(marquee.length / 2))"
+                :key="'media-2-' + index"
+                class="flex items-center justify-center w-48 h-24 p-2 bg-white border rounded-[10px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
+              >
+                <img :src="media.foto_client_url" alt="Client Logo" class="max-w-[80px] object-contain" />
               </div>
             </div>
           </Marquee>
@@ -94,7 +107,6 @@ const ourClientData = ref([]);
 const ourMediaData = ref([]);
 const mediaMarquees = ref([]);
 
-
 const chunkArray = (array, size) => {
   return Array.from({ length: Math.ceil(array.length / size) }, (_, i) => array.slice(i * size, i * size + size));
 };
@@ -113,13 +125,21 @@ const getData = async () => {
     mediaMarquees.value = chunkArray(ourMediaData.value, 7);
   } catch (error) {
     console.error("Error fetching data:", error);
-
   }
 };
 
 onMounted(() => {
   getData();
 });
-
 </script>
 
+<style scoped>
+.project-container::-webkit-scrollbar {
+  display: none;
+}
+
+.project-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>

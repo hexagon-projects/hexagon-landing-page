@@ -1,6 +1,6 @@
 <template>
   <div class="relative w-full pb-24 overflow-hidden bg-white rounded-xl dark:bg-black">
-    <div ref="scrollContainer" @mouseover="pauseScroll" @mouseleave="resumeScroll" class="flex gap-4 p-4 overflow-x-auto hide-scrollbar scroll-snap-x">
+    <div ref="scrollContainer" class="flex gap-4 p-4 overflow-x-auto hide-scrollbar scroll-snap-x">
       <div
         v-for="(gallery, index) in galleries"
         :key="gallery.id"
@@ -73,9 +73,9 @@ const startScroll = () => {
   }, scrollSpeed);
 };
 
-const pauseScroll = () => {
-  clearInterval(scrollInterval);
-};
+// const pauseScroll = () => {
+//   clearInterval(scrollInterval);
+// };
 
 const resumeScroll = () => {
   startScroll();
@@ -85,9 +85,9 @@ onMounted(() => {
   startScroll();
 });
 
-onUnmounted(() => {
-  pauseScroll();
-});
+// onUnmounted(() => {
+//   pauseScroll();
+// });
 </script>
 
 <style scoped>

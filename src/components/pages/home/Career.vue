@@ -12,7 +12,8 @@ const getCareerData = async () => {
     const response = await fetchCareer();
     if (response.error) throw response.error;
     
-    positions.value = response.data || [];
+    positions.value = response;
+    console.log('Data:', positions.value);
   } catch (err) {
     error.value = err.message || 'Gagal memuat data karir';
   } finally {
@@ -95,10 +96,10 @@ onMounted(getCareerData);
         </template>
 
         <template v-else-if="!error">
-          <div class="overflow-x-auto">
-            <div class="flex gap-4 py-4">
-              <div v-for="(position, index) in positions.slice(0, 2)" :key="index"
-                class="flex-shrink-0 w-[280px] flex flex-col items-start bg-[#F5F6FA] rounded-[16px] p-6 relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-800 hover:text-white hover:shadow-lg hover:scale-105">
+          <div class="">
+            <div class="space-y-4">
+              <div v-for="(position, index) in positions" :key="index"
+                class="flex-shrink-0  flex flex-col items-start bg-[#F5F6FA] rounded-[16px] p-6 relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-800 hover:text-white hover:shadow-lg hover:scale-105">
                 <p class="mb-2 text-xs text-gray-600 dark:text-gray-400">{{ position.tipe }}tes</p>
                 <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-2">
                   {{ position.lowong_krj }}tes

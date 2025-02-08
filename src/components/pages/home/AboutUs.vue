@@ -49,7 +49,7 @@ import { Icon } from "@iconify/vue";
 
             <!-- Card 2 -->
             <div
-                class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg">
+                class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA]  dark:bg-[#191D34] rounded-[16px] card-bg">
                 <div class="flex h-full">
                     <div class="flex items-end w-1/2">
                         <img src="@/assets/services/Union5.png" alt="Digital Marketing" class="">

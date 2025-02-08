@@ -5,7 +5,6 @@ import LatestNews from '@/components/News/LatestNews.vue';
 </script>
 
 <template>
-    <div class="md:pt-40">
         <!-- <div class="px-[16px] md:px-[112px] md:mt-[56px]">
             <div class="mb-0">
                 <div class="flex items-center justify-between">
@@ -24,10 +23,9 @@ import LatestNews from '@/components/News/LatestNews.vue';
                 </div>
             </div>
         </div> -->
-        <div class="flex justify-start gap-[24px] py-[56px] overflow-x-auto project-container">
+        <div class="flex justify-start gap-[24px] pb-[56px] overflow-x-auto project-container">
             <LatestNews></LatestNews>
         </div>
-    </div>
 </template>
 
 <style scoped>
