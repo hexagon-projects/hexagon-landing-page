@@ -93,17 +93,17 @@ onMounted(() => {
         <div class="hidden md:block">
             <div class="flex justify-start gap-[24px] md:py-[56px] overflow-x-auto project-container">
                 <div v-for="(card, index) in cardItems" :key="index"
-                    class="p-[24px] w-[395px] rounded-2xl flex-shrink-0 hover:shadow-2xl transition-all duration-300"
+                    class="px-[24px] w-[395px] rounded-2xl flex-shrink-0 hover:shadow-2xl  transition-all duration-1000"
                     :class="{ 'ml-[56px] md:ml-[112px]': index == 0, '': index + 1 == activeCard }">
-                    <img v-if="card.image" :src="card.image" :alt="card.alt" class="mb-[24px] rounded-lg">
+                    <img v-if="card.image" :src="card.image" :alt="card.alt" class="mb-[24px] w-full aspect-[3/2] object-cover rounded-lg">
                     <div class="space-y-[16px]">
                         <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">
                             {{ card.tag }}
                         </span>
-                        <h1 class="text-gray-800 font-raleway text-[32px] font-semibold dark:text-white">
+                        <h1 class="text-gray-800 font-raleway text-[22px] font-semibold dark:text-white line-clamp-2">
                             {{ card.title }}
                         </h1>
-                        <p class="text-[16px] text-gray-600 dark:text-gray-400">
+                        <p class="text-[14px] text-gray-600 dark:text-gray-400 line-clamp-4">
                             {{ card.description }}
                         </p>
                         <RouterLink class="inline-block">
@@ -118,16 +118,16 @@ onMounted(() => {
         <div class="md:hidden block mx-4">
             <div class="flex justify-start gap-4 py-4 overflow-x-auto project-container pb-13">
                 <div v-for="(card, index) in cardItems" :key="index"
-                    class="p-4 w-[80vw] rounded-2xl flex-shrink-0 hover:shadow-2xl hover:shadow-blue-200 transition-all duration-300">
+                    class="p-4 w-[80vw] rounded-2xl flex-shrink-0 hover:shadow-2xl  transition-all duration-1000">
                     <img v-if="card.image" :src="card.image" :alt="card.alt" class="mb-4 rounded-lg">
                     <div class="space-y-3">
                         <span class="inline px-3 py-1 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">
                             {{ card.tag }}
                         </span>
-                        <h1 class="text-gray-800 font-raleway text-xl font-semibold dark:text-white">
+                        <h1 class="text-gray-800 font-raleway text-xl font-semibold dark:text-white line-clamp-2">
                             {{ card.title }}
                         </h1>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">
+                        <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
                             {{ card.description }}
                         </p>
                         <RouterLink class="inline-block text-blue-500 hover:underline">

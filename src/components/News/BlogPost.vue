@@ -15,7 +15,7 @@
           &nbsp;|&nbsp; {{ timeAgo }}
         </p>
         <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100">{{ title }}</h2>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">{{ description }}</p>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 line-clamp-3">{{ description }}</p>
       </div>
       <div class="flex items-center justify-between gap-2 mt-4 text-sm text-gray-500 dark:text-gray-400">
         <div class="flex gap-2">

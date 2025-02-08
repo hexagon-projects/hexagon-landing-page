@@ -43,7 +43,7 @@
                 </div>
                 <h2 class="text-xl font-semibold text-white">{{ blog.judul_news }}</h2>
                 <div class="sm:max-w-[400px] max-w-full">
-                  <p class="mt-1 text-xs text-white sm:text-sm">{{ blog.ket_news }}</p>
+                  <p class="mt-1 text-xs text-white sm:text-sm line-clamp-2">{{ blog.ket_news }}</p>
                 </div>
               </div>
             </div>

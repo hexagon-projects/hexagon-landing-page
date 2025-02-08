@@ -76,8 +76,8 @@ const navItems = [
               v-for="item in navItems"
               :key="item.route"
               :to="{ name: item.route }"
-              class="relative dark:text-white hover:after:content-[''] hover:after:block hover:after:absolute hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:w-2 hover:after:h-2 hover:after:rounded-full hover:after:bg-light-primary hover:dark:after:bg-white hover:after:mt-4"
-              active-class="font-medium mb-1 after:content-[''] after:block after:absolute after:left-1/2 after:-translate-x-1/2 after:w-2 after:h-2 after:rounded-full after:bg-light-primary dark:after:bg-white after:mt-4"
+              class="relative dark:text-white hover:after:content-[''] hover:after:block hover:after:absolute hover:after:left-1/2 hover:after:-translate-x-1/2 hover:after:w-2 after:transition-all after:duration-3x00 hover:after:h-2 hover:after:rounded-full hover:after:bg-light-primary hover:dark:after:bg-white hover:after:mt-4"
+              active-class="font-medium mb-1 after:content-[''] after:block after:absolute after:left-1/2 after:-translate-x-1/2 after:w-2 after:h-2 after:transition-all after:duration-300 after:rounded-full after:bg-light-primary dark:after:bg-white after:mt-4"
             >
               <span>{{ item.text }}</span>
             </RouterLink>
