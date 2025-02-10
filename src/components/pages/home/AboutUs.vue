@@ -16,7 +16,6 @@ import { Icon } from "@iconify/vue";
                     best partner to create solution together</h1>
                 <div class="flex flex-col sm:flex-row gap-[14px]">
                     <Button @click="$router.push({ name: 'about-us' })">
-                        <span class="block w-2 h-2 bg-white rounded-full"></span>
                         <span>More About Us</span>
                     </Button>
                     <ButtonOutline @click="$router.push({ name: 'services' })">

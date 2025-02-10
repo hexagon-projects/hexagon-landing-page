@@ -12,7 +12,6 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
             <div class="hidden md:block">
                 <div class="flex flex-col sm:flex-row gap-[14px]">
                     <Button>
-                        <span class="h-2 w-2 bg-white block rounded-full"></span>
                         <span>Contact Us</span>
                     </Button>
                     <ButtonOutline @click="$router.push({ name: 'contact' })">

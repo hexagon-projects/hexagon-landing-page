@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { Icon } from "@iconify/vue";
+import Button from '@/components/button/Button.vue';
 
 const formData = ref({
     fullName: '',
@@ -91,7 +92,7 @@ const handleSubmit = () => {
                     <textarea v-model="formData.message" placeholder="Your message" rows="4"
                         class="w-full px-4 py-2 border border-gray-300 rounded-lg dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                 </div>
-
+                
                 <button
                     class="flex items-center justify-center w-full gap-2 px-6 py-3 font-medium text-white transition-all duration-500 bg-blue-500 rounded-full hover:bg-blue-700">
                     Send Message

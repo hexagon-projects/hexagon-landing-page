@@ -41,25 +41,29 @@ onMounted(() => {
         today.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-[18px]">
-      <div v-for="(position, index) in positions" :key="index"
-        class="bg-[#F5F6FA] dark:bg-black rounded-[16px] hover:shadow-lg transition-all duration-300 dark:shadow-gray-600">
+      <router-link v-for="(position, index) in positions" :key="index"
+        :to="{ name: 'position-detail', params: { id: position.id } }" class="block">
         <div
-          class="flex flex-col flex-wrap items-start bg-[#F5F6FA] rounded-[16px] p-[45px] pt-[35px] relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-800 hover:text-white hover:shadow-lg hover:scale-105">
-          <p class="mb-2 text-xs text-gray-600 dark:text-gray-400">{{ position.tipe }}</p>
-          <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-2">
-            {{ position.lowong_krj }}
-          </h1>
-          <p class="text-xs text-justify text-gray-600 break-all dark:text-gray-400">
-            {{ position.ket_lowong }}
-          </p>
-          <div class="absolute bottom-0 flex items-center justify-center -right-1">
-            <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />
-          </div>
-          <div class="absolute bottom-0 right-0 flex gap-2 transition-opacity duration-300 opacity-0 hover:opacity-100">
-            <img src="@/assets/Large unit.svg" alt="Large Unit Icon" class="w-[150px] h-[150]" />
+          class="bg-[#F5F6FA] dark:bg-black rounded-[16px] hover:shadow-lg transition-all duration-300 dark:shadow-gray-600">
+          <div
+            class="flex flex-col flex-wrap items-start bg-[#F5F6FA] rounded-[16px] p-[45px] pt-[35px] relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-800 hover:text-white hover:shadow-lg hover:scale-105">
+            <p class="mb-2 text-xs text-gray-600 dark:text-gray-400">{{ position.tipe }}</p>
+            <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-2">
+              {{ position.lowong_krj }}
+            </h1>
+            <p class="text-xs text-justify text-gray-600 break-all dark:text-gray-400">
+              {{ position.ket_lowong }}
+            </p>
+            <div class="absolute bottom-0 flex items-center justify-center -right-1">
+              <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />
+            </div>
+            <div
+              class="absolute bottom-0 right-0 flex gap-2 transition-opacity duration-300 opacity-0 hover:opacity-100">
+              <img src="@/assets/Large unit.svg" alt="Large Unit Icon" class="w-[150px] h-[150]" />
+            </div>
           </div>
         </div>
-      </div>
+      </router-link>
     </div>
     <div
       class="frame-section-bg text-white rounded-2xl p-10 flex flex-col md:flex-row justify-between items-center mt-[50px] shadow-lg hover:shadow-xl transition-all duration-300">
@@ -79,7 +83,9 @@ onMounted(() => {
         <div class="flex gap-2 items-center justify-center">
           <span>Let's Chat</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
           </svg>
         </div>
       </ButtonOutline>
@@ -87,17 +93,16 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
-.active-dot {
-  content: url("@/assets/Active dot.svg");
-}
-</style>
 
 <style scoped>
 .frame-section-bg {
   background-image: url(@/assets/frameworktogether.png), linear-gradient(to bottom, #2f84ff, #0c57c3);
   background-position: center;
   background-size: cover;
+}
+
+.router-link-active {
+  text-decoration: none;
 }
 
 .active-dot {
