@@ -18,7 +18,6 @@
             </h3>
             <div class="flex justify-center w-full gap-3.5">
               <Button @click="scrollToSection">
-                <div class="block w-2 h-2 bg-white rounded-full"></div>
                 Read More
               </Button>
               <ButtonOutline @click="$router.push({ name: 'services' })">

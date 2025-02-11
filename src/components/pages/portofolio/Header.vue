@@ -20,12 +20,11 @@ const scrollToSection = () => {
       <p class="font-raleway text-[16px] font-semibold text-gray-600 dark:text-white">Mengembangkan Bisnis, Satu Solusi pada Satu Waktu</p>
       <div class="flex flex-col sm:flex-row gap-[14px]">
         <Button @click="scrollToSection">
-          <span class="block w-2 h-2 bg-white rounded-full"></span>
-          <span>Explore Karya Kami</span>
+          <span>Explore Our Works</span>
         </Button>
         <ButtonOutline @click="$router.push({ name: 'contact' })">
           <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
-          <span class="dark:text-white">Minta Konsultasi</span>
+          <span class="dark:text-white">Request a Consultation</span>
         </ButtonOutline>
       </div>
     </div>

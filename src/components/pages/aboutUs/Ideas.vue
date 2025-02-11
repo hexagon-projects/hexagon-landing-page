@@ -34,7 +34,6 @@
       <div class="hidden md:flex flex-wrap gap-4">
         <!-- <div class="hidden md:block"> -->
           <Button @click="$router.push({ name: 'contact', hash: '#navbar' })">
-            <div class="block w-2 h-2 bg-white rounded-full"></div>
             See More
           </Button>
 

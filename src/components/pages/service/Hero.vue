@@ -25,7 +25,6 @@ const scrollToSection = () => {
                 Business</p>
             <div class="flex flex-col sm:flex-row gap-[14px]">
                 <Button @click="scrollToSection">
-                    <span class="block w-2 h-2 bg-white rounded-full"></span>
                     <span>Explore Our Service</span>
                 </Button>
                 <ButtonOutline @click="$router.push({ name: 'contact' })">

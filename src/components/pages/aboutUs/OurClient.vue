@@ -132,14 +132,3 @@ onMounted(() => {
   getData();
 });
 </script>
-
-<style scoped>
-.project-container::-webkit-scrollbar {
-  display: none;
-}
-
-.project-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-</style>
