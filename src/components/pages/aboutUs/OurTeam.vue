@@ -45,34 +45,13 @@ const teamMembers = ref([
         image: new URL('@/assets/about-us/OurTeam/PakTaufiq.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/Endar.webp', import.meta.url).href,
-    },
-    {
         image: new URL('@/assets/about-us/OurTeam/Ghiar.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/Ambu.webp', import.meta.url).href,
+        image: new URL('@/assets/about-us/OurTeam/Endar.webp', import.meta.url).href,
     },
     {
         image: new URL('@/assets/about-us/OurTeam/Dherri.webp', import.meta.url).href,
-    },
-    {
-        image: new URL('@/assets/about-us/OurTeam/sari.webp', import.meta.url).href,
-    },
-    {
-        image: new URL('@/assets/about-us/OurTeam/Diar.webp', import.meta.url).href,
-    },
-    {
-        image: new URL('@/assets/about-us/OurTeam/fauzan.webp', import.meta.url).href,
-    },
-    {
-        image: new URL('@/assets/about-us/OurTeam/gina.webp', import.meta.url).href,
-    },
-    {
-        image: new URL('@/assets/about-us/OurTeam/salwa.webp', import.meta.url).href,
-    },
-    {
-        image: new URL('@/assets/about-us/OurTeam/yoyo.webp', import.meta.url).href,
     },
 ]);
 
