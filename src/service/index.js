@@ -136,8 +136,8 @@ export const fetchOurClient = async (status = null) => {
       },
     });
     // Cek apakah response memiliki data yang valid
-    if (response.data && response.data.data) {
-      return response.data.data;
+    if (response.data && response.data) {
+      return response.data;
     } else {
       throw new Error("No data found in response");
     }

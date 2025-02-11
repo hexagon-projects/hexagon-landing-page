@@ -10,31 +10,21 @@
         <li class="breadcrumbs-separator rtl:rotate-180">
           <span class="icon-[tabler--chevron-right] text-light-primary"></span>
         </li>
-        <li><a href="#" class="text-light-primary">{{ portofolio.judul_porto }}</a></li>
+        <li>
+          <a href="#" class="text-light-primary">{{ portofolio.judul_porto }}</a>
+        </li>
       </ul>
     </div>
 
     <!-- Carousel Section -->
-    <div class="relative w-full mt-10 overflow-hidden ">
+    <div v-if="!portofolio.youtube" class="relative w-full mt-10 overflow-hidden">
       <div class="flex transition-transform duration-500" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-        <img
-          v-for="(image, index) in portofolio.images"
-          :key="index"
-          :src="image"
-          :alt="`Image ${index + 1}`"
-          class="w-full flex-shrink-0 aspect-video object-cover rounded-2xl"
-        />
+        <img v-for="(image, index) in portofolio.images" :key="index" :src="image" :alt="`Image ${index + 1}`" class="w-full flex-shrink-0 aspect-video object-cover rounded-2xl" />
       </div>
 
-      <!-- Navigation Buttons -->
-      <button @click="prevSlide" class="absolute left-4 top-1/2 hover:top-1/2 transform -translate-y-1/2 hover:-translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80">
-        ❮
-      </button>
-      <button @click="nextSlide" class="absolute right-4 top-1/2 hover:top-1/2 transform -translate-y-1/2 hover:-translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80">
-        ❯
-      </button>
+      <button @click="prevSlide" class="absolute left-4 top-1/2 hover:top-1/2 transform -translate-y-1/2 hover:-translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80">❮</button>
+      <button @click="nextSlide" class="absolute right-4 top-1/2 hover:top-1/2 transform -translate-y-1/2 hover:-translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80">❯</button>
 
-      <!-- Dots Indicator -->
       <div class="flex justify-center mt-4 space-x-2">
         <span
           v-for="(image, index) in portofolio.images"
@@ -42,11 +32,15 @@
           @click="goToSlide(index)"
           :class="{
             'w-9 h-3 bg-blue-500': currentIndex === index,
-            'w-3 h-3 bg-gray-400': currentIndex !== index
+            'w-3 h-3 bg-gray-400': currentIndex !== index,
           }"
           class="rounded-full cursor-pointer transition-all duration-300"
         ></span>
       </div>
+    </div>
+
+    <div v-else class="relative w-full mt-10 overflow-hidden">
+      <iframe :src="portofolio.youtube" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="w-full flex-shrink-0 aspect-video object-cover rounded-2xl"></iframe>
     </div>
 
     <!-- Project Info Section -->
@@ -107,8 +101,7 @@ const nextSlide = () => {
 };
 
 const prevSlide = () => {
-  currentIndex.value =
-    (currentIndex.value - 1 + portofolio.value.images.length) % portofolio.value.images.length;
+  currentIndex.value = (currentIndex.value - 1 + portofolio.value.images.length) % portofolio.value.images.length;
 };
 
 const goToSlide = (index) => {
