@@ -12,14 +12,34 @@ const getCareerData = async () => {
     const response = await fetchCareer();
     if (response.error) throw response.error;
     
-    positions.value = response;
-    console.log('Data:', positions.value);
+    // Pastikan setiap posisi memiliki ket_lowong sebagai objek
+    positions.value = response.map(position => {
+      if (typeof position.ket_lowong === 'string') {
+        try {
+          position.ket_lowong = JSON.parse(position.ket_lowong);
+        } catch (e) {
+          // Jika parsing gagal, tetapkan default object
+          position.ket_lowong = {
+            ringkasan: '',
+            klasifikasi: [],
+            deskripsi: [],
+            skillsets: [],
+            pengalaman: '',
+            jam_kerja: '',
+            hari_kerja: '',
+            lokasi: '',
+          };
+        }
+      }
+      return position;
+    });
   } catch (err) {
     error.value = err.message || 'Gagal memuat data karir';
   } finally {
     loading.value = false;
   }
 };
+
 
 onMounted(getCareerData);
 </script>
@@ -62,10 +82,10 @@ onMounted(getCareerData);
               {{ position.lowong_krj }}
             </h1>
             <p class="text-xs text-justify text-gray-600 dark:text-gray-400 line-clamp-3">
-              {{ position.ket_lowong }}
+              {{ position.ket_lowong.ringkasan }}
             </p>
             <div class="absolute bottom-0 right-0 flex items-center justify-center">
-              <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />
+              <img src="@/assets/Group 11.svg" alt="Icon" class="h-13" />
             </div>
           </div>
         </template>
@@ -106,7 +126,7 @@ onMounted(getCareerData);
                   {{ position.ket_lowong }}tes
                 </p>
                 <div class="absolute bottom-0 right-0 flex items-center justify-center">
-                  <img src="@/assets/Group 11.svg" alt="Icon" class="w-10 h-10" />
+                  <img src="@/assets/Group 11.svg" alt="Icon" class="h-10" />
                 </div>
               </div>
             </div>

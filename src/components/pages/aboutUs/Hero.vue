@@ -5,7 +5,7 @@
         <!-- Menggunakan LampEffect sebagai background -->
         <LampEffect class="absolute z-10 -top-60 object-cover w-full h-full" />
 
-        <div class="absolute bottom-0 z-20 w-full h-full bg-gradient-to-t from-white dark:from-black via-white/20 dark:black/20 to-transparent"></div>
+        <div class="absolute bottom-60 z-20 w-full h-1/4 bg-gradient-to-t from-white dark:from-black via-white/20 dark:black/20 to-transparent"></div>
 
         <div class="relative z-20 flex justify-center w-full pt-40">
           <div class="mb-16 max-w-[1000px] space-y-8 z-20">
@@ -25,9 +25,9 @@
                 Services Detail
               </ButtonOutline>
             </div>
-            <div class="rounded-xl p-px bg-gradient-to-b from-[#7c8dfe] to-transparent h-full w-full">
+            <!-- <div class="rounded-xl p-px bg-gradient-to-b from-[#7c8dfe] to-transparent h-full w-full"> -->
               <div
-                class="w-full z-30 p-4 sm:p-6 md:p-8 space-y-4  rounded-xl absolute bg-gradient-to-b from-[#0D1B75] to-black backdrop-blur max-w-[1000px] transition-transform duration-1000 ease-out delay-300 translate-y-[100%] animate-slide-up"
+                class="w-full z-30 p-4 sm:p-6 md:p-8 space-y-4  rounded-xl absolute bg-gradient-to-b from-[#0D1B75] border border-light-primary to-transparent backdrop-blur max-w-[1000px] transition-transform duration-1000 ease-out delay-300 translate-y-[100%] animate-slide-up"
               >
                 <!-- Konten tetap sama -->
                 <div class="flex items-center gap-4 sm:gap-6">
@@ -51,7 +51,7 @@
                   ></iframe>
                 <!-- </div> -->
               </div>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>

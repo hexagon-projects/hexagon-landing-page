@@ -21,8 +21,8 @@
         <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-center">
           <!-- Judul (Kolom Kiri) -->
           <h1 class="font-raleway text-[30px] md:text-[20px] font-semibold text-gray-800 dark:text-white max-w-[300px]">
-            25+ sekolah seluruh Indonesia<br />
-            sebagai Mitra Vokasi Hexagon
+            Membina 50+ SMK<br />
+            di seluruh Indonesia
           </h1>
 
           <!-- Marquee Section (Kolom Kanan) -->
@@ -74,7 +74,7 @@ const chunkArray = (array, size) => {
 const getData = async () => {
   try {
     // Fetch Our Clients (status = 1)
-    const clients = await fetchOurClient(1);
+    const clients = await fetchOurClient(2);
     ourClientData.value = clients || [];
 
     // Fetch Media Partners (status = 0)
