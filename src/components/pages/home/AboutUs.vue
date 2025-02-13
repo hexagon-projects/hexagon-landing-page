@@ -30,25 +30,25 @@ import { Icon } from "@iconify/vue";
         <div class="hidden md:flex flex-col lg:flex-row gap-[18px] mb-[18px] justify-center">
             <!-- Card 1 -->
             <div
-                class="lg:max-w-[650px] w-full flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] items-center overflow-hidden card-bg">
+                class="lg:max-w-[650px] w-full flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] items-center overflow-hidden card-bg hover:scale-105 transition-transform duration-300 hover:bg-blue-100 dark:hover:bg-blue-900">
                 <div class="flex flex-col p-[28px] pt-[28px] justify-center items-center">
                     <ButtonOutline @click="$router.push({ name: 'contact' })">
                         <Icon icon="meteocons:star-fill" class="w-6 h-6" />
                         <span class="dark:text-white">IT Solution</span>
                     </ButtonOutline>
-                    <h1 class="text-[40px] font-raleway font-semibold text-gradient-dark mt-5">Digital Solutions
+                    <h1 class="text-[40px] md:text-[32px] font-raleway font-semibold text-gradient-dark mt-5">Digital Solutions
                         <br> For Your Business
                     </h1>
                 </div>
                 <div class="">
                     <img src="@/assets/services/3d1.png" alt="IT Consultation"
-                        class="rounded-xl object-cover w-full h-auto" />
+                        class="rounded-xl object-cover w-36 h-auto" />
                 </div>
             </div>
 
             <!-- Card 2 -->
             <div
-                class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA]  dark:bg-[#191D34] rounded-[16px] card-bg">
+                class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA]  dark:bg-[#191D34] rounded-[16px] card-bg hover:scale-105 transition-transform duration-300 hover:bg-blue-100 dark:hover:bg-blue-900">
                 <div class="flex h-full">
                     <div class="flex items-end w-1/2">
                         <img src="@/assets/services/Union5.png" alt="Digital Marketing" class="">
@@ -70,7 +70,7 @@ import { Icon } from "@iconify/vue";
         <div class="hidden md:flex flex-col lg:flex-row gap-[18px] mb-[18px] justify-center">
             <!-- Card 1 -->
             <div
-                class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg ">
+                class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg hover:scale-105 transition-transform duration-300 hover:bg-blue-100 dark:hover:bg-blue-900">
                 <div class="flex h-full">
                     <div class="flex justify-between flex-col">
                         <div>
@@ -92,9 +92,9 @@ import { Icon } from "@iconify/vue";
 
             <!-- Card 2 -->
             <div
-                class="lg:max-w-[650px] w-full flex flex-col items-center  bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] overflow-hidden card-bg">
+                class="lg:max-w-[650px] w-full flex flex-col items-center  bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] overflow-hidden card-bg hover:scale-105 transition-transform duration-300 hover:bg-blue-100 dark:hover:bg-blue-900">
                 <div class="p-[38px]">
-                    <img src="@/assets/services/3d2.png" alt="Media Consultant" class="object-cover w-full h-auto">
+                    <img src="@/assets/services/3d2.png" alt="Media Consultant" class="object-cover w-36 h-auto">
                 </div>
                 <div class="flex flex-col items-center">
                     <div>
@@ -115,7 +115,7 @@ import { Icon } from "@iconify/vue";
         <div class="md:hidden mobile-scroll-container">
             <div class="mobile-scroll-content">
                 <!-- Card 1 -->
-                <div class="mobile-card">
+                <div class="mobile-card hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
                     <div
                         class="flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-3xl items-center overflow-hidden card-bg">
                         <div class="flex flex-col p-[8px] pt-[28px] justify-center items-center">
@@ -135,7 +135,7 @@ import { Icon } from "@iconify/vue";
                 </div>
 
                 <!-- Card 2 -->
-                <div class="mobile-card">
+                <div class="mobile-card hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
                     <div
                         class="flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg h-full">
                         <div class="flex h-full">
@@ -162,7 +162,7 @@ import { Icon } from "@iconify/vue";
                 </div>
 
                 <!-- Card 3 -->
-                <div class="mobile-card">
+                <div class="mobile-card hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
                     <div
                         class="flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg h-full">
                         <div class="flex h-full">
@@ -190,7 +190,7 @@ import { Icon } from "@iconify/vue";
                 </div>
 
                 <!-- Card 4 -->
-                <div class="mobile-card">
+                <div class="mobile-card hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
                     <div
                         class="flex flex-col items-center bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] overflow-hidden card-bg">
                         <div class="p-[18px]">

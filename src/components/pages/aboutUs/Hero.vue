@@ -5,7 +5,7 @@
         <!-- Menggunakan LampEffect sebagai background -->
         <LampEffect class="absolute z-10 -top-60 object-cover w-full h-full" />
 
-        <div class="absolute bottom-0 z-20 w-full h-full bg-gradient-to-t from-white dark:from-black via-white/20 dark:black/20 to-transparent"></div>
+        <div class="absolute bottom-0 z-20 w-full h-full bg-gradient-to-t from-white dark:from-black via-transparent dark:black/20 to-transparent"></div>
 
         <div class="relative z-20 flex justify-center w-full pt-40">
           <div class="mb-16 max-w-[1000px] space-y-8 z-20">

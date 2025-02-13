@@ -22,10 +22,9 @@ import ButtonOutline from '@/components/button/ButtonOutline.vue';
           <Button @click="$router.push({ name: 'contact' })">
             <span class="text-white">Let's Chat!</span>
           </Button>
-          <ButtonOutline @click="$router.push({ name: 'contact' })"
-            class="px-4 py-2 text-white rounded bg-white dark:bg-gray-400 dark:bg-opacity-50 border border-white hover-gradient group">
+          <ButtonOutline @click="$router.push({ name: 'contact' })">
             <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
-            <span class="text-black dark:text-white group-hover:text-white">Request a Consultation</span>
+            <span class="text-white ">Request a Consultation</span>
           </ButtonOutline>
         </div>
       </div>
