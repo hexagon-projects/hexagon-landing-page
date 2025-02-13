@@ -85,7 +85,7 @@ onMounted(getCareerData);
               {{ position.ket_lowong.ringkasan }}
             </p>
             <div class="absolute bottom-0 right-0 flex items-center justify-center">
-              <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />
+              <img src="@/assets/Group 11.svg" alt="Icon" class="h-13" />
             </div>
           </div>
         </template>
@@ -126,7 +126,7 @@ onMounted(getCareerData);
                   {{ position.ket_lowong }}tes
                 </p>
                 <div class="absolute bottom-0 right-0 flex items-center justify-center">
-                  <img src="@/assets/Group 11.svg" alt="Icon" class="w-10 h-10" />
+                  <img src="@/assets/Group 11.svg" alt="Icon" class="h-10" />
                 </div>
               </div>
             </div>

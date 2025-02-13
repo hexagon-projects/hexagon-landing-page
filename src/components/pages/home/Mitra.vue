@@ -21,8 +21,8 @@
         <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-center">
           <!-- Judul (Kolom Kiri) -->
           <h1 class="font-raleway text-[30px] md:text-[20px] font-semibold text-gray-800 dark:text-white max-w-[300px]">
-            50+ sekolah seluruh Indonesia<br />
-            sebagai Mitra Vokasi Hexagon
+            Membina 50+ SMK<br />
+            di seluruh Indonesia
           </h1>
 
           <!-- Marquee Section (Kolom Kanan) -->
