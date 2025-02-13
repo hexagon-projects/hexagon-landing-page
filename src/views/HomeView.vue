@@ -1,5 +1,6 @@
 <script setup>
 import AboutUs from '@/components/pages/home/AboutUs.vue';
+import Mitra from '@/components/pages/home/Mitra.vue';
 import Hero from '@/components/pages/home/Hero.vue';
 import OurPartner from '@/components/pages/home/OurPartner.vue';
 import OurProject from '@/components/pages/home/OurProject.vue';
@@ -16,6 +17,7 @@ import OurClient from '@/components/pages/aboutUs/OurClient.vue';
         <Hero />
         <OurPartner />
         <AboutUs />
+        <Mitra />
         <OurProject />
         <Review />
         <News />

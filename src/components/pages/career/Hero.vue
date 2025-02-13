@@ -18,7 +18,6 @@ const scrollToSection = () => {
             <p class="font-raleway text-[13px] md:text-[16px] font-semibold text-gray-600 dark:text-white">Be part of a dynamic team that values innovation, growth, and collaboration.</p>
             <div class="flex flex-col sm:flex-row gap-[14px]">
                 <Button  @click="scrollToSection">
-                    <span class="block w-2 h-2 bg-white rounded-full"></span>
                     <span>Explore Position</span>
                 </Button>
                 <ButtonOutline @click="$router.push({ name: 'contact' })">

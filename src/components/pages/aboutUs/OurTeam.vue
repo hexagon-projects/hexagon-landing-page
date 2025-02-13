@@ -15,7 +15,7 @@
 
         <div class="grid gap-8 px-4 mx-auto grid-cols-2 lg:grid-cols-4 lg:px-16 max-w-7xl">
             <div v-for="(member, index) in displayedMembers" :key="index"
-                class="relative overflow-hidden transition-all duration-500 shadow-lg group rounded-2xl hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
+                class="relative overflow-hidden transition-all duration-500  group rounded-2xl hover:scale-105 hover:shadow-md hover:-translate-y-2">
                 <div class="aspect-w-3 aspect-h-4">
                     <img :src="member.image" :alt="`Image of ${member.name}`"
                         class="object-cover w-full h-full transition-transform duration-500" />
@@ -63,13 +63,7 @@ const teamMembers = ref([
         image: new URL('@/assets/about-us/OurTeam/Diar.webp', import.meta.url).href,
     },
     {
-        image: new URL('@/assets/about-us/OurTeam/fauzan.webp', import.meta.url).href,
-    },
-    {
         image: new URL('@/assets/about-us/OurTeam/gina.webp', import.meta.url).href,
-    },
-    {
-        image: new URL('@/assets/about-us/OurTeam/salwa.webp', import.meta.url).href,
     },
     {
         image: new URL('@/assets/about-us/OurTeam/yoyo.webp', import.meta.url).href,

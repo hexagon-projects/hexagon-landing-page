@@ -8,6 +8,7 @@ import BlogPostView from "@/views/BlogPostView.vue";
 import PortofolioPostView from "@/views/PortofolioPostView.vue";
 import CareerView from "@/views/CareerView.vue";
 import ContactView from "@/views/ContactView.vue";
+import PositionDetailView from "@/views/PositionDetailView.vue";
 
 // Array routes
 const routes = [
@@ -55,6 +56,12 @@ const routes = [
     path: "/portfolio/:id",
     name: "portfolio-detail",
     component: PortofolioPostView,
+    props: true,
+  },
+  {
+    path: "/career/:id",
+    name: "position-detail",
+    component: PositionDetailView,
     props: true,
   },
 ];

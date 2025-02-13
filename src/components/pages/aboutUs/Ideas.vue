@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center justify-between max-w-6xl p-8 mx-auto md:flex-row">
     <!-- Left Section: Image -->
     <div class="w-full mb-8 md:w-1/2 md:mb-0">
-      <img src="@/assets/about-us/superman_3d.png" alt="Superman 3D" class="w-full h-auto" />
+      <img src="@/assets/about-us/superman_3d.png" alt="Superman 3D" class="w-3/4 h-auto" />
     </div>
 
     <!-- Right Section: Text & Buttons -->
@@ -34,7 +34,6 @@
       <div class="hidden md:flex flex-wrap gap-4">
         <!-- <div class="hidden md:block"> -->
           <Button @click="$router.push({ name: 'contact', hash: '#navbar' })">
-            <div class="block w-2 h-2 bg-white rounded-full"></div>
             See More
           </Button>
 

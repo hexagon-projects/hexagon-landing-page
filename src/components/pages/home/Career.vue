@@ -59,7 +59,6 @@ onMounted(getCareerData);
           <div class="mt-4">
             <Button @click="$router.push({ name: 'career' })">
               <span class="text-xs">See All Job Offer</span>
-              <font-awesome-icon icon="arrow-right" />
             </Button>
           </div>
         </div>
@@ -94,11 +93,10 @@ onMounted(getCareerData);
         <!-- Static Apply Card -->
         <div class="flex flex-col items-center bg-[#F5F6FA] rounded-[16px] p-[45px] pt-[35px] relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-950 hover:text-white hover:shadow-lg hover:scale-105">
           <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 mb-2 text-center dark:text-white">
-            Can't find the position you are looking for?
+            Can't find the position <br> you are looking for?
           </h1>
           <Button class="rounded-lg mt-3">
             <span class="text-xs">Apply Now</span>
-            <font-awesome-icon icon="arrow-right" />
           </Button>
         </div>
       </div>

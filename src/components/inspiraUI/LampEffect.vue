@@ -6,7 +6,7 @@
         :style="{
           backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
         }"
-        class="animate-conic-gradient bg-gradient-conic absolute inset-auto right-1/2 h-[25vh] w-[40vw] overflow-visible from-blue-500 via-transparent to-transparent text-white opacity-50 [--conic-position:from_70deg_at_center_top]"
+        class="animate-conic-gradient bg-gradient-conic absolute inset-auto right-1/2 h-[25vh] w-[40vw] overflow-visible from-blue-500 via-transparent to-transparent text-white opacity-50 [--conic-position:from_90deg_at_center_top]"
       >
         <div class="absolute bottom-0 left-0 z-20 h-[10vh] w-full bg-slate-950 [mask-image:linear-gradient(to_top,white,transparent)]" />
         <div class="absolute bottom-0 left-0 z-20 h-full w-[15vw] bg-slate-950 [mask-image:linear-gradient(to_right,white,transparent)]" />
@@ -16,7 +16,7 @@
         :style="{
           backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
         }"
-        class="animate-conic-gradient bg-gradient-conic absolute inset-auto left-1/2 h-[25vh] w-[40vw] from-transparent via-transparent to-blue-500 text-white opacity-50 [--conic-position:from_290deg_at_center_top]"
+        class="animate-conic-gradient bg-gradient-conic absolute inset-auto left-1/2 h-[25vh] w-[40vw] from-transparent via-transparent to-blue-500 text-white opacity-50 [--conic-position:from_270deg_at_center_top]"
       >
         <div class="absolute bottom-0 right-0 z-20 h-full w-[15vw] bg-slate-950 [mask-image:linear-gradient(to_left,white,transparent)]" />
         <div class="absolute bottom-0 right-0 z-20 h-[10vh] w-full bg-slate-950 [mask-image:linear-gradient(to_top,white,transparent)]" />
@@ -82,6 +82,10 @@ const delayInSeconds = computed(() => `${props.delay}s`);
 .animate-conic-gradient {
   animation: conic-gradient-anim ease-in-out v-bind(durationInSeconds) forwards;
   animation-delay: v-bind(delayInSeconds);
+}
+
+.conic{
+  background-image: conic-gradient(from 90deg at 50% 50%, #A100ffff 0%, #000 25%, #119cfdff 30%);
 }
 
 @keyframes spotlight-anim {
