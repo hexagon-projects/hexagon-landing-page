@@ -1,54 +1,59 @@
 <template>
-  <div :class="cn('relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0', $props.class)">
-    <div class="relative z-0 flex items-center justify-center flex-1 w-full scale-y-125 isolate -mt-[24vh]">
+  <div :class="cn(
+    'relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#2147A7] dark:bg-slate-950 w-full rounded-md z-0',
+    $props.class,
+  )">
+    <div class="relative isolate z-0 flex w-full flex-1 scale-y-125 items-center justify-center">
       <!-- Conic Gradient -->
-      <div
-        :style="{
-          backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
-        }"
-        class="animate-conic-gradient bg-gradient-conic absolute inset-auto right-1/2 h-[25vh] w-[40vw] overflow-visible from-blue-500 via-transparent to-transparent text-white opacity-50 [--conic-position:from_70deg_at_center_top]"
-      >
-        <div class="absolute bottom-0 left-0 z-20 h-[10vh] w-full bg-slate-950 [mask-image:linear-gradient(to_top,white,transparent)]" />
-        <div class="absolute bottom-0 left-0 z-20 h-full w-[15vw] bg-slate-950 [mask-image:linear-gradient(to_right,white,transparent)]" />
+      <div :style="{
+        backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
+      }"
+        class="animate-conic-gradient bg-gradient-conic absolute inset-auto right-1/2 h-56 w-[32rem] overflow-visible from-[#2125ff] via-transparent to-transparent text-white opacity-50 [--conic-position:from_70deg_at_center_top]">
+        <div
+          class="absolute bottom-0 left-0 z-20 h-40 w-full [mask-image:linear-gradient(to_top,white,transparent)]" />
+        <div
+          class="absolute bottom-0 left-0 z-20 h-full w-80  [mask-image:linear-gradient(to_right,white,transparent)]" />
       </div>
 
-      <div
-        :style="{
-          backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
-        }"
-        class="animate-conic-gradient bg-gradient-conic absolute inset-auto left-1/2 h-[25vh] w-[40vw] from-transparent via-transparent to-blue-500 text-white opacity-50 [--conic-position:from_290deg_at_center_top]"
-      >
-        <div class="absolute bottom-0 right-0 z-20 h-full w-[15vw] bg-slate-950 [mask-image:linear-gradient(to_left,white,transparent)]" />
-        <div class="absolute bottom-0 right-0 z-20 h-[10vh] w-full bg-slate-950 [mask-image:linear-gradient(to_top,white,transparent)]" />
+      <div :style="{
+        backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
+      }"
+        class="animate-conic-gradient bg-gradient-conic absolute inset-auto left-1/2 h-56 w-[32rem] from-transparent via-transparent to-[#2125ff] text-white opacity-50 [--conic-position:from_290deg_at_center_top]">
+        <div
+          class="absolute bottom-0 right-0 z-20 h-full w-80  [mask-image:linear-gradient(to_left,white,transparent)]" />
+        <div
+          class="absolute bottom-0 right-0 z-20 h-40 w-full  [mask-image:linear-gradient(to_top,white,transparent)]" />
       </div>
 
-      <div class="absolute w-full h-[12vh] scale-x-150 translate-y-[3vh] top-1/2 bg-slate-950 blur-2xl"></div>
+      <div class="absolute top-1/2 h-48 w-full translate-y-12 scale-x-[2.5] bg-[#2147A7] dark:bg-slate-950 blur-2xl"></div>
 
-      <div class="absolute z-50 w-full h-[12vh] bg-transparent top-1/2 opacity-10 backdrop-blur-md"></div>
+      <div class="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
 
-      <div class="absolute inset-auto z-50 h-[12vh] w-[40vw] -translate-y-[1vh] rounded-full bg-blue-500 opacity-50 blur-3xl"></div>
+      <div
+        class="absolute inset-auto z-50 h-36 w-[64rem] -translate-y-1/2 rounded-full bg-[#2125ff] opacity-50 blur-3xl">
+      </div>
 
       <!-- Spotlight -->
-      <div class="absolute inset-auto z-30 w-[30vw] -translate-y-[12vh] rounded-full animate-spotlight h-[20vh] bg-blue-400 blur-2xl scale-y-130"></div>
+      <div
+        class="animate-spotlight absolute inset-auto z-30 h-12 w-64 -translate-y-24 rounded-full bg-[#21ffe5] blur-2xl">
+      </div>
 
       <!-- Glowing Line -->
-      <div class="animate-glowing-line absolute inset-auto z-50 h-0.5 w-[40vw] -translate-y-[7vh] bg-blue-400"></div>
+      <div class="animate-glowing-line absolute inset-auto z-50 h-0.5 w-[32rem] -translate-y-28 bg-[#1781eb]"></div>
 
-      <!-- Tambahan Cahaya Bawah -->
-      <div class="absolute inset-x-0 bottom-0 z-20 h-[15vh] bg-blue-500 blur-3xl opacity-30"></div>
-
-      <div class="absolute inset-auto z-40 h-[11vh] w-full translate-y-[-12.5vh] bg-slate-950"></div>
+      <div class="absolute inset-auto z-40 h-44 w-full translate-y-[-12.5rem] bg-[#2147A7] dark:bg-slate-950"></div>
     </div>
 
-    <div class="">
+    <div class="relative z-50 flex -translate-y-80 flex-col items-center px-5">
       <slot />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { computed, type HTMLAttributes } from "vue";
+import type { HTMLAttributes } from "vue";
 import { cn } from "../../utils/cn";
+import { computed } from "vue";
 
 interface LampEffectProps {
   delay?: number;
@@ -84,32 +89,38 @@ const delayInSeconds = computed(() => `${props.delay}s`);
   animation-delay: v-bind(delayInSeconds);
 }
 
+/* Keyframes for Spotlight */
 @keyframes spotlight-anim {
   from {
-    width: 30vw;
+    width: 16rem;
   }
+
   to {
-    width: 50vw;
+    width: 64rem;
   }
 }
 
+/* Keyframes for Glowing Line */
 @keyframes glowing-line-anim {
   from {
-    width: 40vw;
+    width: 32rem;
   }
+
   to {
-    width: 70vw;
+    width: 64rem;
   }
 }
 
+/* Keyframes for Conic Gradient */
 @keyframes conic-gradient-anim {
   from {
     opacity: 0.5;
-    width: 40vw;
+    width: 32rem;
   }
+
   to {
     opacity: 1;
-    width: 70vw;
+    width: 64rem;
   }
 }
 </style>
