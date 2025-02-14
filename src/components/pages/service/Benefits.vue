@@ -9,7 +9,7 @@
                     </div>
                     <h1
                         class="text-[30px] md:text-[38px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-4 mt-[36px]">
-                        Why Choose <span class="text-gradient">Hexagon inc</span> ?</h1>
+                        Why Choose <br class="md:hidden"> <span class="text-gradient">Hexagon inc</span> ?</h1>
                     <p class="text-xs text-justify text-gray-600 dark:text-white">Discover the advantages of partnering
                         with us—tailored
                         solutions, dedicated support, and proven results that set us apart.</p>

@@ -18,7 +18,7 @@ const scrollToSection = () => {
         <div class="flex flex-col gap-9 items-center text-center mb-[60px]">
             <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline">Our
                 Service</span>
-            <h1 class="font-raleway text-[40px] md:text-[60px] font-bold text-gradient">Empowering your business<br>with smart
+            <h1 class="font-raleway text-[24px] md:text-[60px] font-bold text-gradient">Empowering your business<br>with smart
                 solutions</h1>
             <p class="font-raleway text-[16px] font-semibold text-gray-600 dark:text-white">We Provide Perfect IT
                 Solutions For Your
