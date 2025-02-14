@@ -4,7 +4,6 @@
       <div class="relative min-h-[800px] md:min-h-[1000px]">
         <LampEffect class="absolute z-10 -top-60 object-cover w-full h-full" />
         <!-- Menggunakan LampEffect sebagai background -->
-
         <div
           class="absolute bottom-60 z-20 w-full h-full bg-gradient-to-t from-white to-20% dark:from-black via-transparent dark:black/20 to-transparent">
         </div>

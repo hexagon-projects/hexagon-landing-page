@@ -88,7 +88,7 @@ const chunkArray = (array, size) => {
 const getData = async () => {
   try {
     // Fetch Our Clients (status = 1)
-    const clients = await fetchOurClient(1);
+    const clients = await fetchOurClient(2);
     ourClientData.value = clients || [];
 
     // Fetch Media Partners (status = 0)

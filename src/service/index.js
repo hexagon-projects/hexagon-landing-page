@@ -111,6 +111,22 @@ export const fetchCareer = async (type) => {
   }
 };
 
+export const fetchJobDetail = async (id) => {
+  try {
+    const response = await axiosInstance.get(`/api/Career/${id}`);
+
+    if (response.data) {
+      return response.data;
+    } else {
+      throw new Error("No data found in response");
+    }
+  } catch (error) {
+    console.error("Error fetching job detail:", error);
+    return { error: "Failed to fetch job detail. Please try again later." };
+  }
+};
+
+
 export const fetchValue = async (type) => {
   try {
     const response = await axiosInstance.get("/api/values", {
@@ -136,8 +152,8 @@ export const fetchOurClient = async (status = null) => {
       },
     });
     // Cek apakah response memiliki data yang valid
-    if (response.data && response.data.data) {
-      return response.data.data;
+    if (response.data && response.data) {
+      return response.data;
     } else {
       throw new Error("No data found in response");
     }

@@ -10,12 +10,29 @@ const getCareerData = async () => {
 
   try {
     const response = await fetchCareer();
-    if (response.error) {
-      throw new Error(response.error);
-    }
-
-    positions.value = response;
-    console.log("Data:", positions.value);
+     if (response.error) throw response.error;
+    
+    // Pastikan setiap posisi memiliki ket_lowong sebagai objek
+    positions.value = response.map(position => {
+      if (typeof position.ket_lowong === 'string') {
+        try {
+          position.ket_lowong = JSON.parse(position.ket_lowong);
+        } catch (e) {
+          // Jika parsing gagal, tetapkan default object
+          position.ket_lowong = {
+            ringkasan: '',
+            klasifikasi: [],
+            deskripsi: [],
+            skillsets: [],
+            pengalaman: '',
+            jam_kerja: '',
+            hari_kerja: '',
+            lokasi: '',
+          };
+        }
+      }
+      return position;
+    });
   } catch (err) {
     error.value = err.message;
     console.error('Error fetching career data:', err);
@@ -52,7 +69,7 @@ onMounted(() => {
               {{ position.lowong_krj }}
             </h1>
             <p class="text-xs text-justify text-gray-600 break-all dark:text-gray-400">
-              {{ position.ket_lowong }}
+              {{ position.ket_lowong.ringkasan }}
             </p>
             <div class="absolute bottom-0 flex items-center justify-center -right-1">
               <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />

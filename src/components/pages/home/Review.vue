@@ -116,10 +116,10 @@ onMounted(() => {
 
             <!-- Decorative Elements -->
             <div class="absolute bottom-0 right-0 flex items-center justify-center">
-              <img src="@/assets/Group 11.svg" alt="Icon" class="w-13 h-13" />
+              <img src="@/assets/Group 11.svg" alt="Icon" class="h-13" />
             </div>
             <div class="absolute bottom-0 right-0 flex gap-2 transition-opacity duration-300 opacity-0 hover:opacity-100">
-              <img src="@/assets/Large unit.svg" alt="Large Unit Icon" class="w-[200px] h-[200px]" />
+              <img src="@/assets/Large unit.svg" alt="Large Unit Icon" class="h-[200px]" />
             </div>
           </div>
 
