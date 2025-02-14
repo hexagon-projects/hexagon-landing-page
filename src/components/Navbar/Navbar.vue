@@ -134,17 +134,17 @@ const closePopup = () => {
   </div>
 
   <!-- Popover -->
-  <Transition name="fade">
+  <Transition name="slide-up">
     <div v-if="isPopupOpen" class="fixed flex flex-col bottom-28 left-1/2 gap-2 z-[999] -translate-x-1/2 dark:bg-black bg-white text-white rounded-lg shadow-md w-[90vw] p-2">
-      <RouterLink to="/portfolio"  @click="closePopup" class="w-full px-4 py-2.5 text-black text-lg dark:text-white flex gap-4 hover:bg-blue-50 dark:hover:bg-gray-600 dark:bg-gray-800 rounded-xl">
+      <RouterLink to="/portfolio" @click="closePopup" class="w-full px-4 py-2.5 text-black text-lg dark:text-white flex gap-4 hover:bg-blue-50 dark:hover:bg-gray-600 dark:bg-gray-800 rounded-xl">
         <Icon icon="ph:files" class="w-6 h-6"></Icon>
         Portofolio
       </RouterLink>
-      <RouterLink to="/news"  @click="closePopup" class="w-full px-4 py-2.5 text-black text-lg dark:text-white flex gap-4 hover:bg-blue-50 dark:hover:bg-gray-600 dark:bg-gray-800 rounded-xl">
+      <RouterLink to="/news" @click="closePopup" class="w-full px-4 py-2.5 text-black text-lg dark:text-white flex gap-4 hover:bg-blue-50 dark:hover:bg-gray-600 dark:bg-gray-800 rounded-xl">
         <Icon icon="ph:newspaper" class="w-6 h-6"></Icon>
         News
       </RouterLink>
-      <RouterLink to="/career"  @click="closePopup" class="w-full px-4 py-2.5 text-black text-lg dark:text-white flex gap-4 hover:bg-blue-50 dark:hover:bg-gray-600 dark:bg-gray-800 rounded-xl">
+      <RouterLink to="/career" @click="closePopup" class="w-full px-4 py-2.5 text-black text-lg dark:text-white flex gap-4 hover:bg-blue-50 dark:hover:bg-gray-600 dark:bg-gray-800 rounded-xl">
         <Icon icon="bytesize:portfolio" class="w-6 h-6"></Icon>
         Career
       </RouterLink>
@@ -157,17 +157,23 @@ const closePopup = () => {
   @apply dark:text-white text-black gap-1.5 flex flex-col items-center justify-center p-4 transition-all dark:hover:text-gray-300 hover:text-light-primary;
 }
 
-/* Animasi masuk & keluar */
-.fade-enter-active,
-.fade-leave-active {
+/* Updated bottom-to-top animation */
+.slide-up-enter-active,
+.slide-up-leave-active {
   transition: all 0.3s ease-out;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.slide-up-enter-from,
+.slide-up-leave-to {
   opacity: 0;
-  transform: translateY(20px);
-  transform: translateX(20px);
+  z-index: -1;
+  transform: translate(-50%, 100%);
+}
+
+.slide-up-enter-to,
+.slide-up-leave-from {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .btn-close {
