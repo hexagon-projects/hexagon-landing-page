@@ -1,29 +1,43 @@
 <template>
-  <div class="relative w-full py-8 space-y-4 md:space-y-12 bg-white dark:bg-black">
+  <div class="relative w-full py-15 space-y-[68px] bg-white dark:bg-black">
     <!-- Our Client Section -->
-    <div class="flex flex-col gap-9 items-center text-center mb-[78px]">
+    <div class="flex flex-col gap-9 items-center text-center px-[30px]">
       <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">Mitra</span>
-      <h1 class="font-raleway text-[30px] font-semibold text-gray-800 dark:text-white">
+      <h1 class="font-raleway text-[24px] md:text-[30px] font-semibold text-gray-800 dark:text-white">
         Sebagai mitra Direktorat Jendral Pendidikan Vokasi <br />
         Kementerian Pendidikan Dasar dan Menengah Republik Indonesia
       </h1>
-      <div class="flex flex-col sm:flex-row">
-        <img src="@/assets/about-us/OurClient/Frame 1597883494.webp" alt="" class="w-full h-20 object-cover w-1/3" />
-        <img src="@/assets/about-us/OurClient/Frame 1597883481.webp" alt="" class="w-full h-20 object-cover w-1/3" />
-        <img src="@/assets/about-us/OurClient/vokasi.webp" alt="" class="w-full h-20 object-cover w-1/3" />
+      <div class="grid grid-cols-3 md:w-2/5 px-[30px]">
+        <div class="">
+          <img src="@/assets/about-us/OurClient/Frame 1597883494.webp" alt="" class="object-cover w-full" />
+        </div>
+        <div>
+          <img src="@/assets/about-us/OurClient/Frame 1597883481.webp" alt="" class="object-cover w-full" />
+        </div>
+        <div>
+          <img src="@/assets/about-us/OurClient/vokasi.webp" alt="" class="object-cover w-full" />
+        </div>
       </div>
     </div>
-
+    <div class="md:hidden justify-center flex text-center">
+      <h1 class="font-raleway text-[20px] font-semibold text-gray-800 dark:text-white max-w-[300px]">
+        Membina 50+ SMK<br />
+        di seluruh Indonesia
+      </h1>
+    </div>
     <!-- Marquee Section -->
-    <div class="px-[60px]">
+    <div class="px-[16px] md:px-[60px]">
       <div
         class="flex flex-col gap-12 overflow-hidden border border-gray-200 dark:border-gray-700 py-8 px-8 rounded-xl">
         <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-center">
           <!-- Judul (Kolom Kiri) -->
-          <h1 class="font-raleway text-[30px] md:text-[20px] font-semibold text-gray-800 dark:text-white max-w-[300px]">
-            Membina 50+ SMK<br />
-            di seluruh Indonesia
-          </h1>
+          <div class="hidden md:block">
+            <h1
+              class="font-raleway text-[16px] md:text-[20px] font-semibold text-gray-800 dark:text-white max-w-[300px]">
+              Membina 50+ SMK<br />
+              di seluruh Indonesia
+            </h1>
+          </div>
 
           <!-- Marquee Section (Kolom Kanan) -->
           <div class="w-full overflow-hidden">
@@ -32,7 +46,7 @@
               <Marquee :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40">
                 <div class="flex gap-4 pl-4">
                   <div v-for="(client, index) in ourClientData" :key="'marquee-desktop-' + index"
-                    class="flex items-center justify-center w-36 h-22 bg-white">
+                    class="flex items-center justify-center w-36 h-22">
                     <img :src="client.foto_client_url" alt="client.name" class="max-w-[150px] object-contain" />
                   </div>
                 </div>
@@ -44,7 +58,7 @@
               <Marquee :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40">
                 <div class="flex gap-4">
                   <div v-for="(client, index) in ourClientData" :key="'marquee-mobile-' + index"
-                    class="flex items-center justify-center w-36 h-22 bg-white border rounded-[10px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300">
+                    class="flex items-center justify-center w-36 h-22">
                     <img :src="client.foto_client_url" alt="Client Logo" class="max-w-[80px] object-contain" />
                   </div>
                 </div>

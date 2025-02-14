@@ -9,7 +9,7 @@ import AnyProjIdea from '@/components/pages/contact/AnyProjIdea.vue';
 </script>
 
 <template>
-    <div class="space-y-16">
+    <div class="space-y-12">
         <Hero />
         <ListContact />
         <OurOffices />

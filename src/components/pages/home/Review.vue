@@ -63,15 +63,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="px-[20px] md:px-[112px] relative bg-gradient-to-b z-0 pb-[78px] md:pt-[78px] from-[#F3F8FF] to-white dark:bg-gradient-to-b dark:from-black dark:to-black">
+  <div class="px-[20px] md:px-[112px] relative bg-gradient-to-b z-0 pb-[78px] pt-[56px] md:pt-[78px] from-[#F3F8FF] to-white dark:bg-gradient-to-b dark:from-black dark:to-black">
     <!-- Background Images -->
-    <img src="../../../assets/about-us/hexsideshapelight.png" alt="" class="absolute right-0 -z-10 block dark:hidden" />
-    <img src="../../../assets/about-us/hexsideshape.png" alt="" class="absolute right-0 z-0 hidden dark:block" />
-
+    <div class="hidden md:block">
+      <img src="../../../assets/about-us/hexsideshapelight.png" alt="" class="absolute right-0 -z-10 block dark:hidden" />
+      <img src="../../../assets/about-us/hexsideshape.png" alt="" class="absolute right-0 z-0 hidden dark:block" />
+    </div>
     <!-- Header Section -->
-    <div class="flex flex-col z-0 gap-9 items-center text-center mb-[78px]">
+    <div class="flex flex-col z-0 gap-9 items-center text-center mb-[24px]">
       <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">Review</span>
-      <h1 class="font-raleway text-[30px] font-bold text-gray-800 dark:text-white">What Our Clients Say</h1>
+      <h1 class="font-raleway text-[30px] font-semibold text-gray-800 dark:text-white">What Our Clients Say</h1>
     </div>
 
     <!-- Loading State -->
@@ -94,7 +95,7 @@ onMounted(() => {
       <div class="hidden md:block">
         <div class="flex flex-col lg:flex-row gap-[18px] mb-[18px] z-10">
           <!-- Review Card -->
-          <div class="lg:max-w-[750px] w-full flex flex-col bg-[#2C7EF9] rounded-[20px] shadow-lg relative">
+          <div class="lg:max-w-[750px] w-full flex flex-col bg-[#136ff8] rounded-[20px] shadow-lg relative">
             <!-- Review Text -->
             <div class="p-[56px] pt-[55px]">
               <p class="text-[16px] text-white font-normal">
@@ -140,7 +141,7 @@ onMounted(() => {
       <!-- Mobile Layout -->
       <div class="md:hidden block">
         <div class="flex flex-col items-center">
-          <div class="w-full max-w-[350px] bg-[#2C7EF9] rounded-[20px] shadow-lg relative p-6">
+          <div class="w-full max-w-[350px] bg-[#136ff8] rounded-[20px] shadow-lg relative p-6">
             <p class="text-[16px] text-white font-normal line-clamp-5">{{ reviewData[currentPage].review }}</p>
             <div class="flex items-center mt-4">
               <div class="flex items-center justify-center w-10 h-10 overflow-hidden rounded-full">

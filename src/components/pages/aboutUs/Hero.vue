@@ -24,7 +24,7 @@
               </Button>
               <ButtonOutline @click="$router.push({ name: 'services' })">
                 <span class="block w-2 h-2 rounded-full bg-light-secondary"></span>
-                <span class="text-white">Services Detail</span>
+                <span class="text-white">Serviceess Detail</span>
               </ButtonOutline>
             </div>
             <div
