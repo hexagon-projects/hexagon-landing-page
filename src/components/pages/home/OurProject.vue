@@ -46,7 +46,7 @@ onMounted(() => {
 <template>
     <div class="bg-gradient-to-t from-[#F3F8FF] to-white dark:bg-gradient-to-t dark:from-black dark:to-black">
         <div class="px-[16px] md:px-[112px] mt-4 md:mt-[56px]">
-            <div class="mb-[56px]">
+            <div class="md:mb-[56px]">
                 <div class="flex items-center justify-between">
                     <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">Our Projects</span>
                         <ButtonOutline @click="$router.push({ name: 'portfolio' })">
@@ -56,8 +56,8 @@ onMounted(() => {
                             </span>
                         </ButtonOutline>
                 </div>
-                <div class="z-20 flex items-center justify-center mt-[14px]">
-                    <h1 class="font-semibold text-[16px] md:text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">We provide perfect IT solutions for your business</h1>
+                <div class="flex items-center justify-center mt-[14px]">
+                    <h1 class="font-semibold text-[20px] md:text-[32px] font-raleway tracking-[-0.64px] pt-[10px] dark:text-white">We provide perfect IT solutions for your business</h1>
                 </div>
             </div>
         </div>
