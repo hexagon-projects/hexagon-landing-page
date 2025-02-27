@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="md:hidden justify-center flex text-center">
+    <div class="flex justify-center text-center md:hidden">
       <h1 class="font-raleway text-[20px] font-semibold text-gray-800 dark:text-white max-w-[300px]">
         Membina 50+ SMK<br />
         di seluruh Indonesia
@@ -28,7 +28,7 @@
     <!-- Marquee Section -->
     <div class="px-[16px] md:px-[60px]">
       <div
-        class="flex flex-col gap-12 overflow-hidden border border-gray-200 dark:border-gray-700 py-8 px-8 rounded-xl">
+        class="flex flex-col gap-12 px-8 py-8 overflow-hidden border border-gray-200 dark:border-gray-700 rounded-xl">
         <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-8 items-center">
           <!-- Judul (Kolom Kiri) -->
           <div class="hidden md:block">
@@ -46,8 +46,8 @@
               <Marquee :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40">
                 <div class="flex gap-4 pl-4">
                   <div v-for="(client, index) in ourClientData" :key="'marquee-desktop-' + index"
-                    class="flex items-center justify-center w-36 h-22">
-                    <img :src="client.foto_client_url" alt="client.name" class="max-w-[150px] object-contain" />
+                    class="flex items-center justify-center w-36">
+                    <img :src="client.foto_client_url" alt="client.name" class="max-w-[150px] h-[80px] object-contain" />
                   </div>
                 </div>
               </Marquee>
