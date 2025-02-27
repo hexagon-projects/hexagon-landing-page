@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full py-8 space-y-4 md:space-y-12 bg-white dark:bg-black">
+  <div class="relative w-full py-8 space-y-4 bg-white md:space-y-12 dark:bg-black">
     <!-- Our Client Section -->
     <div class="flex flex-col items-center justify-center">
       <div class="flex items-center gap-2.5">
@@ -23,7 +23,7 @@
               :key="'marquee-desktop-' + index"
               class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
             >
-              <img :src="client.foto_client_url" alt="client.name" class="max-w-[120px] object-contain" />
+              <img :src="client.foto_client_url" alt="client.name" class="max-w-[140px] object-contain" />
             </div>
           </div>
         </Marquee>
@@ -60,7 +60,7 @@
               :key="'media-' + index"
               class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
             >
-              <img :src="media.foto_client_url" :alt="media.status_label" class="max-w-[120px] object-contain" />
+              <img :src="media.foto_client_url" :alt="media.status_label" class="max-w-[160px] object-contain" />
             </div>
           </div>
         </Marquee>
@@ -69,6 +69,7 @@
       <!-- Marquee Kedua (Mobile) -->
       <div class="block md:hidden">
         <div class="flex flex-col gap-4">
+          <!-- Marquee Bagian Pertama -->
           <Marquee v-for="(marquee, mIdx) in mediaMarquees" :key="'media-marquee-1-' + mIdx" :fade="true" direction="left" :reverse="false" :pauseOnHover="false" :speed="40" class="overflow-hidden">
             <div class="flex gap-4">
               <div
@@ -80,10 +81,11 @@
               </div>
             </div>
           </Marquee>
+          <!-- Marquee Bagian Kedua -->
           <Marquee v-for="(marquee, mIdx) in mediaMarquees" :key="'media-marquee-2-' + mIdx" :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40" class="overflow-hidden">
             <div class="flex gap-4">
               <div
-                v-for="(media, index) in marquee.slice(0, Math.ceil(marquee.length / 2))"
+                v-for="(media, index) in marquee.slice(Math.ceil(marquee.length / 2))"
                 :key="'media-2-' + index"
                 class="flex items-center justify-center w-48 h-24 p-2 bg-white border rounded-[10px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
               >

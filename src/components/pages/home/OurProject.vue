@@ -56,7 +56,7 @@ onMounted(() => {
                             </span>
                         </ButtonOutline>
                 </div>
-                <div class="z-20 flex items-center justify-center mt-[14px]">
+                <div class="z-20 flex items-center justify-center md:justify-start mt-[14px]">
                     <h1 class="font-semibold text-[16px] md:text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">We provide perfect IT solutions for your business</h1>
                 </div>
             </div>

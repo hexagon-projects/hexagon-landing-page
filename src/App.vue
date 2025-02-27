@@ -7,7 +7,7 @@ import { ref, onMounted } from "vue";
 const isLoading = ref(true);
 
 onMounted(async () => {
-  await new Promise(resolve => setTimeout(resolve, 100));
+  await new Promise(resolve => setTimeout(resolve, 3000));
   isLoading.value = false;
 });
 </script>
