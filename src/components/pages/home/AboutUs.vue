@@ -5,16 +5,14 @@ import { Icon } from "@iconify/vue";
 </script>
 
 <template>
-    <div class="pl-4 md:px-[112px]">
+    <div class="pl-4 md:px-[112px] pt-12">
         <!-- Bagian About Us (Tetap Sama) -->
-        <div class="hidden md:block">
-            <div class="flex flex-col gap-9 items-center text-center mb-[78px]">
-                <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">ABOUT
-                    US</span>
-                <h1 class="font-raleway text-[30px] font-semibold text-gray-800 dark:text-white">Digital Artwork & IT
-                    Solution<br>Be the
-                    best partner to create solution together</h1>
-                <div class="flex flex-col sm:flex-row gap-[14px]">
+        <div class="flex flex-col gap-9 items-start md:items-center md:text-center mb-[36px] md:mb-[78px]">
+            <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">Services</span>
+            <h1 class="font-raleway md:text-[30px] text-[20px] font-semibold text-gray-800 dark:text-white">Discover
+                solutions crafted for your business growth.</h1>
+            <div class="hidden md:block">
+                <div class="flex gap-[14px]">
                     <Button @click="$router.push({ name: 'about-us' })">
                         <span>More About Us</span>
                     </Button>
@@ -36,7 +34,8 @@ import { Icon } from "@iconify/vue";
                         <Icon icon="meteocons:star-fill" class="w-6 h-6" />
                         <span class="dark:text-white">IT Solution</span>
                     </ButtonOutline>
-                    <h1 class="text-[40px] md:text-[32px] font-raleway font-semibold text-gradient-dark mt-5">Digital Solutions
+                    <h1 class="text-[40px] md:text-[32px] font-raleway font-semibold text-gradient-dark mt-5">Digital
+                        Solutions
                         <br> For Your Business
                     </h1>
                 </div>
@@ -115,7 +114,8 @@ import { Icon } from "@iconify/vue";
         <div class="md:hidden mobile-scroll-container">
             <div class="mobile-scroll-content">
                 <!-- Card 1 -->
-                <div class="mobile-card md:hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
+                <div
+                    class="mobile-card md:hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
                     <div
                         class="flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-3xl items-center overflow-hidden card-bg">
                         <div class="flex flex-col p-[8px] pt-[28px] justify-center items-center">
@@ -128,14 +128,14 @@ import { Icon } from "@iconify/vue";
                             </h1>
                         </div>
                         <div class="py-8">
-                            <img src="@/assets/services/3d1.png" alt="IT Consultation"
-                                class="object-cover w-32 h-32" />
+                            <img src="@/assets/services/3d1.png" alt="IT Consultation" class="object-cover w-32 h-32" />
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="mobile-card md:hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
+                <div
+                    class="mobile-card md:hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
                     <div
                         class="flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg h-full">
                         <div class="flex h-full">
@@ -162,18 +162,17 @@ import { Icon } from "@iconify/vue";
                 </div>
 
                 <!-- Card 3 -->
-                <div class="mobile-card md:hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
+                <div
+                    class="mobile-card md:hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
                     <div
                         class="flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg h-full">
                         <div class="flex h-full">
                             <div class="flex justify-between flex-col w-full">
                                 <div>
-                                    <img src="@/assets/services/Union7.png" alt="Digital Marketing"
-                                        class="">
+                                    <img src="@/assets/services/Union7.png" alt="Digital Marketing" class="">
                                 </div>
                                 <div class="flex w-1/2">
-                                    <img src="@/assets/services/Union6.png" alt="Digital Marketing"
-                                        class="">
+                                    <img src="@/assets/services/Union6.png" alt="Digital Marketing" class="">
                                 </div>
                             </div>
                         </div>
@@ -190,7 +189,8 @@ import { Icon } from "@iconify/vue";
                 </div>
 
                 <!-- Card 4 -->
-                <div class="mobile-card md:hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
+                <div
+                    class="mobile-card md:hover:scale-105 transition-transform duration-300 hover:bg-blue-50 dark:hover:bg-blue-900">
                     <div
                         class="flex flex-col items-center bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] overflow-hidden card-bg">
                         <div class="p-[18px]">
