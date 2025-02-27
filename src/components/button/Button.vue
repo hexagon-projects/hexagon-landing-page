@@ -9,7 +9,7 @@
    border: none;
    color: #fff;
    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
-   border-radius: 20px;
+   border-radius: 999px;
    background-size: 100% auto;
    font-family: inherit;
    font-size: 17px;

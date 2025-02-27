@@ -113,13 +113,13 @@ const closePopup = () => {
       <Icon icon="fluent:home-12-regular" class="w-6 h-6"></Icon>
       Home
     </RouterLink>
-    <RouterLink to="/about-us" class="nav-item">
-      <img class="h-6" src="../../../Logo.png" alt="Hexagon Inc." />
-      About
-    </RouterLink>
     <RouterLink to="/services" class="nav-item">
       <Icon icon="uil:setting" class="w-6 h-6  rotate-[30]"></Icon>
       Service
+    </RouterLink>
+    <RouterLink to="/about-us" class="nav-item">
+      <img class="h-6" src="../../../Logo.png" alt="Hexagon Inc." />
+      About
     </RouterLink>
     <button @click="togglePopup" class="nav-item">
       <div class="w-full  flex justify-center  mx-0 transition-all duration-300" :class="isPopupOpen == true ? 'bg-light-primary mx-3 rounded-full text-white' : ''">

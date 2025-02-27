@@ -7,15 +7,14 @@
                 <h4 class="font-medium tracking-wider text-gray-600 text-md dark:text-gray-400">OUR TEAM</h4>
                 <div class="w-8 h-0.5 bg-blue-500"></div>
             </div>
-            <h1 class="mt-2 text-4xl font-bold leading-tight text-center text-gray-800 md:text-5xl dark:text-white font-raleway">
-                Meet the Minds Behind <br/>
-                <span class="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">the Innovation</span>
+            <h1 class="mt-2 leading-tight text-center text-gray-800 font-old text-[28px] md:text-[36px] dark:text-white font-raleway">
+                Meet the Minds Behind the Innovation
             </h1>
         </div>
 
-        <div class="grid gap-8 px-4 mx-auto grid-cols-2 lg:grid-cols-4 lg:px-16 max-w-7xl">
+        <div class="grid grid-cols-2 gap-8 px-4 mx-auto lg:grid-cols-4 lg:px-16 max-w-7xl">
             <div v-for="(member, index) in displayedMembers" :key="index"
-                class="relative overflow-hidden transition-all duration-500  group rounded-2xl hover:scale-105 hover:shadow-md hover:-translate-y-2">
+                class="relative overflow-hidden transition-all duration-500 group rounded-2xl hover:scale-105 hover:shadow-md hover:-translate-y-2">
                 <div class="aspect-w-3 aspect-h-4">
                     <img :src="member.image" :alt="`Image of ${member.name}`"
                         class="object-cover w-full h-full transition-transform duration-500" />
@@ -24,7 +23,7 @@
         </div>
 
         <!-- See More Button (Mobile Only) -->
-        <div class=" md:hidden block">
+        <div class="block md:hidden">
             <div v-if="teamMembers.length > 4" class="flex justify-center mt-8">
                 <button 
                     @click="showAll = !showAll"

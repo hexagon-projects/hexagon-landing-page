@@ -48,12 +48,12 @@ onMounted(() => {
 
 <template>
   <div class="px-[56px] md:px-[112px]">
-    <div class="flex flex-col gap-9 items-center mb-[60px]">
+    <div class="flex flex-col gap-4 items-center mb-[60px]">
       <span class="bg-gray-100 dark:bg-[#121212] px-4 py-2 rounded-lg text-xs font-medium inline mt-[50px]">Open
         Position</span>
-      <h1 class="font-raleway text-[25px] md:text-[45px] font-bold text-gray-800 dark:text-gradient text-center">Explore
+      <h1 class="font-raleway text-[25px] md:text-[40px] font-bold text-gray-800 text-center dark:text-white">Explore
         Opportunities, <span class="text-gradient">Shape your Career</span></h1>
-      <p class="font-raleway text-[13px] md:text-[16px] font-semibold text-gray-600 dark:text-white">See available
+      <p class="font-raleway text-[13px] md:text-[16px] font-semibold text-gray-600 text-center dark:text-gray-400">See available
         positions and find a role where your skills and passions align with our mission.<br />Start your journey with us
         today.</p>
     </div>
@@ -68,7 +68,7 @@ onMounted(() => {
             <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-2">
               {{ position.lowong_krj }}
             </h1>
-            <p class="text-xs text-justify text-gray-600 break-all dark:text-gray-400">
+            <p class="text-xs text-justify text-gray-600 break-all dark:text-gray-400 line-clamp-3">
               {{ position.ket_lowong.ringkasan }}
             </p>
             <div class="absolute bottom-0 flex items-center justify-center -right-1">
@@ -97,7 +97,7 @@ onMounted(() => {
         </div>
       </div>
       <Button class="text-white border-white" @click="$router.push({ name: 'contact' })">
-        <div class="flex gap-2 items-center justify-center">
+        <div class="flex items-center justify-center gap-2">
           <span>Let's Chat</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
