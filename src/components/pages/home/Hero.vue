@@ -6,13 +6,12 @@ const canvas = ref(null);
 
 const state = reactive({
     spline: {
-        desktopScene: 'https://prod.spline.design/qpjuRBJ6jl7KmNG2/scene.splinecode', // Link untuk desktop
+        desktopScene: 'https://prod.spline.design/Ry9Xir03d7uzegml/scene.splinecode', // Link untuk desktop
         mobileScene: 'https://prod.spline.design/y22mr3XC-3wuEu5V/scene.splinecode', // Link untuk mobile
         app: null,
         isLoaded: false,
     }
 });
-
 
 
 // Fungsi untuk memilih scene berdasarkan ukuran layar
@@ -50,12 +49,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="relative h-screen max-h-[900px] mb-16 pt-24 md:pt-16">
+    <div class="relative h-screen mb-16 pt-24 md:pt-16">
         <div class="hero-section-bg absolute w-full h-full bg-no-repeat z-0 -mt-[48px]">
             <canvas ref="canvas" class="w-full h-full" />
             <span class="bg-gradient-to-b absolute bottom-0 via-50% md:via-80% via-white dark:via-black/95 from-transparent w-full h-1/2 to-white dark:to-black z-[2]"></span>
         </div>
-        <div class="absolute flex flex-col items-center -translate-x-1/2 left-1/2 via -bottom-16 gap-9">
+        <div class="absolute flex flex-col items-center -translate-x-1/2 left-1/2 -bottom-16 gap-9">
             <div class="scrolldown" style="--color: #136FF8">
                 <div class="chevrons">
                     <div class="chevrondown"></div>
