@@ -145,7 +145,7 @@ onMounted(() => {
       </div>
       <!-- Tombol ajakan untuk kontak -->
       <Button class="text-white border-white" @click="$router.push({ name: 'contact' })">
-        <div class="flex gap-2 items-center justify-center">
+        <div class="flex items-center justify-center gap-2">
           <span>Let's Chat</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
             <path

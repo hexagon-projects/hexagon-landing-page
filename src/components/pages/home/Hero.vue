@@ -14,7 +14,7 @@ const canvas = ref(null);
 // instance aplikasi Spline, dan status apakah scene sudah dimuat.
 const state = reactive({
     spline: {
-        desktopScene: 'https://prod.spline.design/qpjuRBJ6jl7KmNG2/scene.splinecode', // Link untuk desktop
+        desktopScene: 'https://prod.spline.design/Ry9Xir03d7uzegml/scene.splinecode', // Link untuk desktop
         mobileScene: 'https://prod.spline.design/y22mr3XC-3wuEu5V/scene.splinecode', // Link untuk mobile
         app: null,
         isLoaded: false,
@@ -35,9 +35,14 @@ const getSceneUrl = () => {
 // Fungsi yang akan dipanggil ketika jendela diresize untuk mengubah ukuran canvas dan mereset aplikasi Spline
 const handleResize = () => {
     if (state.spline.app && canvas.value) {
+        // Update canvas dimensions
         canvas.value.width = window.innerWidth;
         canvas.value.height = window.innerHeight;
-        state.spline.app.resize();
+        
+        // Check if resize method exists before calling
+        if (typeof state.spline.app.resize === 'function') {
+            state.spline.app.resize();
+        }
     }
 };
 
@@ -46,7 +51,9 @@ const handleResize = () => {
 /* ------------------------------ */
 // Saat komponen dimuat, inisialisasi aplikasi Spline dan load scene yang sesuai
 onMounted(async () => {
-    // Membuat instance Spline Application dengan canvas yang disediakan
+
+    try {
+        // Membuat instance Spline Application dengan canvas yang disediakan
     const app = new Application(canvas.value);
     // Menentukan scene URL berdasarkan ukuran layar
     const sceneUrl = getSceneUrl();
@@ -62,6 +69,9 @@ onMounted(async () => {
 
     // Menambahkan event listener untuk menangani resize pada jendela
     window.addEventListener('resize', handleResize);
+    } catch (error) {
+        console.error('Error initializing Spline:', error);
+    }
 });
 
 /* ------------------------------ */

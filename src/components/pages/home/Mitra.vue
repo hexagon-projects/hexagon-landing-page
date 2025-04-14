@@ -25,7 +25,6 @@
         </div>
       </div>
     </div>
-
     <!-- Mobile Judul Khusus -->
     <div class="md:hidden justify-center flex text-center">
       <h1 class="font-raleway text-[20px] font-semibold text-gray-800 dark:text-white max-w-[300px]">
@@ -56,8 +55,8 @@
                 <div class="flex gap-4 pl-4">
                   <!-- Looping data ourClientData untuk menampilkan logo secara horizontal -->
                   <div v-for="(client, index) in ourClientData" :key="'marquee-desktop-' + index"
-                    class="flex items-center justify-center w-36 h-22">
-                    <img :src="client.foto_client_url" alt="client.name" class="max-w-[150px] object-contain" />
+                    class="flex items-center justify-center w-36">
+                    <img :src="client.foto_client_url" alt="client.name" class="max-w-[150px] h-[80px] object-contain" />
                   </div>
                 </div>
               </Marquee>

@@ -48,7 +48,7 @@
         <!-- Gambar Workshop 1 -->
         <div class="relative">
           <img
-            :class="selectedImage === 1 ? 'w-72 h-80 dark:filter dark:brightness-75' : 'w-14 h-80'"
+            :class="selectedImage === 1 ? 'w-72 h-80' : 'w-14 h-80' + ' dark:filter dark:brightness-75'"
             src="@/assets/gallery/1.webp"
             alt="Image 1"
             class="object-cover transition-all duration-300 rounded-lg shadow-md cursor-pointer"

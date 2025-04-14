@@ -32,7 +32,7 @@
               :key="'marquee-desktop-' + index"
               class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
             >
-              <img :src="client.foto_client_url" alt="client.name" class="max-w-[120px] object-contain" />
+              <img :src="client.foto_client_url" alt="client.name" class="max-w-[140px] object-contain" />
             </div>
           </div>
         </Marquee>
@@ -74,7 +74,7 @@
               :key="'media-' + index"
               class="flex items-center justify-center w-72 h-32 p-4 bg-white border rounded-[20px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
             >
-              <img :src="media.foto_client_url" :alt="media.status_label" class="max-w-[120px] object-contain" />
+              <img :src="media.foto_client_url" :alt="media.status_label" class="max-w-[160px] object-contain" />
             </div>
           </div>
         </Marquee>
@@ -100,7 +100,7 @@
           <Marquee v-for="(marquee, mIdx) in mediaMarquees" :key="'media-marquee-2-' + mIdx" :fade="true" direction="left" :reverse="true" :pauseOnHover="false" :speed="40" class="overflow-hidden">
             <div class="flex gap-4">
               <div
-                v-for="(media, index) in marquee.slice(0, Math.ceil(marquee.length / 2))"
+                v-for="(media, index) in marquee.slice(Math.ceil(marquee.length / 2))"
                 :key="'media-2-' + index"
                 class="flex items-center justify-center w-48 h-24 p-2 bg-white border rounded-[10px] border-[#2F84FF] hover:bg-light-primary/20 dark:hover:bg-gray-800 dark:border-blue-400 dark:bg-blue-900/20 transition-all duration-300"
               >

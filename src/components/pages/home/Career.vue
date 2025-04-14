@@ -77,7 +77,7 @@ onMounted(getCareerData);
     <div class="flex flex-col lg:flex-row lg:justify-between mb-[18px]">
       <!-- Left Header: Judul dan deskripsi -->
       <div class="mb-6 lg:w-1/2">
-        <h1 class="text-[30px] md:text-[45px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-4">
+        <h1 class="text-[30px] md:text-[40px] font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-4">
           Would you like to join our team
         </h1>
         <div class="hidden md:block">
@@ -98,8 +98,8 @@ onMounted(getCareerData);
         <!-- Tampilkan skeleton card saat data masih loading -->
         <template v-if="loading">
           <div v-for="n in 2" :key="n" class="bg-[#F5F6FA] rounded-[16px] mb-4 p-[45px] pt-[35px] animate-pulse">
-            <div class="h-4 bg-gray-300 rounded w-1/4 mb-3"></div>
-            <div class="h-6 bg-gray-300 rounded w-3/4 mb-3"></div>
+            <div class="w-1/4 h-4 mb-3 bg-gray-300 rounded"></div>
+            <div class="w-3/4 h-6 mb-3 bg-gray-300 rounded"></div>
             <div class="h-12 bg-gray-300 rounded"></div>
           </div>
         </template>
@@ -127,7 +127,7 @@ onMounted(getCareerData);
           <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 mb-2 text-center dark:text-white">
             Can't find the position <br> you are looking for?
           </h1>
-          <Button class="rounded-lg mt-3">
+          <Button class="mt-3 rounded-lg">
             <span class="text-xs">Apply Now</span>
           </Button>
         </div>
@@ -139,8 +139,8 @@ onMounted(getCareerData);
         <template v-if="loading">
           <div class="flex gap-4 py-4">
             <div v-for="n in 2" :key="n" class="flex-shrink-0 w-[280px] bg-[#F5F6FA] rounded-[16px] p-6 animate-pulse">
-              <div class="h-4 bg-gray-300 rounded w-1/4 mb-3"></div>
-              <div class="h-6 bg-gray-300 rounded w-3/4 mb-3"></div>
+              <div class="w-1/4 h-4 mb-3 bg-gray-300 rounded"></div>
+              <div class="w-3/4 h-6 mb-3 bg-gray-300 rounded"></div>
               <div class="h-20 bg-gray-300 rounded"></div>
             </div>
           </div>
@@ -154,10 +154,10 @@ onMounted(getCareerData);
                 class="flex-shrink-0 flex flex-col items-start bg-[#F5F6FA] rounded-[16px] p-6 relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-800 hover:text-white hover:shadow-lg hover:scale-105">
                 <p class="mb-2 text-xs text-gray-600 dark:text-gray-400">{{ position.tipe }}tes</p>
                 <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 dark:text-white mb-2">
-                  {{ position.lowong_krj }}tes
+                  {{ position.lowong_krj }}
                 </h1>
                 <p class="text-xs text-justify text-gray-600 dark:text-gray-400 line-clamp-3">
-                  {{ position.ket_lowong }}tes
+                 {{ position.ket_lowong.ringkasan }}
                 </p>
                 <div class="absolute bottom-0 right-0 flex items-center justify-center">
                   <img src="@/assets/Group 11.svg" alt="Icon" class="h-10" />
@@ -177,7 +177,7 @@ onMounted(getCareerData);
           <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 mb-2 text-center dark:text-white">
             Can't find the position you are looking for?
           </h1>
-          <Button class="rounded-lg mt-3">
+          <Button class="mt-3 rounded-lg">
             <span class="text-xs">Apply Now</span>
             <font-awesome-icon icon="arrow-right" />
           </Button>

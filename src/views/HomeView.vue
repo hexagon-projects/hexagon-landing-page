@@ -8,8 +8,17 @@ import Review from '@/components/pages/home/Review.vue';
 import Career from '@/components/pages/home/Career.vue';
 import News from '@/components/pages/home/News.vue';
 import Cta from '@/components/pages/home/cta.vue';
-import OurClient from '@/components/pages/aboutUs/OurClient.vue';
+import Chart from '@/components/pages/home/Chart.vue';
+import { onMounted } from 'vue';
+import axiosInstance from '../axios';
 
+onMounted(async () => {
+  try {
+    await axiosInstance.post('/api/track-visit');
+  } catch (error) {
+    console.error('Gagal tracking', error);
+  }
+});
 </script>
 
 <template>
@@ -21,6 +30,7 @@ import OurClient from '@/components/pages/aboutUs/OurClient.vue';
         <OurProject />
         <Review />
         <News />
+        <Chart />
         <Career />
         <Cta />
     </div>

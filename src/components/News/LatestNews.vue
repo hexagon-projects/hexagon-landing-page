@@ -33,18 +33,18 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="md:pt-40">
+  <div class="w-full md:pt-40">
     <div class="px-[16px] md:px-[112px] md:mt-[56px]">
       <div class="mb-0">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between w-full">
           <span class="inline px-4 py-2 text-xs font-medium bg-gray-100 rounded-lg dark:bg-gray-800">NEWS AND INSIGHT</span>
+        </div>
+        <div class="z-20 flex items-center mt-[14px] justify-between w-full">
+          <h1 class="font-semibold text-[16px] md:text-[32px] text-[#135df4] font-raleway tracking-[-0.64px] pt-[10px]">Get the latest articles from our journal, writing, discuss and share</h1>
           <ButtonOutline @click="$router.push({ name: 'news' })">
             <Icon icon="heroicons-solid:arrow-sm-right" width="18" height="18" />
             <span class="hidden md:block"> Show All Articles </span>
           </ButtonOutline>
-        </div>
-        <div class="z-20 flex items-center justify-center mt-[14px]">
-          <h1 class="font-semibold text-[16px] md:text-[32px] font-raleway tracking-[-0.64px] pt-[10px]">Get the latest articles from our journal, writing, discuss and share</h1>
         </div>
       </div>
     </div>
@@ -81,12 +81,12 @@ onMounted(() => {
     </div>
 
     <!-- Mobile Layout -->
-    <div class="md:hidden block">
-      <div class="flex flex-col divide-y divide-gray-300 px-4 py-6">
+    <div class="block md:hidden">
+      <div class="flex flex-col px-4 py-6 divide-y divide-gray-300">
         <div v-if="cardItems.length == 0" class="py-6">
           <div class="flex justify-between gap-4">
             <!-- Konten Teks -->
-            <div class="flex flex-col gap-2 flex-1">
+            <div class="flex flex-col flex-1 gap-2">
               <!-- Judul -->
               <h1 class="text-gray-800 dark:text-white font-raleway text-[16px] font-bold line-clamp-2 bg-gray-300 rounded-md h-[30px] w-3/4"></h1>
 
@@ -100,13 +100,13 @@ onMounted(() => {
             </div>
 
             <!-- Gambar -->
-            <div class="w-32 h-24 rounded-lg bg-gray-300"></div>
+            <div class="w-32 h-24 bg-gray-300 rounded-lg"></div>
           </div>
         </div>
         <div v-else v-for="(card, index) in cardItems" :key="index" class="py-6">
           <div class="flex justify-between gap-4">
             <!-- Konten Teks -->
-            <div class="flex flex-col gap-2 flex-1">
+            <div class="flex flex-col flex-1 gap-2">
               <!-- Judul -->
               <h1 class="text-gray-800 dark:text-white font-raleway text-[16px] font-bold line-1">
                 {{ card.judul_news }}
@@ -124,7 +124,7 @@ onMounted(() => {
             </div>
 
             <!-- Gambar -->
-            <img :src="card.images[0]" :alt="card.alt" class="w-32 h-24 rounded-lg object-cover" />
+            <img :src="card.images[0]" :alt="card.alt" class="object-cover w-32 h-24 rounded-lg" />
           </div>
         </div>
       </div>
