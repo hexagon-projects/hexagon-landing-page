@@ -79,7 +79,7 @@ export default {
 </script>
 
 <style>
-canvas {
+#visitChart {
   width: 100% !important;
   height: 400px !important;
 }

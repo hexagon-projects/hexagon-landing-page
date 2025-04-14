@@ -13,7 +13,6 @@ const state = reactive({
     }
 });
 
-
 // Fungsi untuk memilih scene berdasarkan ukuran layar
 const getSceneUrl = () => {
     return window.innerWidth >= 768 ? state.spline.desktopScene : state.spline.mobileScene;
@@ -21,25 +20,34 @@ const getSceneUrl = () => {
 
 const handleResize = () => {
     if (state.spline.app && canvas.value) {
+        // Update canvas dimensions
         canvas.value.width = window.innerWidth;
         canvas.value.height = window.innerHeight;
-        state.spline.app.resize();
+        
+        // Check if resize method exists before calling
+        if (typeof state.spline.app.resize === 'function') {
+            state.spline.app.resize();
+        }
     }
 };
 
 onMounted(async () => {
-    const app = new Application(canvas.value);
-    const sceneUrl = getSceneUrl(); // Pilih scene berdasarkan ukuran layar
-    await app.load(sceneUrl);
-    state.spline.app = app;
-    state.spline.isLoaded = true;
+    try {
+        const app = new Application(canvas.value);
+        const sceneUrl = getSceneUrl(); // Pilih scene berdasarkan ukuran layar
+        await app.load(sceneUrl);
+        state.spline.app = app;
+        state.spline.isLoaded = true;
 
-    // Set initial canvas size
-    canvas.value.width = window.innerWidth;
-    canvas.value.height = window.innerHeight;
+        // Set initial canvas size
+        canvas.value.width = window.innerWidth;
+        canvas.value.height = window.innerHeight;
 
-    // Add resize event listener
-    window.addEventListener('resize', handleResize);
+        // Add resize event listener
+        window.addEventListener('resize', handleResize);
+    } catch (error) {
+        console.error('Error initializing Spline:', error);
+    }
 });
 
 onUnmounted(() => {
@@ -49,9 +57,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="relative h-screen mb-16 pt-24 md:pt-16">
+    <div class="relative h-[600px] mb-16 pt-24 md:pt-16">
         <div class="hero-section-bg absolute w-full h-full bg-no-repeat z-0 -mt-[48px]">
-            <canvas ref="canvas" class="w-full h-full" />
+            <canvas ref="canvas" />
             <span class="bg-gradient-to-b absolute bottom-0 via-50% md:via-80% via-white dark:via-black/95 from-transparent w-full h-1/2 to-white dark:to-black z-[2]"></span>
         </div>
         <div class="absolute flex flex-col items-center -translate-x-1/2 left-1/2 -bottom-16 gap-9">

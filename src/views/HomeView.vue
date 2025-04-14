@@ -9,7 +9,6 @@ import Career from '@/components/pages/home/Career.vue';
 import News from '@/components/pages/home/News.vue';
 import Cta from '@/components/pages/home/cta.vue';
 import Chart from '@/components/pages/home/Chart.vue';
-import OurClient from '@/components/pages/aboutUs/OurClient.vue';
 import { onMounted } from 'vue';
 import axiosInstance from '../axios';
 
