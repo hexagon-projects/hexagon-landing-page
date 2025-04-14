@@ -42,7 +42,7 @@ import { Icon } from "@iconify/vue";
         <!-- ----------------------------- -->
         <!-- Container untuk Desktop (Tanpa Scroll Horizontal) -->
         <!-- ----------------------------- -->
-        <div class="hidden md:flex flex-col lg:flex-row gap-[18px] mb-[18px] justify-center">
+        <div class="hidden md:flex flex-col lg:flex-row gap-[36px] mb-[36px] justify-center">
             <!-- Card 1: Menampilkan layanan IT Solution dan Digital Solutions -->
             <div class="lg:max-w-[650px] w-full flex flex-col bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] items-center overflow-hidden card-bg md:hover:scale-105 transition-transform duration-300 hover:bg-blue-100 dark:hover:bg-blue-900">
                 <div class="flex flex-col p-[28px] pt-[28px] justify-center items-center">
@@ -88,7 +88,7 @@ import { Icon } from "@iconify/vue";
         </div>
 
         <!-- Container untuk Desktop Baris Kedua -->
-        <div class="hidden md:flex flex-col lg:flex-row gap-[18px] mb-[18px] justify-center">
+        <div class="hidden md:flex flex-col lg:flex-row gap-[36px] mb-[18px] justify-center">
             <!-- Card 1: Menampilkan layanan Media Consultant (versi 1) -->
             <div class="lg:max-w-[350px] w-full flex flex-col justify-between bg-[#F5F6FA] dark:bg-[#191D34] rounded-[16px] card-bg md:hover:scale-105 transition-transform duration-300 hover:bg-blue-100 dark:hover:bg-blue-900">
                 <div class="flex h-full">

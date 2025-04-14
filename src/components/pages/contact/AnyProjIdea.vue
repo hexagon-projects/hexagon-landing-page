@@ -107,19 +107,20 @@
           class="w-full px-4 py-2 border rounded-lg dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           required
         ></textarea>
-        <button
+        <Button
           type="submit"
-          class="flex items-center justify-center w-full gap-2 px-6 py-3 font-medium text-white bg-blue-500 rounded-full hover:bg-blue-700 transition-all duration-500"
+          class="flex items-center justify-center w-full gap-2 px-6 py-3 font-medium text-white bg-primary rounded-full hover:bg-blue-700 transition-all duration-500"
         >
           Send Message
           <font-awesome-icon icon="arrow-right" class="text-sm" />
-        </button>
+        </Button>
       </form>
     </div>
   </div>
 </template>
 
 <script setup>
+import Button from "../../button/Button.vue";
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
 import axiosInstance from "../../../axios"; // ganti fetchAPI jadi axiosInstance
