@@ -66,7 +66,7 @@ async function fetchProjectData(page = 1) {
       
       // Memetakan data API ke format yang digunakan untuk kartu portofolio
       cardItems.value = response.data.data.map((item) => ({
-        id: item.id,
+        id: item.portofolio_id,
         tag: item.Kategori,
         title: item.judul_porto,
         description: item.ket_porto,

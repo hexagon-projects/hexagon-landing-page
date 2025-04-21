@@ -98,7 +98,6 @@ const selectImage = (imageIndex) => {
                     </div>
                 </div>
             </div>
-          </transition>
         </div>
     </div>
 </template>

@@ -159,17 +159,17 @@ onMounted(() => {
         </div>
 
         <!-- Static Apply Card untuk Desktop -->
-        <div class="hidden md:flex flex-col items-center bg-[#F5F6FA] rounded-[16px] p-[45px] pt-[35px] relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-950 hover:text-white hover:shadow-lg hover:scale-105">
+        <!-- <div class="hidden md:flex flex-col items-center bg-[#F5F6FA] rounded-[16px] p-[45px] pt-[35px] relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-950 hover:text-white hover:shadow-lg hover:scale-105">
             <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 mb-2 text-center dark:text-white">
                 Can't find the position <br> you are looking for?
             </h1>
             <Button class="rounded-lg mt-3">
                 <span class="text-xs">Apply Now</span>
             </Button>
-        </div>
+        </div> -->
 
         <!-- Static Apply Card untuk Mobile -->
-        <div class="md:hidden flex flex-col items-center bg-[#F5F6FA] rounded-[16px] p-6 mt-4 relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-950 hover:text-white hover:shadow-lg hover:scale-105">
+        <!-- <div class="md:hidden flex flex-col items-center bg-[#F5F6FA] rounded-[16px] p-6 mt-4 relative transition-all duration-300 hover:bg-blue-500 dark:bg-gray-950 hover:text-white hover:shadow-lg hover:scale-105">
             <h1 class="text-xl font-raleway tracking-[-0.64px] leading-9 font-bold text-gray-800 mb-2 text-center dark:text-white">
                 Can't find the position you are looking for?
             </h1>
@@ -177,7 +177,7 @@ onMounted(() => {
                 <span class="text-xs">Apply Now</span>
                 <font-awesome-icon icon="arrow-right" />
             </Button>
-        </div>
+        </div> -->
     </div>
 </template>
 

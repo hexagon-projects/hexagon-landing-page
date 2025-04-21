@@ -41,7 +41,7 @@ async function fetchProjectData(page = 1) {
     if (response.data && response.data.data) {
       // Memetakan data API ke format yang diinginkan
       cardItems.value = response.data.data.map((item) => ({
-        id: item.id,
+        id: item.news_id,
         // Memecah string kategori dan mengambil elemen pertama
         category: item.Kategori ? item.Kategori.split(',').map(tag => tag.trim())[0] : "",
         title: item.judul_news,
