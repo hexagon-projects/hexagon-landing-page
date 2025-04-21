@@ -9,6 +9,7 @@ import PortofolioPostView from "@/views/PortofolioPostView.vue";
 import CareerView from "@/views/CareerView.vue";
 import ContactView from "@/views/ContactView.vue";
 import PositionDetailView from "@/views/PositionDetailView.vue";
+import FaqView from "@/views/FaqView.vue";
 
 // Array routes
 const routes = [
@@ -51,6 +52,11 @@ const routes = [
     path: "/news/:id",
     name: "news-detail",
     component: BlogPostView,
+  },
+  {
+    path: "/faq",
+    name: "faq",
+    component: FaqView,
   },
   {
     path: "/portfolio/:id",

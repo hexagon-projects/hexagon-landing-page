@@ -1,7 +1,8 @@
 import './assets/main.css'
 import "flyonui/flyonui";
 import axios from "./axios";
-
+import VueSweetalert2 from "vue-sweetalert2";
+import "sweetalert2/dist/sweetalert2.min.css";
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -25,6 +26,7 @@ const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(createPinia())
+app.use(VueSweetalert2)
 app.use(router)
 
 app.mount('#app')

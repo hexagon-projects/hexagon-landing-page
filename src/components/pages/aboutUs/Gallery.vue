@@ -18,6 +18,7 @@ import { fetchGallery } from "@/service"; // Mengimpor fungsi dari service
 
 const galleries = ref([]); // Menyimpan data klien
 
+// Fungsi untuk mengambil data galeri
 const getGallery = async () => {
   const data = await fetchGallery();
   console.log(data); // Menampilkan data yang diterima dari API
@@ -38,8 +39,9 @@ const getGallery = async () => {
   }
 };
 
+// Panggil fungsi getGallery saat komponen dimuat
 onMounted(() => {
-  getGallery(); // Panggil fungsi saat komponen dimuat
+  getGallery();
 });
 
 const scrollContainer = ref(null);
@@ -47,6 +49,7 @@ const scrollContainer = ref(null);
 let scrollInterval;
 const scrollSpeed = 3000;
 
+// Fungsi untuk memulai auto-scroll
 const startScroll = () => {
   const container = scrollContainer.value;
   const slides = container.children;
@@ -73,6 +76,7 @@ const startScroll = () => {
   }, scrollSpeed);
 };
 
+// Fungsi untuk melanjutkan scroll (bisa digunakan bila ingin pause/resume)
 // const pauseScroll = () => {
 //   clearInterval(scrollInterval);
 // };
@@ -81,10 +85,12 @@ const resumeScroll = () => {
   startScroll();
 };
 
+// Mulai auto-scroll saat komponen dimuat
 onMounted(() => {
   startScroll();
 });
 
+// Menghentikan interval saat komponen di-unmount (jika diperlukan)
 // onUnmounted(() => {
 //   pauseScroll();
 // });
@@ -93,28 +99,21 @@ onMounted(() => {
 <style scoped>
 /* Scrollbar Hiding */
 .hide-scrollbar {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+  -ms-overflow-style: none; /* IE dan Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari, and Opera */
+  display: none; /* Chrome, Safari, dan Opera */
 }
 
 /* Scroll Snap Styling */
 .scroll-snap-x {
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; /* Optional smooth scroll for user interaction */
 }
 
 .scroll-snap-align {
   scroll-snap-align: center;
-}
-
-/* Optional smooth scroll for user interaction */
-.scroll-snap-x {
-  scroll-behavior: smooth;
 }
 </style>
